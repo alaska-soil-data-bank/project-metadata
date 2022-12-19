@@ -12,8 +12,8 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - data-management-plan.qmd
-    - deliverable-1.qmd
+    - datamanagementplan.qmd
+    - deliverable1.qmd
     - summary.qmd
     - references.qmd
 
