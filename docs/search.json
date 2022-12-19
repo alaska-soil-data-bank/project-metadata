@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Alaska Soil Data Bank Project Metadata",
+    "section": "",
+    "text": "This quarto book documents the metadata architecture for “The Alaska Soil Data Bank (ASDB): A database for delivering non-NRCS legacy data for digital soil mapping initiatives in Alaska” - USDA-NRCS SPSD Award #NR223A750025C013. The book is arranged in chapters, each of which deals with the metadata for one of three deliverables in the grant. Each of these deliverables also has a unique GitHub repository nested under the alaska-soil-data-bank organization. These deliverables are:\n1. The Alaska Soil Data Bank (ASDB). We will acquire, curate, and centralize non-NRCS legacy data for the state of Alaska and stand up a database for continuing contributions on the G.E.M.S. platform of the University of Minnesota Supercomputing Institute. The ASDB will result in a harmonized dataset for use in digital soil mapping in Alaska and scripts will be written to export the data into a NASIS-readable format for ingestion.\n2. AK Statewide Predictive Soil Order/Suborder Map. We will generate digital predictive soil order and soil suborder maps of the state of Alaska at a resolution of 30m.\n3. Segmentation Analysis Approach to DSM for Katmai National Park and Preserve. We will utilize a novel landscape segmentation analysis approach to digital soil mapping for Katmai National Park and Preserve.\n\n\n\nNic Jelinski; Associate Professor, University of Minnesota (PI)\nColby Brungard; Associate Professor, New Mexico State University (Co-PI)\nSabine Grunwald; Professor, University of Florida (Co-PI);\nMatt Macander; Senior Scientist, ABR, Inc. (Co-PI)\n\n\n\n\n\n\n\nThis project was awarded for a proposal submitted to the USDA-NRCS 2022 Soil Science Collaborative Research Proposals RFP\nYou can find the original RFP here https://www.grants.gov/web/grants/view-opportunity.html?oppId=337972."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming."
+  },
+  {
+    "objectID": "intro.html#a-subsection",
+    "href": "intro.html#a-subsection",
+    "title": "1  Introduction",
+    "section": "1.1 A subsection",
+    "text": "1.1 A subsection\nNote that subsections appear in the sidebar table of contents for this chapter"
+  },
+  {
+    "objectID": "intro.html#another-subsection",
+    "href": "intro.html#another-subsection",
+    "title": "1  Introduction",
+    "section": "1.2 Another subsection",
+    "text": "1.2 Another subsection\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  }
+]

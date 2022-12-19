@@ -1,0 +1,26 @@
+project:
+  type: book
+  # change output-dir to "docs" to publish to gh pages
+  output-dir: docs
+
+book:
+  title: "Alaska Soil Data Bank Project Metadata"
+  author: "Nic Jelinski"
+  date: "12/19/2022"
+  cover-image: "aksdb-badge-01.png"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
