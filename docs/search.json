@@ -4,76 +4,153 @@
     "href": "index.html",
     "title": "Alaska Soil Data Bank Project Metadata",
     "section": "",
-    "text": "This quarto book documents the metadata architecture for “The Alaska Soil Data Bank (ASDB): A database for delivering non-NRCS legacy data for digital soil mapping initiatives in Alaska” - USDA-NRCS SPSD Award #NR223A750025C013. The book is arranged in chapters, each of which deals with the metadata for one of three deliverables in the grant. Each of these deliverables also has a unique GitHub repository nested under the alaska-soil-data-bank organization. These deliverables are:\n1. The Alaska Soil Data Bank (ASDB). We will acquire, curate, and centralize non-NRCS legacy data for the state of Alaska and stand up a database for continuing contributions on the G.E.M.S. platform of the University of Minnesota Supercomputing Institute. The ASDB will result in a harmonized dataset for use in digital soil mapping in Alaska and scripts will be written to export the data into a NASIS-readable format for ingestion.\n2. AK Statewide Predictive Soil Order/Suborder Map. We will generate digital predictive soil order and soil suborder maps of the state of Alaska at a resolution of 30m.\n3. Segmentation Analysis Approach to DSM for Katmai National Park and Preserve. We will utilize a novel landscape segmentation analysis approach to digital soil mapping for Katmai National Park and Preserve.\n\n\n\nNic Jelinski; Associate Professor, University of Minnesota (PI)\nColby Brungard; Associate Professor, New Mexico State University (Co-PI)\nSabine Grunwald; Professor, University of Florida (Co-PI);\nMatt Macander; Senior Scientist, ABR, Inc. (Co-PI)\n\n\n\n\n\n\n\nThis project was awarded for a proposal submitted to the USDA-NRCS 2022 Soil Science Collaborative Research Proposals RFP\nYou can find the original RFP here https://www.grants.gov/web/grants/view-opportunity.html?oppId=337972."
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming."
-  },
-  {
-    "objectID": "intro.html#a-subsection",
-    "href": "intro.html#a-subsection",
-    "title": "1  Introduction",
-    "section": "1.1 A subsection",
-    "text": "1.1 A subsection\nNote that subsections appear in the sidebar table of contents for this chapter"
-  },
-  {
-    "objectID": "intro.html#another-subsection",
-    "href": "intro.html#another-subsection",
-    "title": "1  Introduction",
-    "section": "1.2 Another subsection",
-    "text": "1.2 Another subsection\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "This quarto book documents the metadata architecture for “The Alaska Soil Data Bank (ASDB): A database for delivering non-NRCS legacy data for digital soil mapping initiatives in Alaska” - USDA-NRCS SPSD Award #NR223A750025C013.\n\n\n[From Project Proposal] Approximately 300 million acres (> 70%) of the NOTCOM areas in the United States are in Alaska. Little data is available in unmapped areas of Alaska in the NASIS database. Harnessing disparate non-NRCS legacy datasets for digital soil mapping initiatives in Alaska will therefore be critical for completing the Soils2026 initiative. In order to properly harness big data in soil survey in Alaska, where a significant amount of non-NRCS soil data exists in critical areas, we need to develop a platform that allows public/private data, provides attribution, is flexible and nimble enough to accept ongoing contributions without a large burden on the submitter, can be easily scaled, and can provide export workflows to ingest data into NASIS. The utility of such a database (what we will refer to as the Alaska Soil Data Bank – ASDB) will be demonstrated through the production of digital soil mapping products at multiple scales and using multiple methods. We will use the harmonized ASDB dataset and NASIS together to produce the first digital statewide predictive map of Alaska soil orders and suborders at 30m resolution, and apply a novel approach to digital soil mapping (using landscape segmentation analysis) for Katmai National Park and Preserve.\n\n\n\nThis document contains metadata for each of the grant deliverables, as well as general project metadata and information. Each of the deliverables also has a unique GitHub repository nested under the alaska-soil-data-bank organization. These deliverables are:\n1. The Alaska Soil Data Bank (ASDB). We will acquire, curate, and centralize non-NRCS legacy data for the state of Alaska and stand up a database for continuing contributions on the G.E.M.S. platform of the University of Minnesota Supercomputing Institute. The ASDB will result in a harmonized dataset for use in digital soil mapping in Alaska and scripts will be written to export the data into a NASIS-readable format for ingestion.\n2. AK Statewide Predictive Soil Order/Suborder Map. We will generate digital predictive soil order and soil suborder maps of the state of Alaska at a resolution of 30m.\n3. Segmentation Analysis Approach to DSM for Katmai National Park and Preserve. We will utilize a novel landscape segmentation analysis approach to digital soil mapping for Katmai National Park and Preserve.\n\n\n\n\nNic Jelinski; Associate Professor, University of Minnesota (PI)\nColby Brungard; Associate Professor, New Mexico State University (Co-PI)\nSabine Grunwald; Professor, University of Florida (Co-PI);\nMatt Macander; Senior Scientist, ABR, Inc. (Co-PI)\n\n\n\n\n\nSue Ives; Senior Scientist, ABR, Inc.\nMichael Sousa; Soil Scientist, USDA-NRCS\n\n\n\n\nThis project was awarded for a proposal submitted to the USDA-NRCS 2022 Soil Science Collaborative Research Proposals RFP\nYou can find the original RFP here https://www.grants.gov/web/grants/view-opportunity.html?oppId=337972.\n\n\n\nhttps://github.com/alaska-soil-data-bank"
   },
   {
     "objectID": "datamanagementplan.html",
     "href": "datamanagementplan.html",
-    "title": "2  Data Management Plan (Original from proposal)",
+    "title": "1  Data Management Plan",
     "section": "",
-    "text": "The data generated by this project will be digital soil data generated by acquiring existing non-NRCS soil datasets from academic and agency partners, peer-reviewed literature, and grey literature (i.e. government publications and reports). It is expected that this project will include the acquisition of over 200 datasets and add over 14,000 new observations to the NASIS database for Alaska, particularly in underrepresented areas in the NASIS datasets that are critical areas to gap fill to meet Soil2026 goals."
+    "text": "Notes and questions on this section:"
+  },
+  {
+    "objectID": "datamanagementplan.html#expected-data-types",
+    "href": "datamanagementplan.html#expected-data-types",
+    "title": "1  Data Management Plan",
+    "section": "1.1 Expected Data Types",
+    "text": "1.1 Expected Data Types\nThe data generated by this project will be digital soil data generated by acquiring existing non-NRCS soil datasets from academic and agency partners, peer-reviewed literature, and grey literature (i.e. government publications and reports). It is expected that this project will include the acquisition of over 200 datasets and add over 14,000 new observations to the NASIS database for Alaska, particularly in underrepresented areas in the NASIS datasets that are critical areas to gap fill to meet Soil2026 goals."
   },
   {
     "objectID": "datamanagementplan.html#data-format",
     "href": "datamanagementplan.html#data-format",
-    "title": "2  Data Management Plan (Original from proposal)",
-    "section": "2.2 Data Format",
-    "text": "2.2 Data Format\nThis original data will be acquired and ingested “as is” – if the original data is digital, it will remain in its original format. If the data is held as hard copy records, those will be scanned, digitized, and formatted for NASIS ingestion prior to input into GEMS. The output will be a harmonized dataset in machine-readable format prepared for automated input into NASIS and following all NASIS formatting standards."
+    "title": "1  Data Management Plan",
+    "section": "1.2 Data Format",
+    "text": "1.2 Data Format\nThis original data will be acquired and ingested “as is” – if the original data is digital, it will remain in its original format. If the data is held as hard copy records, those will be scanned, digitized, and formatted for NASIS ingestion prior to input into GEMS. The output will be a harmonized dataset in machine-readable format prepared for automated input into NASIS and following all NASIS formatting standards."
   },
   {
     "objectID": "datamanagementplan.html#data-storage-and-preservation",
     "href": "datamanagementplan.html#data-storage-and-preservation",
-    "title": "2  Data Management Plan (Original from proposal)",
-    "section": "2.3 Data Storage and Preservation",
-    "text": "2.3 Data Storage and Preservation\nData generated by activities outlined in this proposal will be initially stored and maintained in the GEMS platform hosted in the data center of the Minnesota Supercomputing Institute (MSI). MSI performs full off-site backups as part of their disaster recovery plan. GEMS has recurrent Minnesota State Government funding to maintain its core operations, currently with no expiry date. All registered data in GEMS is persistent, given a DataCite DOI minted by our University of Minnesota Libraries partners. In addition to storage in GEMS and linkage in metadata to original data sources whenever possible, harmonized data will be imported into NASIS in compatible, machine- readable format and therefore all data produced by the project will also be imported into NASIS prior to project end. Per the project narrative, the power of the GEMS platform is that datasets are input “as is”, maintaining the data structure of the original authors. GEMS metadata for each dataset includes full reference information. If the dataset is publicly available, the GEMS metadata for that dataset will include information on dataset access, storage platform, and author contact information. This metadata is in JSON format and can be reconfigured and exported for any metadata catalog (in this case specifically targeting the NOTCOM catalog maintained by the NRCS Initial Mapping Team) that may be maintained by NRCS. The GEMS platform excels at utilizing field metadata and fuzzy matching to enable post-input data harmonization. During the dataset input process, in addition to constructing dataset metadata, metadata tags are assigned to each dataset field from a dynamic data dictionary which can be expanded as necessary as more datasets are added. These field metadata tags then become the primary vehicle through which scripts are written to subsequently harmonize the data for export and usage in DSM. There are many advantages to this approach. The primary advantage is that datasets are imported “as is”, meaning that data will match the original data source and author format. This increases transparency because there is no prior “re-working” of data before it is added to the database. As scripts are written to harmonize datasets to a defined format using field metadata tags, these scripts will also be available on GitHub to enable any potential user to recreate the eventual harmonized dataset that is utilized for DSM. Finally, because scripting is used for harmonization, output format is flexible. This is critical, because scripts will be developed to harmonize data and output in a format which can be ingested into NASIS.\n\n2.3.1 Data Sharing, Protection and Public Access\nThe GEMS agroinformatics platform developed by the University of Minnesota supports the data interoperability and sharing needs of this project. GEMS adheres to and, via its extensive (and still expanding) data handling toolkit, makes practically possible, FAIR(ER) data sharing principles; findable, accessible, interoperable, reusable, ethical—i.e., respects data sensitivities (e.g., partner sourced) or any proprietary (e.g., privately-sourced) data—and reproducible. Non-private data will be made open to the public via GEMS-Open, an open database of functionally interoperable and documented data that adheres to standard and harmonized meta-data protocols. When viewing and analyzing datasets, GEMS requires users to click licenses of each primary data source prior to receiving access to the data. Similarly, all data product derivatives are electronically tagged with links to the product sources in their metadata, ensuring proper credit attributions, as often described by their license agreements. The ASDB will adopt a data policy that accounts for data ownership, allows reuse of data and creation of data derivatives (e.g., pooling of soil data into new larger continental soil applications). We will adopt the Creative Commons Licensing scheme for data sharing and attributions. Importantly, the spectrum of private-public data sharing is accounted for in the ASDB. This is an important aspect because some soil data have inherent restrictions of data usage (e.g., soil projects funded by private companies or corporations, soil data with privacy/confidentiality protection), while other soil projects funded by federal resources are considered public goods without data restrictions. Geographic coordinates are in some cases private data that need to be protected for confidentiality reasons and may be released only for public use in aggregated/masked format.\n\n\n2.3.2 Roles and Responsibilities\nPI Jelinski will be responsible ensuring the data management plan is followed by all project participants and will also be responsible for reporting compliance with this data management plan to NRCS. The annual and final reports to NRCS will have an expanded data management plan as an integral component, and will include progress in data sharing (e.g., statistics on shared and accessed data sets, publications, DOIs, outreach materials). The final report will describe the data that was produced during the award period and the components that will be stored and preserved (including the expected duration) after the award ends. The GEMS platform data steward will ensure that the data management plan will be compliant with the Research Terms and Conditions that govern NRCS-funded projects."
+    "title": "1  Data Management Plan",
+    "section": "1.3 Data Storage and Preservation",
+    "text": "1.3 Data Storage and Preservation\nData generated by activities outlined in this proposal will be initially stored and maintained in the GEMS platform hosted in the data center of the Minnesota Supercomputing Institute (MSI). MSI performs full off-site backups as part of their disaster recovery plan. GEMS has recurrent Minnesota State Government funding to maintain its core operations, currently with no expiry date. All registered data in GEMS is persistent, given a DataCite DOI minted by our University of Minnesota Libraries partners. In addition to storage in GEMS and linkage in metadata to original data sources whenever possible, harmonized data will be imported into NASIS in compatible, machine- readable format and therefore all data produced by the project will also be imported into NASIS prior to project end. Per the project narrative, the power of the GEMS platform is that datasets are input “as is”, maintaining the data structure of the original authors. GEMS metadata for each dataset includes full reference information. If the dataset is publicly available, the GEMS metadata for that dataset will include information on dataset access, storage platform, and author contact information. This metadata is in JSON format and can be reconfigured and exported for any metadata catalog (in this case specifically targeting the NOTCOM catalog maintained by the NRCS Initial Mapping Team) that may be maintained by NRCS. The GEMS platform excels at utilizing field metadata and fuzzy matching to enable post-input data harmonization. During the dataset input process, in addition to constructing dataset metadata, metadata tags are assigned to each dataset field from a dynamic data dictionary which can be expanded as necessary as more datasets are added. These field metadata tags then become the primary vehicle through which scripts are written to subsequently harmonize the data for export and usage in DSM. There are many advantages to this approach. The primary advantage is that datasets are imported “as is”, meaning that data will match the original data source and author format. This increases transparency because there is no prior “re-working” of data before it is added to the database. As scripts are written to harmonize datasets to a defined format using field metadata tags, these scripts will also be available on GitHub to enable any potential user to recreate the eventual harmonized dataset that is utilized for DSM. Finally, because scripting is used for harmonization, output format is flexible. This is critical, because scripts will be developed to harmonize data and output in a format which can be ingested into NASIS.\n\n1.3.1 Data Sharing, Protection and Public Access\nThe GEMS agroinformatics platform developed by the University of Minnesota supports the data interoperability and sharing needs of this project. GEMS adheres to and, via its extensive (and still expanding) data handling toolkit, makes practically possible, FAIR(ER) data sharing principles; findable, accessible, interoperable, reusable, ethical—i.e., respects data sensitivities (e.g., partner sourced) or any proprietary (e.g., privately-sourced) data—and reproducible. Non-private data will be made open to the public via GEMS-Open, an open database of functionally interoperable and documented data that adheres to standard and harmonized meta-data protocols. When viewing and analyzing datasets, GEMS requires users to click licenses of each primary data source prior to receiving access to the data. Similarly, all data product derivatives are electronically tagged with links to the product sources in their metadata, ensuring proper credit attributions, as often described by their license agreements. The ASDB will adopt a data policy that accounts for data ownership, allows reuse of data and creation of data derivatives (e.g., pooling of soil data into new larger continental soil applications). We will adopt the Creative Commons Licensing scheme for data sharing and attributions. Importantly, the spectrum of private-public data sharing is accounted for in the ASDB. This is an important aspect because some soil data have inherent restrictions of data usage (e.g., soil projects funded by private companies or corporations, soil data with privacy/confidentiality protection), while other soil projects funded by federal resources are considered public goods without data restrictions. Geographic coordinates are in some cases private data that need to be protected for confidentiality reasons and may be released only for public use in aggregated/masked format."
   },
   {
-    "objectID": "deliverable1.html#a-subsection",
-    "href": "deliverable1.html#a-subsection",
-    "title": "3  Metadata for Deliverable 1",
-    "section": "3.2 A subsection",
-    "text": "3.2 A subsection\nNote that subsections appear in the sidebar table of contents for this chapter"
+    "objectID": "datamanagementplan.html#data-security",
+    "href": "datamanagementplan.html#data-security",
+    "title": "1  Data Management Plan",
+    "section": "1.4 Data Security",
+    "text": "1.4 Data Security\n[From GEMS Platform FAQ] All GEMS staff members, including those at the data center at MSI who maintain GEMS have been fully trained on HIPAA privacy protocols. GEMS also has policies reviewed by MSI’s Research Security and Compliance Analyst. All GEMS staff with access to private data sign an internal non-disclosure agreement designed by UMN’s Office of the General Counsel. All operations within the platform are isolated into encrypted containers where no other users have access (hence no snooping). Data entering or leaving these containers is also encrypted to prevent opportunity for leaks. All identifiable data residing in the platform are legally deemed private and non-public by the State of Minnesota, and hence not FOIAble. Finally, we provide users with various anonymization tools to de-identify their own data sets prior to sharing. These include removal of named identifiers, fuzzing and jittering of geo-coordinates and geospatial aggregation.\n\n1.4.1 Roles and Responsibilities\nPI Jelinski will be responsible ensuring the data management plan is followed by all project participants and will also be responsible for reporting compliance with this data management plan to NRCS. The annual and final reports to NRCS will have an expanded data management plan as an integral component, and will include progress in data sharing (e.g., statistics on shared and accessed data sets, publications, DOIs, outreach materials). The final report will describe the data that was produced during the award period and the components that will be stored and preserved (including the expected duration) after the award ends. The GEMS platform data steward will ensure that the data management plan will be compliant with the Research Terms and Conditions that govern NRCS-funded projects."
   },
   {
-    "objectID": "deliverable1.html#another-subsection",
-    "href": "deliverable1.html#another-subsection",
-    "title": "3  Metadata for Deliverable 1",
-    "section": "3.3 Another subsection",
-    "text": "3.3 Another subsection"
+    "objectID": "deliverable1.html",
+    "href": "deliverable1.html",
+    "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
+    "section": "",
+    "text": "University of Alaska Fairbanks University of Minnesota Woods Hole Research Center National Park Service - Arctic Research Coordination NEtwork (NPS-ACRN) U.S. Army Corps of Engineers Cold Regions Research and Engineering Laborotory (CRREL) BLM-AIM Database Alaska Biological Resarch (ABR, Inc., Anchorage AK) 1995 -2021\n[Legacy Data] US Geological Survey (USGS) US Department of Energy (DOE) Bureau of Land Management (BLM) US Forest Service (USFS)"
+  },
+  {
+    "objectID": "deliverable1.html#data-description",
+    "href": "deliverable1.html#data-description",
+    "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
+    "section": "2.2 Data Description",
+    "text": "2.2 Data Description\n[output from GEMS]"
+  },
+  {
+    "objectID": "deliverable1.html#description-of-data-mining-procedures",
+    "href": "deliverable1.html#description-of-data-mining-procedures",
+    "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
+    "section": "2.3 Description of Data Mining Procedures",
+    "text": "2.3 Description of Data Mining Procedures\n\nhardcopy data\ndigital data"
+  },
+  {
+    "objectID": "deliverable1.html#data-completeness-rankings-index",
+    "href": "deliverable1.html#data-completeness-rankings-index",
+    "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
+    "section": "2.4 Data Completeness Rankings / Index",
+    "text": "2.4 Data Completeness Rankings / Index\n\nTiers\nMorphology\nLab Data\nSite Data"
+  },
+  {
+    "objectID": "deliverable1.html#standardized-projection",
+    "href": "deliverable1.html#standardized-projection",
+    "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
+    "section": "2.5 Standardized Projection",
+    "text": "2.5 Standardized Projection\nProjection: Alaska Albers NAD83, EPSG: 3338 Scope: Topographic Mapping (small scale) Area of Use: United States (USA) - Alaska Coordinate System: Cartesian 2D CS. Axes: easting, northing (X,Y). Orientations: east, north. Unit: meters (m) Geodetic CRS: NAD83 Datum: North American Datum 1983 Ellipsoid: GRS 1980 Prime meridian: Greenwich Data Source: EPSG Information Source: State of Alaska Department of Natural Resources Revision Date: 11-11-2006"
+  },
+  {
+    "objectID": "deliverable1.html#geospatial-data-quality-rankings",
+    "href": "deliverable1.html#geospatial-data-quality-rankings",
+    "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
+    "section": "2.6 Geospatial Data Quality Rankings",
+    "text": "2.6 Geospatial Data Quality Rankings\n[From Colby] We took a ‘tiered’ approach for ranking spatial quality:\n\nTier 1 – spatial coordinates were noted as being collected with GPS (there is never enough information to quantify positional accuracy or the type of GPS, but we figured that coordinates from a GPS unit are probably more consistent than from other sources).\nTier 2 – spatial coordinates were collected post 2010. We assume that these were collected with a GPS even if there is nothing that indicates it was collected by GPS.\nTier 3 – spatial coordinates collected between 2000 and 2010. Coordinates may have come from a GPS, but then again they may not have.\nTier 4 – pre-2000, even if collected with a GPS, selective availability was turned on before this (it specifically ended May 1, 2000) so quality is suspect.\n\nThere may be other tiers that are worth considering for AK if spatial data comes from an air photo or topo map."
+  },
+  {
+    "objectID": "deliverable1.html#description-of-data-wrangling-procedures-gems-import",
+    "href": "deliverable1.html#description-of-data-wrangling-procedures-gems-import",
+    "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
+    "section": "2.7 Description of Data Wrangling Procedures-GEMS import",
+    "text": "2.7 Description of Data Wrangling Procedures-GEMS import"
+  },
+  {
+    "objectID": "deliverable1.html#description-of-controlled-vocabulariesontologies",
+    "href": "deliverable1.html#description-of-controlled-vocabulariesontologies",
+    "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
+    "section": "2.8 Description of controlled vocabularies/ontologies",
+    "text": "2.8 Description of controlled vocabularies/ontologies"
+  },
+  {
+    "objectID": "deliverable1.html#description-of-post-ingestion-scriptiing-harmonization-procedures",
+    "href": "deliverable1.html#description-of-post-ingestion-scriptiing-harmonization-procedures",
+    "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
+    "section": "2.9 Description of post-ingestion scriptiing, harmonization procedures",
+    "text": "2.9 Description of post-ingestion scriptiing, harmonization procedures"
+  },
+  {
+    "objectID": "deliverable1.html#description-of-export-procedures",
+    "href": "deliverable1.html#description-of-export-procedures",
+    "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
+    "section": "2.10 Description of export procedures",
+    "text": "2.10 Description of export procedures"
+  },
+  {
+    "objectID": "deliverable2.html",
+    "href": "deliverable2.html",
+    "title": "3  Metadata for Deliverable 2",
+    "section": "",
+    "text": "Note that subsections appear in the sidebar table of contents for this chapter"
+  },
+  {
+    "objectID": "deliverable2.html#another-subsection",
+    "href": "deliverable2.html#another-subsection",
+    "title": "3  Metadata for Deliverable 2",
+    "section": "3.2 Another subsection",
+    "text": "3.2 Another subsection"
+  },
+  {
+    "objectID": "deliverable3.html",
+    "href": "deliverable3.html",
+    "title": "4  Metadata for Deliverable 3",
+    "section": "",
+    "text": "Note that subsections appear in the sidebar table of contents for this chapter"
+  },
+  {
+    "objectID": "deliverable3.html#another-subsection",
+    "href": "deliverable3.html#another-subsection",
+    "title": "4  Metadata for Deliverable 3",
+    "section": "4.2 Another subsection",
+    "text": "4.2 Another subsection"
+  },
+  {
+    "objectID": "authorship-guidelines.html",
+    "href": "authorship-guidelines.html",
+    "title": "5  Authorship Guidelines",
+    "section": "",
+    "text": "[ is there a good example we can draw from?, authorship if our data is used externally, or authorship within our group?]\n\nhttps://besjournals.onlinelibrary.wiley.com/doi/full/10.1002/2688-8319.12060\n\nCreative Commons Licensing?\nAuthorship for us internal\nAuthorship for external groups that use our data"
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "4  Summary",
+    "title": "6  Summary",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Do we need a summary chapter?"
   }
 ]

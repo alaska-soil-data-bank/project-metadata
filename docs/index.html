@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Nic Jelinski">
-<meta name="dcterms.date" content="2022-12-19">
+<meta name="author" content="Nic Jelinski and Irfan Ainuddin">
+<meta name="dcterms.date" content="2023-02-08">
 
 <title>Alaska Soil Data Bank Project Metadata</title>
 <style>
@@ -27,7 +27,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./datamanagementplan.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -96,22 +96,32 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./datamanagementplan.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Management Plan</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./datamanagementplan.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data Management Plan (Original from proposal)</span></a>
+  <a href="./deliverable1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./deliverable1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 1</span></a>
+  <a href="./deliverable2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 2</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./deliverable3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 3</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorship-guidelines.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Authorship Guidelines</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -130,9 +140,12 @@ ul.task-list{list-style: none;}
   <ul>
   <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
   <ul class="collapse">
+  <li><a href="#project-description" id="toc-project-description" class="nav-link" data-scroll-target="#project-description">Project Description</a></li>
+  <li><a href="#structure-and-deliverables" id="toc-structure-and-deliverables" class="nav-link" data-scroll-target="#structure-and-deliverables">Structure and Deliverables</a></li>
   <li><a href="#key-personnel" id="toc-key-personnel" class="nav-link" data-scroll-target="#key-personnel">Key Personnel</a></li>
   <li><a href="#additional-collaborators" id="toc-additional-collaborators" class="nav-link" data-scroll-target="#additional-collaborators">Additional Collaborators</a></li>
   <li><a href="#funding-source-and-rfp" id="toc-funding-source-and-rfp" class="nav-link" data-scroll-target="#funding-source-and-rfp">Funding Source and RFP</a></li>
+  <li><a href="#project-website" id="toc-project-website" class="nav-link" data-scroll-target="#project-website">Project Website</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -152,14 +165,14 @@ ul.task-list{list-style: none;}
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Nic Jelinski </p>
+             <p>Nic Jelinski and Irfan Ainuddin </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 19, 2022</p>
+      <p class="date">February 8, 2023</p>
     </div>
   </div>
     
@@ -171,10 +184,18 @@ ul.task-list{list-style: none;}
 
 <section id="preface" class="level1 unnumbered">
 <p><img src="aksdb-badge-02.png" title="Alaska Soil Data Bank Project Metadata" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">Preface</h1>
-<p>This quarto book documents the metadata architecture for “The Alaska Soil Data Bank (ASDB): A database for delivering non-NRCS legacy data for digital soil mapping initiatives in Alaska” - USDA-NRCS SPSD Award #NR223A750025C013. The book is arranged in chapters, each of which deals with the metadata for one of three deliverables in the grant. Each of these deliverables also has a unique GitHub repository nested under the alaska-soil-data-bank organization. These deliverables are:</p>
+<p>This quarto book documents the metadata architecture for “The Alaska Soil Data Bank (ASDB): A database for delivering non-NRCS legacy data for digital soil mapping initiatives in Alaska” - USDA-NRCS SPSD Award #NR223A750025C013.</p>
+<section id="project-description" class="level2">
+<h2 class="anchored" data-anchor-id="project-description">Project Description</h2>
+<p>[From Project Proposal] Approximately 300 million acres (&gt; 70%) of the NOTCOM areas in the United States are in Alaska. Little data is available in unmapped areas of Alaska in the NASIS database. Harnessing disparate non-NRCS legacy datasets for digital soil mapping initiatives in Alaska will therefore be critical for completing the Soils2026 initiative. In order to properly harness big data in soil survey in Alaska, where a significant amount of non-NRCS soil data exists in critical areas, we need to develop a platform that allows public/private data, provides attribution, is flexible and nimble enough to accept ongoing contributions without a large burden on the submitter, can be easily scaled, and can provide export workflows to ingest data into NASIS. The utility of such a database (what we will refer to as the Alaska Soil Data Bank – ASDB) will be demonstrated through the production of digital soil mapping products at multiple scales and using multiple methods. We will use the harmonized ASDB dataset and NASIS together to produce the first digital statewide predictive map of Alaska soil orders and suborders at 30m resolution, and apply a novel approach to digital soil mapping (using landscape segmentation analysis) for Katmai National Park and Preserve.</p>
+</section>
+<section id="structure-and-deliverables" class="level2">
+<h2 class="anchored" data-anchor-id="structure-and-deliverables">Structure and Deliverables</h2>
+<p>This document contains metadata for each of the grant deliverables, as well as general project metadata and information. Each of the deliverables also has a unique GitHub repository nested under the alaska-soil-data-bank organization. These deliverables are:</p>
 <p>1. <em>The Alaska Soil Data Bank (ASDB)</em>. We will acquire, curate, and centralize non-NRCS legacy data for the state of Alaska and stand up a database for continuing contributions on the G.E.M.S. platform of the University of Minnesota Supercomputing Institute. The ASDB will result in a harmonized dataset for use in digital soil mapping in Alaska and scripts will be written to export the data into a NASIS-readable format for ingestion.</p>
 <p>2. <em>AK Statewide Predictive Soil Order/Suborder Map</em>. We will generate digital predictive soil order and soil suborder maps of the state of Alaska at a resolution of 30m.</p>
 <p>3. <em>Segmentation Analysis Approach to DSM for Katmai National Park and Preserve</em>. We will utilize a novel landscape segmentation analysis approach to digital soil mapping for Katmai National Park and Preserve.</p>
+</section>
 <section id="key-personnel" class="level2">
 <h2 class="anchored" data-anchor-id="key-personnel">Key Personnel</h2>
 <ul>
@@ -186,11 +207,19 @@ ul.task-list{list-style: none;}
 </section>
 <section id="additional-collaborators" class="level2">
 <h2 class="anchored" data-anchor-id="additional-collaborators">Additional Collaborators</h2>
+<ul>
+<li>Sue Ives; Senior Scientist, ABR, Inc.</li>
+<li>Michael Sousa; Soil Scientist, USDA-NRCS</li>
+</ul>
 </section>
 <section id="funding-source-and-rfp" class="level2">
 <h2 class="anchored" data-anchor-id="funding-source-and-rfp">Funding Source and RFP</h2>
 <p>This project was awarded for a proposal submitted to the USDA-NRCS 2022 Soil Science Collaborative Research Proposals RFP</p>
 <p>You can find the original RFP here <a href="https://www.grants.gov/web/grants/view-opportunity.html?oppId=337972" class="uri">https://www.grants.gov/web/grants/view-opportunity.html?oppId=337972</a>.</p>
+</section>
+<section id="project-website" class="level2">
+<h2 class="anchored" data-anchor-id="project-website">Project Website</h2>
+<p><a href="https://github.com/alaska-soil-data-bank" class="uri">https://github.com/alaska-soil-data-bank</a></p>
 
 
 </section>
@@ -280,8 +309,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./datamanagementplan.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Management Plan</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

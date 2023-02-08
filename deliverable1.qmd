@@ -1,9 +1,65 @@
-# Metadata for Deliverable 1
+# Metadata for Deliverable 1: Building the Alaska Soil Data Bank
 
-## The Alaska Soil Data Bank (ASDB)
+## Data Contributors
+University of Alaska Fairbanks
+University of Minnesota
+Woods Hole Research Center
+National Park Service - Arctic Research Coordination NEtwork (NPS-ACRN)
+U.S. Army Corps of Engineers Cold Regions Research and Engineering Laborotory (CRREL)
+BLM-AIM Database
+Alaska Biological Resarch (ABR, Inc., Anchorage AK) 1995 -2021
 
-## A subsection
+[Legacy Data]
+US Geological Survey (USGS)
+US Department of Energy (DOE)
+Bureau of Land Management (BLM)
+US Forest Service (USFS)
 
-Note that subsections appear in the sidebar table of contents for this chapter
+## Data Description
+[output from GEMS]
 
-## Another subsection
+## Description of Data Mining Procedures
+
+- hardcopy data
+- digital data
+
+## Data Completeness Rankings / Index 
+
+- Tiers
+- Morphology
+- Lab Data
+- Site Data
+
+## Standardized Projection
+Projection: Alaska Albers NAD83, EPSG: 3338
+Scope: Topographic Mapping (small scale)
+Area of Use: United States (USA) - Alaska
+Coordinate System: Cartesian 2D CS. Axes: easting, northing (X,Y). Orientations: east, north. 
+Unit: meters (m)
+Geodetic CRS: NAD83
+Datum: North American Datum 1983
+Ellipsoid: GRS 1980
+Prime meridian: Greenwich
+Data Source: EPSG
+Information Source: State of Alaska Department of Natural Resources
+Revision Date: 11-11-2006
+
+## Geospatial Data Quality Rankings
+
+[From Colby] We took a ‘tiered’ approach for ranking spatial quality:
+
+- Tier 1 – spatial coordinates were noted as being collected with GPS (there is never enough information to quantify positional accuracy or the type of GPS, but we figured that coordinates from a GPS unit are probably more consistent than from other sources).
+- Tier 2 – spatial coordinates were collected post 2010. We assume that these were collected with a GPS even if there is nothing that indicates it was collected by GPS.
+- Tier 3 – spatial coordinates collected between 2000 and 2010. Coordinates may have come from a GPS, but then again they may not have.
+- Tier 4 – pre-2000, even if collected with a GPS, selective availability was turned on before this (it specifically ended May 1, 2000) so quality is suspect.
+ 
+There may be other tiers that are worth considering for AK if spatial data comes from an air photo or topo map.
+
+## Description of Data Wrangling Procedures-GEMS import
+
+## Description of controlled vocabularies/ontologies
+
+## Description of post-ingestion scriptiing, harmonization procedures
+
+## Description of export procedures
+

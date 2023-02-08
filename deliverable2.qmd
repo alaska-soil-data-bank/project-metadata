@@ -1,0 +1,7 @@
+# Metadata for Deliverable 2
+
+## A subsection
+
+Note that subsections appear in the sidebar table of contents for this chapter
+
+## Another subsection
