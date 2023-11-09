@@ -74,7 +74,7 @@
     "href": "deliverable1.html#data-completeness-geospatial-data-quality-and-soil-classification-quality-rankings",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
     "section": "2.5 Data Completeness, Geospatial Data Quality, and Soil Classification Quality Rankings",
-    "text": "2.5 Data Completeness, Geospatial Data Quality, and Soil Classification Quality Rankings\n\n2.5.1 Data Completeness Rankings\n[From Nic] These data completeness rankings will be assigned programmatically, but they may still hold value for dataset users who would like a single field to filter all data on: - Tier 1 – Soil morphology and physical/chemical data\n\nTiers\nMorphology\nLab Data\nSite Data"
+    "text": "2.5 Data Completeness, Geospatial Data Quality, and Soil Classification Quality Rankings\nThese rankings will be added to the site (geolocated) metadata for each record. They will be added as field metadata tags in the site id field (data completeness), latitude and longitude fields (geospatial data quality), and classification fields (soil classification quality).\n\n2.5.1 Data Completeness Rankings\n[From Nic] These data completeness rankings will be assigned programmatically, but they may still hold value for dataset users who would like a single field to filter all data on:\n\nTier 1 – Soil morphology and physical/chemical data to a depth of at least 1 meter\nTier 2 – Soil morphology and physical/chemical data to a depth of < 1m\nTier 3 – Soil morphology to a depth of at least 1m\nTier 4 – Soil morphology to a depth of < 1m\nTier 5 – Site characteristics only (i.e. thickness of organics, thaw depth, etc)"
   },
   {
     "objectID": "deliverable1.html#geospatial-data-quality-rankings",
@@ -235,7 +235,7 @@
     "href": "data-use-and-sharing.html",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "",
-    "text": "This data use agreement is a formal contract that clearly documents the data being shared and the parameters under which the data may be used—including description of project, term of use, and method of transmission. This agreement serves two purposes. First, it protects the entity providing the data [heneceforth “data provider”] to ensure that the data will not be misused. Second, it protects the intended recipient of the data [heneceforth “data recipient”] by providing confirmation that they are authorized to use that data for the proposed purpose and that the data transfer is compliant with legal and ethical standards.[^1]"
+    "text": "This data use agreement is a formal contract that clearly documents the data being shared and the parameters under which the data may be used—including description of project, term of use, and method of transmission. This agreement serves two purposes. First, it protects the entity providing the data [heneceforth “data provider”] to ensure that the data will not be misused. Second, it protects the intended recipient of the data [heneceforth “data recipient”] by providing confirmation that they are authorized to use that data for the proposed purpose and that the data transfer is compliant with legal and ethical standards[^1]."
   },
   {
     "objectID": "data-use-and-sharing.html#agreement-entities-and-points-of-contact",
@@ -249,7 +249,7 @@
     "href": "data-use-and-sharing.html#dataset-scope",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.3 Dataset Scope:",
-    "text": "B.3 Dataset Scope:\nThis agreement encompasses soil and vegetation data collected from [==XXXX-XXXX – fill in years==] under the context of project [==project name and or number==] by [==data collection entity==]. The scope of this dataset includes [==description of numbers of point data or spatial data and data types/description==]."
+    "text": "B.3 Dataset Scope:\nThis agreement encompasses soil and vegetation data collected from ==XXXX-XXXX – fill in years== under the context of project [==project name and or number==] by [==data collection entity==]. The scope of this dataset includes [==description of numbers of point data or spatial data and data types/description==]."
   },
   {
     "objectID": "data-use-and-sharing.html#data-recipient-use-and-request-purpose",
@@ -266,11 +266,11 @@
     "text": "B.5 License[^2]\nThe data provider shall provide to the data requestor a nonexclusive, nontransferable, paid-up license to use data provider’s [==name of dataset==] in accordance with the terms of this Agreement. The data recipient will use the [==name of dataset==] to achieve the use and request purpose described in article 4, above. The data provider should select one of the creative commons licenses (https://creativecommons.org/about/cclicenses/) if they wish data to be shared publicly. Otherwise, the data recipient will operate under a default agreement, which specifies that the dataset will be used only in accordance with the stated purpose in this data use and sharing agreement, and will not be released to any third parties or made public without the express written consent of the data provider."
   },
   {
-    "objectID": "data-use-and-sharing.html#ownership2.",
-    "href": "data-use-and-sharing.html#ownership2.",
+    "objectID": "data-use-and-sharing.html#ownership2",
+    "href": "data-use-and-sharing.html#ownership2",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
-    "section": "B.6 Ownership[^2].",
-    "text": "B.6 Ownership[^2].\nThe [==name of dataset==] is owned by the data provider. The data recipient acknowledges to only use [==name of dataset==] pursuant to Article 4, and that no right, title, or interest in or to any copyrights, trademarks, or other proprietary rights relating to the [==name of dataset==] is transferred or licensed from the data provider to the data requestor."
+    "section": "B.6 Ownership[^2]",
+    "text": "B.6 Ownership[^2]\nThe [==name of dataset==] is owned by the data provider. The data recipient acknowledges to only use [==name of dataset==] pursuant to Article 4, and that no right, title, or interest in or to any copyrights, trademarks, or other proprietary rights relating to the [==name of dataset==] is transferred or licensed from the data provider to the data requestor."
   },
   {
     "objectID": "data-use-and-sharing.html#confidentiality2.",

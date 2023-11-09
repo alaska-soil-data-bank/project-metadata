@@ -1,68 +1,85 @@
 # Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project
 
-## Purpose of this agreement: 
-This data use agreement is a formal contract that clearly documents the data being shared and the parameters under which the data may be used—including description of project, term of use, and method of transmission. This agreement serves two purposes. First, it protects the entity providing the data [heneceforth “data provider”] to ensure that the data will not be misused. Second, it protects the intended recipient of the data [heneceforth “data recipient”] by providing confirmation that they are authorized to use that data for the proposed purpose and that the data transfer is compliant with legal and ethical standards.[^1]
+## Purpose of this agreement:
+
+This data use agreement is a formal contract that clearly documents the data being shared and the parameters under which the data may be used---including description of project, term of use, and method of transmission. This agreement serves two purposes. First, it protects the entity providing the data \[heneceforth "data provider"\] to ensure that the data will not be misused. Second, it protects the intended recipient of the data \[heneceforth "data recipient"\] by providing confirmation that they are authorized to use that data for the proposed purpose and that the data transfer is compliant with legal and ethical standards[^1].
 
 ## Agreement Entities and Points of Contact
-Data Provider/POC: [==Fill in name of data providing entity/POC==]
-Data Recipient/POC: [==Dr. Nicolas Jelinski, Associate Professor, University of Minnesota==]
-Data Recipient/Project Team: [==Information about personnel on the project team who may have access to this data - when and how==].
 
-## Dataset Scope: 
-This agreement encompasses soil and vegetation data collected from [==XXXX-XXXX – fill in years==] under the context of project [==project name and or number==] by [==data collection entity==]. The scope of this dataset includes [==description of numbers of point data or spatial data and data types/description==].
+Data Provider/POC: \[==Fill in name of data providing entity/POC==\] Data Recipient/POC: \[==Dr. Nicolas Jelinski, Associate Professor, University of Minnesota==\] Data Recipient/Project Team: \[==Information about personnel on the project team who may have access to this data - when and how==\].
 
-## Data Recipient Use and Request Purpose: 
-The purpose of this request by the data recipient is to acquire soil and/or vegetation data in critical, underrepresented areas of the state of Alaska in order to build a statewide dataset to be used in conjunction with data in the USDA-NRCS National Soil Information Service (NASIS) database to generate novel, statewide maps of soil classes and properties in support of the USDA-NRCS Soils 2026 initiative which aims to complete a modern, digital soil map of the entire United States by 2026. Alaska represents > 80% of currently non-complete lands, and therefore is a major focus area under a current project funded by USDA-NRCS to the project recipient (PI, Dr. Nic Jelinski, University of Minnesota). Data contributed to this project will only be used in aggregate, with other, statewide data to produce these maps. At no time will specific/individual point data be shared or displayed outside of the project team without the written consent of the data provider.
+## Dataset Scope:
+
+This agreement encompasses soil and vegetation data collected from ==XXXX-XXXX -- fill in years== under the context of project \[==project name and or number==\] by \[==data collection entity==\]. The scope of this dataset includes \[==description of numbers of point data or spatial data and data types/description==\].
+
+## Data Recipient Use and Request Purpose:
+
+The purpose of this request by the data recipient is to acquire soil and/or vegetation data in critical, underrepresented areas of the state of Alaska in order to build a statewide dataset to be used in conjunction with data in the USDA-NRCS National Soil Information Service (NASIS) database to generate novel, statewide maps of soil classes and properties in support of the USDA-NRCS Soils 2026 initiative which aims to complete a modern, digital soil map of the entire United States by 2026. Alaska represents \> 80% of currently non-complete lands, and therefore is a major focus area under a current project funded by USDA-NRCS to the project recipient (PI, Dr. Nic Jelinski, University of Minnesota). Data contributed to this project will only be used in aggregate, with other, statewide data to produce these maps. At no time will specific/individual point data be shared or displayed outside of the project team without the written consent of the data provider.
 
 ## License[^2]
-The data provider shall provide to the data requestor a nonexclusive, nontransferable, paid-up license to use data provider’s [==name of dataset==] in accordance with the terms of this Agreement. The data recipient will use the [==name of dataset==] to achieve the use and request purpose described in article 4, above. The data provider should select one of the creative commons licenses (https://creativecommons.org/about/cclicenses/) if they wish data to be shared publicly. Otherwise, the data recipient will operate under a default agreement, which specifies that the dataset will be used only in accordance with the stated purpose in this data use and sharing agreement, and will not be released to any third parties or made public without the express written consent of the data provider. 
 
-## Ownership[^2]. 
-The [==name of dataset==] is owned by the data provider. The data recipient acknowledges to only use [==name of dataset==] pursuant to Article 4, and that no right, title, or interest in or to any copyrights, trademarks, or other proprietary rights relating to the [==name of dataset==] is transferred or licensed from the data provider to the data requestor. 
+The data provider shall provide to the data requestor a nonexclusive, nontransferable, paid-up license to use data provider's \[==name of dataset==\] in accordance with the terms of this Agreement. The data recipient will use the \[==name of dataset==\] to achieve the use and request purpose described in article 4, above. The data provider should select one of the creative commons licenses (https://creativecommons.org/about/cclicenses/) if they wish data to be shared publicly. Otherwise, the data recipient will operate under a default agreement, which specifies that the dataset will be used only in accordance with the stated purpose in this data use and sharing agreement, and will not be released to any third parties or made public without the express written consent of the data provider.
 
-## Confidentiality[^2]. 
-The data recipient acknowledges the information provided by data provider may contain confidential information and is the property of the data provider. The data recipient shall take appropriate measures to protect the confidentiality and security of such confidential information. The data recipient shall not disclose, use, or distribute any data provider confidential information, except as expressly permitted in this Agreement. The data recipient may use the data provider’s confidential information as needed to accomplish the SOW. 
+## Ownership[^2]
 
-## Data Transfer Plan[^2]: 
-Data will be transferred from the data provider to the data requestor via a secure Box file link sent to the data provider. The University of Minnesota utilizes Box as its preferred inter-entity data transfer, sharing and storage application, as Box is “...FIPS 140-2 certified, and every file is encrypted using AES 256-bit encryption at rest and in transit.”
+The \[==name of dataset==\] is owned by the data provider. The data recipient acknowledges to only use \[==name of dataset==\] pursuant to Article 4, and that no right, title, or interest in or to any copyrights, trademarks, or other proprietary rights relating to the \[==name of dataset==\] is transferred or licensed from the data provider to the data requestor.
 
-## Data Storage[^2]: 
-Once uploaded to the secure Box folder, the dataset will be directly accessible only by the project PI (Dr. Jelinski), who can access via institution password protection. The data will be transferred directly from the shared Box folder to the University of Minnesota Genomics, Environment, Management and Socioeconomic (GEMS) database, where it will be held as private data, non-discoverable and non-shareable. Once on GEMS, the dataset can only be accessed by members of the project team who have access to the encrypted container where the data resides. The dataset will be deleted from the Box secure storage folder [30] days after receipt of data from the data provider, leaving only a single copy of the dataset on GEMS.
+## Confidentiality[^2].
 
-All GEMS staff members, including those at the data center at MSI who maintain GEMS and with access to private data on the platform sign an internal non-disclosure agreement designed by UMN’s Office of the General Counsel. All operations within the platform are isolated into encrypted containers where no other users have access (hence no snooping). Data entering or leaving these containers is also encrypted to prevent opportunity for leaks. All identifiable data residing in the platform are legally deemed private and non-public by the State of Minnesota, and hence not FOIAble. 
+The data recipient acknowledges the information provided by data provider may contain confidential information and is the property of the data provider. The data recipient shall take appropriate measures to protect the confidentiality and security of such confidential information. The data recipient shall not disclose, use, or distribute any data provider confidential information, except as expressly permitted in this Agreement. The data recipient may use the data provider's confidential information as needed to accomplish the SOW.
 
-## Access and Modification Provisions: 
-The dataset files existing on GEMS reside in a secure, isolated, encrypted container. Only project team members with password protected access to the project container on GEMS will be able to access the dataset. Once in the GEMS container, the dataset is part of a larger project “workspace”, which includes all datasets compiled as part of the project scope. Project team members will conduct scripting operations on datasets in the secure R Studio workspace provided on the GEMS platform. This means that all data access and usage of the individual dataset can occur through the secure GEMS platform. 
+## Data Transfer Plan[^2]:
+
+Data will be transferred from the data provider to the data requestor via a secure Box file link sent to the data provider. The University of Minnesota utilizes Box as its preferred inter-entity data transfer, sharing and storage application, as Box is "...FIPS 140-2 certified, and every file is encrypted using AES 256-bit encryption at rest and in transit."
+
+## Data Storage[^2]:
+
+Once uploaded to the secure Box folder, the dataset will be directly accessible only by the project PI (Dr. Jelinski), who can access via institution password protection. The data will be transferred directly from the shared Box folder to the University of Minnesota Genomics, Environment, Management and Socioeconomic (GEMS) database, where it will be held as private data, non-discoverable and non-shareable. Once on GEMS, the dataset can only be accessed by members of the project team who have access to the encrypted container where the data resides. The dataset will be deleted from the Box secure storage folder \[30\] days after receipt of data from the data provider, leaving only a single copy of the dataset on GEMS.
+
+All GEMS staff members, including those at the data center at MSI who maintain GEMS and with access to private data on the platform sign an internal non-disclosure agreement designed by UMN's Office of the General Counsel. All operations within the platform are isolated into encrypted containers where no other users have access (hence no snooping). Data entering or leaving these containers is also encrypted to prevent opportunity for leaks. All identifiable data residing in the platform are legally deemed private and non-public by the State of Minnesota, and hence not FOIAble.
+
+## Access and Modification Provisions:
+
+The dataset files existing on GEMS reside in a secure, isolated, encrypted container. Only project team members with password protected access to the project container on GEMS will be able to access the dataset. Once in the GEMS container, the dataset is part of a larger project "workspace", which includes all datasets compiled as part of the project scope. Project team members will conduct scripting operations on datasets in the secure R Studio workspace provided on the GEMS platform. This means that all data access and usage of the individual dataset can occur through the secure GEMS platform.
 
 The integrity of the dataset as delivered will not be violated or changed in any way. However, additional metadata information, particularly column or field metadata, may be added to an accompanying .json metadata file which will exist on the GEMS workspace. The .json metadata files from all project datasets (including this dataset) will be used to harmonize data for the purposes of achieving the project purpose as stated in Article 4. The single large harmonized dataset will exist in a secure, virtual state in GEMS, but only publicly accessible portions of the harmonized dataset will be made discoverable and shareable.
 
-## Term[^2]. 
-The data use license outlined in this Agreement will commence on the effective date of this Agreement. The effective date of this Agreement shall be the later date of (1) [insert start date] or (2) the date of the last signature by the Parties. The expiration date of this Agreement shall be [insert end date of Agreement - 5 years after start date]. The Agreement may be extended by mutual written Agreement of the Parties.
+## Term[^2].
 
-## Termination[^2]. 
-The data recipient and data provider may terminate this Agreement at any time by mutual written consent. This Agreement may be terminated by either Party 1) on sixty (60) days written notice to the other in accordance with Article 8; or 2) immediately upon a material breach for good cause.  Upon notice of termination, the data requestor shall have sixty (60) days to return, delete, or destroy, any hard copy or digital copies of data provider confidential data from all storage media and platforms. 
+The data use license outlined in this Agreement will commence on the effective date of this Agreement. The effective date of this Agreement shall be the later date of (1) \[insert start date\] or (2) the date of the last signature by the Parties. The expiration date of this Agreement shall be \[insert end date of Agreement - 5 years after start date\]. The Agreement may be extended by mutual written Agreement of the Parties.
 
-## Publications/Reports[^2]. 
-If the data provider desires, the data recipient will acknowledge the data provider as a source of information in any publications or reports that use the data provider’s data in accordance with customary scientific practices. 
+## Termination[^2].
 
-## Review of Publications[^2]. 
-The data requestor shall submit to data provider for review a draft of each proposed publication performed under this Agreement. The data provider shall have a review period of thirty (30) days. The data provider may comment upon, but may not make editorial changes to the results and conclusions set forth in the draft. The draft may be submitted for publication upon receipt of data provider’s written comments or upon expiration of the review period with no comments received from the data provider. Reasonable consideration shall be given to all requested edits received from the data provider. The data requestor shall excise data provider confidential information from any publication or report identified by the data provider in the draft.
+The data recipient and data provider may terminate this Agreement at any time by mutual written consent. This Agreement may be terminated by either Party 1) on sixty (60) days written notice to the other in accordance with Article 8; or 2) immediately upon a material breach for good cause. Upon notice of termination, the data requestor shall have sixty (60) days to return, delete, or destroy, any hard copy or digital copies of data provider confidential data from all storage media and platforms.
 
-## Notices[^2].  
-Any notice required to be given or which shall be given under this Agreement shall be to the undersigned. 
+## Publications/Reports[^2].
 
-## Independent Entity[^2].  
-For purposes of this Agreement and all research conducted hereunder, each Party shall be, and shall be deemed to be, an independent Party and not an agent or employee of the other Party.  Each Party shall have exclusive control over its employees in the performance of the work.  
+If the data provider desires, the data recipient will acknowledge the data provider as a source of information in any publications or reports that use the data provider's data in accordance with customary scientific practices.
 
-## Statement and Representation Authority[^2]. 
-Neither Party shall have authority to make any statements, representations, or commitments of any kind, or take any action, which shall be binding on the other Party, except as may be explicitly provided for herein or authorized in writing.  Neither Party may use the name of the other in advertising or other forms of publicity without the written consent of the other.  
+## Review of Publications[^2].
+
+The data requestor shall submit to data provider for review a draft of each proposed publication performed under this Agreement. The data provider shall have a review period of thirty (30) days. The data provider may comment upon, but may not make editorial changes to the results and conclusions set forth in the draft. The draft may be submitted for publication upon receipt of data provider's written comments or upon expiration of the review period with no comments received from the data provider. Reasonable consideration shall be given to all requested edits received from the data provider. The data requestor shall excise data provider confidential information from any publication or report identified by the data provider in the draft.
+
+## Notices[^2].
+
+Any notice required to be given or which shall be given under this Agreement shall be to the undersigned.
+
+## Independent Entity[^2].
+
+For purposes of this Agreement and all research conducted hereunder, each Party shall be, and shall be deemed to be, an independent Party and not an agent or employee of the other Party. Each Party shall have exclusive control over its employees in the performance of the work.
+
+## Statement and Representation Authority[^2].
+
+Neither Party shall have authority to make any statements, representations, or commitments of any kind, or take any action, which shall be binding on the other Party, except as may be explicitly provided for herein or authorized in writing. Neither Party may use the name of the other in advertising or other forms of publicity without the written consent of the other.
 
 ## Data Management Plan: See current version of project data management plan:
+
 https://alaska-soil-data-bank.github.io/project-metadata/datamanagementplan.html
 
-## Roles and Responsibilities: 
+## Roles and Responsibilities:
+
 The data requestor PI (Dr. Nic Jelinski) is responsible for ensuring the terms of this data use and sharing agreement are implemented in conjunction with the project data management plan and metadata.
 
 References: 
-[^1]: [University of Chicago::University Research Administration - Data Use Agreements](https://ura.uchicago.edu/page/data-use-agreements)
-[^2]: [USGS::Data Sharing Agreements] (https://www.usgs.gov/data-management/data-sharing-agreements#:~:text=Data%20sharing%20agreements%20are%20formal,appropriate%20use%20for%20the%20data)
+[^1]: [University of Chicago::University Research Administration - Data Use Agreements](https://ura.uchicago.edu/page/data-use-agreements) 
+[^2]: \[USGS::Data Sharing Agreements\] (https://www.usgs.gov/data-management/data-sharing-agreements#:\~:text=Data%20sharing%20agreements%20are%20formal,appropriate%20use%20for%20the%20data)
