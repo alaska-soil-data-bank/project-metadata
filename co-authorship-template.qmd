@@ -1,0 +1,68 @@
+# Co-Authorship Agreement Template - Alaska Soil Data Bank Project
+
+## General Criteria for prospective co-authorship in the context of this project. 
+A co-author should be someone “who contributes a minimum of 2 of the 6 “key” parts of the project: getting funded, conceiving the idea, designing the project, collecting the data, analyzing the data, writing/revising/reviewing the manuscript.”[^1]. This rule can be adapted to data contributors in the context of what is likely to be a large data acquisition effort for this project. If someone was substantially involved in data collection or curation on datasets that form a core part of this work and also provides substantive comment or feedback on a manuscript draft, they should be considered for co-authorship.
+
+## Statement. 
+“We have agreed to collaborate in this research and publish our results in a peer-reviewed journal. We agree to the following guidelines. This agreement ends after the paper is published and media inquiries conclude. We enter into this agreement voluntarily, and we can leave the agreement voluntarily as described below.”[^2]
+
+## Roles. 
+Establish who is doing what – Author contribution Statement using [CRediT (Contributor Roles Taxonomy)](https://credit.niso.org) standards.
+
+## Credit and Responsibility[^2] 
+> All co-authors share some degree of responsibility for the entire paper as an accurate, verifiable research report. Co-authors are responsible for the accuracy of their contributions, but may have only limited responsibility for material in other sections. This means that while all co-authors approve the submitted version of the manuscript, they are not obliged to agree entirely with all aspects of this article.
+
+> All co-authors give their permission for publication prior to submission of each version of the paper.
+
+> All co-authors can give presentations of this paper after publication, using material in the paper, providing they reference the paper and their co-authors. Ideally, they will also notify the co-authors of these presentations beforehand.
+
+> All co-authors can respond to media inquiries relating to this paper. Press releases can be issued from each co-author’s institution, but should be coordinated through the lead author(s). Co-authors should acknowledge the contributions of other co-authors during interviews and encourage reporters to contact them.
+
+## Contingencies[^2]
+> No co-author can block publication of the paper except because of concerns related to soundness — e.g., demonstrably incorrect statements (supported by evidence). Differences of opinion are not valid grounds for blockage. Concerns related to policy, management, or implications are not grounds for a co-author to block publication. If most (i.e., > 50%) co-authors agree the paper should be published based on sound information, the paper will move forward. Every reasonable effort will be made by the other co-authors to reach a consensus on moving forward with a publication.
+
+> Co-authors may voluntarily remove themselves from the project, and from co-authorship, at any point if they no longer have time for the project or if they disagree vehemently with some aspect of the project or paper. If a co-author voluntarily leaves the project or is asked to leave the Co-author Team because they are opposed to the paper being published, the co-authors will need to discuss with the dissenting member if her/his contributions can still be used, and perhaps described in the Acknowledgements, or will have to be removed from the paper.
+
+## Communication [^2].
+> All co-authors agree to reply to emails and video/telephone calls concerning the project, especially when approaching final drafts and revisions of the paper, within a reasonable period of time, such as within one week.
+
+> All co-authors agree to notify the rest of the team prior to sharing the manuscript with people outside the Co-Author Team. Co-authors will be given a chance to comment prior to sharing.
+
+> Co-authors are free to develop their own collaborations and directions using the ideas in the paper, once it is published. Co-authors should make every reasonable effort to inform each other when starting new collaborations and spin-off projects that result from this paper. In practice, the co-authors may continue to work together on follow-up projects, but this needs to be discussed among the group, and should not be assumed.
+
+## Conflicts of Interest [^2].
+> All co-authors will disclose to the Co-author Team any real or perceived conflicts of interest related to this project and paper.
+
+> All co-authors will disclose to the Co-author Team whether they or any close family members or associates will benefit financially from this project and paper.
+
+## Derivative Works [^2]
+> If any co-author is invited to be an author on a subsequent manuscript or presentation as a result of the work of this co-author team in the context of this project, they will notify all other co-authors on the list in this document to allow discussion of proper attribution and co-authorship on any derivative works.
+
+## Prospective personnel meeting co-authorship criteria (in no particular order! Just a running list):
+Nic Jelinski (UMN)
+Matt Macander (ABR)
+Sue Ives (ABR)
+Colby Brungard (NMSU)
+Sabine Grunwald (UFL)
+Irfan Ainuddin (UMN)
+Dave D’Amore (USFS)
+Jaqcuie Foss (USFS)
+Frances Biles (USFS)
+Michael Sousa (USDA-NRCS)
+Timm Nawrocki (ACCC)
+Aaron Wells? 
+Others??
+
+## Personnel who should be included in acknowledgements:
+Parker Martyn (NPS)
+Tina Boucher (BLM)
+Dave Swanson (NPS)
+Ben Stratton (BLM)
+Matt Ferderbar (BLM)
+NRCS Staff
+Aaron Wells?
+MANY others….
+
+References: 
+[^1]: [Dr. Manuela González Suárez::Who Should Be a Co-Author - Rules and Etiquette of Academic Authorship]( https://ramblingsofanecologa.wordpress.com/2020/11/10/who-should-be-a-co-author-rules-and-etiquette-of-academic-authorship/#:~:text=My%20rule%20has%20been%20that,the%20data%2C%20writing%20the%20manuscript)
+[^2]: [CJA Bradshaw::Smoothing Over Content Issues with Co-Author Agreements](https://conservationbytes.com/2021/10/07/smoothing-over-content-issues-with-co-author-agreements)

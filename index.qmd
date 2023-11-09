@@ -28,6 +28,10 @@ This document contains metadata for each of the grant deliverables, as well as g
 -   Sue Ives; Senior Scientist, ABR, Inc.
 -   Michael Sousa; Soil Scientist, USDA-NRCS
 
+## Co-Authorship and Data Sharing Agreements
+
+[Co-authorship agreement](co-authorship-template.qmd) [Data Sharing agreement](data-use-and-sharing.qmd)
+
 ## Funding Source and RFP
 
 This project was awarded for a proposal submitted to the USDA-NRCS 2022 Soil Science Collaborative Research Proposals RFP

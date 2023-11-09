@@ -5,8 +5,8 @@ project:
 
 book:
   title: "Alaska Soil Data Bank Project Metadata"
-  author: "Nic Jelinski and Irfan Ainuddin"
-  date: "08-February-2023"
+  author: "N.A. Jelinski, I.H. Ainuddin and the AKSDB Team"
+  date: "09-November-2023"
   cover-image: "aksdb-badge-02.png"
   
   chapters:
@@ -18,6 +18,9 @@ book:
     - authorship-guidelines.qmd
     - summary.qmd
     - references.qmd
+  appendices:
+    - co-authorship-template.qmd
+    - data-use-and-sharing.qmd
 
 bibliography: references.bib
 
