@@ -55,6 +55,17 @@ Revision Date: 11-11-2006
  
 There may be other tiers that are worth considering for AK if spatial data comes from an air photo or topo map.
 
+## Classification Quality Rankings
+
+Classification quality rankings will allow users of the database to discern between soil classes which were assigned with varying degrees of uncertainty. Note that the depths of observation and soil physical and chemical properties required to make unambiguous classifications depend on the taxonomic entity in question. For example, if there is permafrost within 1m of the soil surface, no morphology or laboratory data is necessary to make the unambiguous classification to the Gelisol soil order (Tier 1). However, if no other information is available, then classification to the suborder is not possible (Tier 4). This classification certainty ranking is there applied as a field metadata tag to each level of taxonomic classification, which are held in independent fields:
+
+- Tier 1 – unambiguous classification; all necessary morphological or soil physical and chemical data are available
+- Tier 2 – partially ambiguous classification; unambiguous morphological data, but missing some required soil physical or chemical data, few assumptions made regarding soil features and properties
+- Tier 3 – largely ambiguous classification; morphological data not available to requisite depth or missing key properties, and and/or missing required soil physical or chemical data
+- Tier 4 – no classification possible; limited morphological data and laboratory data available
+ 
+There may be other tiers that are worth considering for AK if spatial data comes from an air photo or topo map.
+
 ## Description of Data Wrangling Procedures-GEMS import
 
 ## Description of controlled vocabularies/ontologies
