@@ -1,6 +1,6 @@
 # Preface {.unnumbered}
 
-This quarto book documents the metadata architecture for "The Alaska Soil Data Bank (ASDB): A database for delivering non-NRCS legacy data for digital soil mapping initiatives in Alaska" - USDA-NRCS SPSD Award #NR223A750025C013.
+This quarto book documents the metadata architecture for "The Alaska Soil Data Bank (AKSDB): A database for delivering non-NRCS legacy data for digital soil mapping initiatives in Alaska" - USDA-NRCS SPSD Award #NR223A750025C013.
 
 ## Project Description
 
@@ -10,7 +10,7 @@ This quarto book documents the metadata architecture for "The Alaska Soil Data B
 
 This document contains metadata for each of the grant deliverables, as well as general project metadata and information. Each of the deliverables also has a unique GitHub repository nested under the alaska-soil-data-bank organization. These deliverables are:
 
-1\. *The Alaska Soil Data Bank (ASDB)*. We will acquire, curate, and centralize non-NRCS legacy data for the state of Alaska and stand up a database for continuing contributions on the G.E.M.S. platform of the University of Minnesota Supercomputing Institute. The ASDB will result in a harmonized dataset for use in digital soil mapping in Alaska and scripts will be written to export the data into a NASIS-readable format for ingestion.
+1\. *The Alaska Soil Data Bank (AKSDB)*. We will acquire, curate, and centralize non-NRCS legacy data for the state of Alaska and stand up a database for continuing contributions on the G.E.M.S. platform of the University of Minnesota Supercomputing Institute. The ASDB will result in a harmonized dataset for use in digital soil mapping in Alaska and scripts will be written to export the data into a NASIS-readable format for ingestion.
 
 2\. *AK Statewide Predictive Soil Order/Suborder Map*. We will generate digital predictive soil order and soil suborder maps of the state of Alaska at a resolution of 30m.
 
@@ -22,11 +22,18 @@ This document contains metadata for each of the grant deliverables, as well as g
 -   Colby Brungard; Associate Professor, New Mexico State University (Co-PI)
 -   Sabine Grunwald; Professor, University of Florida (Co-PI);
 -   Matt Macander; Senior Scientist, ABR, Inc. (Co-PI)
+-   Sue Ives; Senior Scientist, ABR, Inc. (Co-PI)
+-   Irfan Ainuddin; PhD Student, University of Minnesota
 
 ## Additional Collaborators
 
--   Sue Ives; Senior Scientist, ABR, Inc.
 -   Michael Sousa; Soil Scientist, USDA-NRCS
+-   Travis Nauman; Research Soil Scientist, USDA-NRCS
+-   Dave D'Amore; Research Soil Scientist, US Forest Service
+-   Jacquie Foss; Soil Scientist, US Forest Service
+-   Frances Biles; Geographer, US Forest Service
+-   Timm Nawrocki, Terrestrial Ecologist, Alaska Center for Conservation Science - UAA
+-   Josh Minai, Postdoctoral Researcher, Argonne National Laboratory
 
 ## Co-Authorship and Data Sharing Agreements
 

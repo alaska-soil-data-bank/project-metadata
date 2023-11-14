@@ -2,9 +2,15 @@
 
 ## Data Contributors
 
-University of Alaska Fairbanks University of Minnesota Woods Hole Research Center National Park Service - Arctic Research Coordination Network (NPS-ACRN) U.S. Army Corps of Engineers Cold Regions Research and Engineering Laborotory (CRREL) BLM-AIM Database Alaska Biological Resarch (ABR, Inc., Anchorage AK) 1995 -2021
-
-\[Legacy Data\] US Geological Survey (USGS) US Department of Energy (DOE) Bureau of Land Management (BLM) US Forest Service (USFS)
+- University of Alaska Fairbanks 
+- University of Minnesota 
+- National Park Service - Arctic Research Coordination Network (NPS-ACRN) 
+- U.S. Army Corps of Engineers Cold Regions Research and Engineering Laborotory (CRREL) 
+- BLM-AIM Database 
+- Alaska Biological Resarch (ABR, Inc., Anchorage AK)
+- US Department of Energy (DOE) 
+- Bureau of Land Management (BLM) 
+- US Forest Service (USFS)
 
 ## Data Description
 
@@ -20,17 +26,18 @@ University of Alaska Fairbanks University of Minnesota Woods Hole Research Cente
 Projection: Alaska Albers NAD83, EPSG: 3338 Scope: Topographic Mapping (small scale) Area of Use: United States (USA) - Alaska Coordinate System: Cartesian 2D CS. Axes: easting, northing (X,Y). Orientations: east, north. Unit: meters (m) Geodetic CRS: NAD83 Datum: North American Datum 1983 Ellipsoid: GRS 1980 Prime meridian: Greenwich Data Source: EPSG Information Source: State of Alaska Department of Natural Resources Revision Date: 11-11-2006
 
 ## Data Completeness, Geospatial Data Quality, and Soil Classification Quality Rankings
+
 These rankings will be added to the site (geolocated) metadata for each record. They will be added as field metadata tags in the site id field (data completeness), latitude and longitude fields (geospatial data quality), and classification fields (soil classification quality).
 
 ### Data Completeness Rankings
 
-\[From Nic\] These data completeness rankings will be assigned programmatically, but they may still hold value for dataset users who would like a single field to filter all data on: 
+\[From Nic\] These data completeness rankings will be assigned programmatically, but they may still hold value for dataset users who would like a single field to filter all data on:
 
-- Tier 1 -- Soil morphology and physical/chemical data to a depth of at least 1 meter
-- Tier 2 -- Soil morphology and physical/chemical data to a depth of < 1m
-- Tier 3 -- Soil morphology to a depth of at least 1m
-- Tier 4 -- Soil morphology to a depth of < 1m
-- Tier 5 -- Site characteristics only (i.e. thickness of organics, thaw depth, etc)
+-   Tier 1 -- Soil morphology and physical/chemical data to a depth of at least 1 meter
+-   Tier 2 -- Soil morphology and physical/chemical data to a depth of \< 1m
+-   Tier 3 -- Soil morphology to a depth of at least 1m
+-   Tier 4 -- Soil morphology to a depth of \< 1m
+-   Tier 5 -- Site characteristics only (i.e. thickness of organics, thaw depth, etc)
 
 ## Geospatial Data Quality Rankings
 

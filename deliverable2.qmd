@@ -1,7 +1,8 @@
-# Metadata for Deliverable 2
+# Metadata for Deliverable 2: Statewide soil class mapping
 
-## A subsection
+*AK Statewide Predictive Soil Order/Suborder Map*. We will generate digital predictive soil order and soil suborder maps of the state of Alaska at a resolution of 30m using both NASIS and non-NRCS data compiled in the AKSDB (deliverable 1). These should improve on both STATSGO and gNATSGO products for high-level dominant soil class predictions in support of Soils 2026 for Alaska.
 
-Note that subsections appear in the sidebar table of contents for this chapter
+## Approach
 
-## Another subsection
+## Covariate Development and Curation
+

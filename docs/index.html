@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="N.A. Jelinski, I.H. Ainuddin and the AKSDB Team">
-<meta name="dcterms.date" content="2023-11-09">
+<meta name="dcterms.date" content="2023-11-13">
 
 <title>Alaska Soil Data Bank Project Metadata</title>
 <style>
@@ -106,12 +106,12 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./deliverable2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 2</span></a>
+  <a href="./deliverable2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 2: Statewide soil class mapping</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./deliverable3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 3</span></a>
+  <a href="./deliverable3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 3: Segmentation Analysis - Katmai National Park and Preserve</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -193,7 +193,7 @@ ul.task-list{list-style: none;}
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 9, 2023</p>
+      <p class="date">November 13, 2023</p>
     </div>
   </div>
     
@@ -205,7 +205,7 @@ ul.task-list{list-style: none;}
 
 <section id="preface" class="level1 unnumbered">
 <p><img src="aksdb-badge-02.png" title="Alaska Soil Data Bank Project Metadata" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">Preface</h1>
-<p>This quarto book documents the metadata architecture for “The Alaska Soil Data Bank (ASDB): A database for delivering non-NRCS legacy data for digital soil mapping initiatives in Alaska” - USDA-NRCS SPSD Award #NR223A750025C013.</p>
+<p>This quarto book documents the metadata architecture for “The Alaska Soil Data Bank (AKSDB): A database for delivering non-NRCS legacy data for digital soil mapping initiatives in Alaska” - USDA-NRCS SPSD Award #NR223A750025C013.</p>
 <section id="project-description" class="level2">
 <h2 class="anchored" data-anchor-id="project-description">Project Description</h2>
 <p>[From Project Proposal] Approximately 300 million acres (&gt; 70%) of the NOTCOM areas in the United States are in Alaska. Little data is available in unmapped areas of Alaska in the NASIS database. Harnessing disparate non-NRCS legacy datasets for digital soil mapping initiatives in Alaska will therefore be critical for completing the Soils2026 initiative. In order to properly harness big data in soil survey in Alaska, where a significant amount of non-NRCS soil data exists in critical areas, we need to develop a platform that allows public/private data, provides attribution, is flexible and nimble enough to accept ongoing contributions without a large burden on the submitter, can be easily scaled, and can provide export workflows to ingest data into NASIS. The utility of such a database (what we will refer to as the Alaska Soil Data Bank – ASDB) will be demonstrated through the production of digital soil mapping products at multiple scales and using multiple methods. We will use the harmonized ASDB dataset and NASIS together to produce the first digital statewide predictive map of Alaska soil orders and suborders at 30m resolution, and apply a novel approach to digital soil mapping (using landscape segmentation analysis) for Katmai National Park and Preserve.</p>
@@ -213,7 +213,7 @@ ul.task-list{list-style: none;}
 <section id="structure-and-deliverables" class="level2">
 <h2 class="anchored" data-anchor-id="structure-and-deliverables">Structure and Deliverables</h2>
 <p>This document contains metadata for each of the grant deliverables, as well as general project metadata and information. Each of the deliverables also has a unique GitHub repository nested under the alaska-soil-data-bank organization. These deliverables are:</p>
-<p>1. <em>The Alaska Soil Data Bank (ASDB)</em>. We will acquire, curate, and centralize non-NRCS legacy data for the state of Alaska and stand up a database for continuing contributions on the G.E.M.S. platform of the University of Minnesota Supercomputing Institute. The ASDB will result in a harmonized dataset for use in digital soil mapping in Alaska and scripts will be written to export the data into a NASIS-readable format for ingestion.</p>
+<p>1. <em>The Alaska Soil Data Bank (AKSDB)</em>. We will acquire, curate, and centralize non-NRCS legacy data for the state of Alaska and stand up a database for continuing contributions on the G.E.M.S. platform of the University of Minnesota Supercomputing Institute. The ASDB will result in a harmonized dataset for use in digital soil mapping in Alaska and scripts will be written to export the data into a NASIS-readable format for ingestion.</p>
 <p>2. <em>AK Statewide Predictive Soil Order/Suborder Map</em>. We will generate digital predictive soil order and soil suborder maps of the state of Alaska at a resolution of 30m.</p>
 <p>3. <em>Segmentation Analysis Approach to DSM for Katmai National Park and Preserve</em>. We will utilize a novel landscape segmentation analysis approach to digital soil mapping for Katmai National Park and Preserve.</p>
 </section>
@@ -224,13 +224,20 @@ ul.task-list{list-style: none;}
 <li>Colby Brungard; Associate Professor, New Mexico State University (Co-PI)</li>
 <li>Sabine Grunwald; Professor, University of Florida (Co-PI);</li>
 <li>Matt Macander; Senior Scientist, ABR, Inc.&nbsp;(Co-PI)</li>
+<li>Sue Ives; Senior Scientist, ABR, Inc.&nbsp;(Co-PI)</li>
+<li>Irfan Ainuddin; PhD Student, University of Minnesota</li>
 </ul>
 </section>
 <section id="additional-collaborators" class="level2">
 <h2 class="anchored" data-anchor-id="additional-collaborators">Additional Collaborators</h2>
 <ul>
-<li>Sue Ives; Senior Scientist, ABR, Inc.</li>
 <li>Michael Sousa; Soil Scientist, USDA-NRCS</li>
+<li>Travis Nauman; Research Soil Scientist, USDA-NRCS</li>
+<li>Dave D’Amore; Research Soil Scientist, US Forest Service</li>
+<li>Jacquie Foss; Soil Scientist, US Forest Service</li>
+<li>Frances Biles; Geographer, US Forest Service</li>
+<li>Timm Nawrocki, Terrestrial Ecologist, Alaska Center for Conservation Science - UAA</li>
+<li>Josh Minai, Postdoctoral Researcher, Argonne National Laboratory</li>
 </ul>
 </section>
 <section id="co-authorship-and-data-sharing-agreements" class="level2">

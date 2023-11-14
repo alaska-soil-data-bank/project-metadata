@@ -1,7 +1,10 @@
-# Metadata for Deliverable 3
+# Metadata for Deliverable 3: Segmentation Analysis  - Katmai National Park and Preserve
 
-## A subsection
+We will utilize a landscape segmentation analysis approach to digital soil mapping for Katmai National Park and Preserve. 
 
-Note that subsections appear in the sidebar table of contents for this chapter
+## Approach
+Training data from KATM curated and prepared by ABR includes approximately 407 points along 67 transects in KATM. This data will be used to classify the segments from imagery analysis to soil map-unit components using random forest models (Breiman 2001) and spectral metrics from high-resolution imagery and other co-variates. The end product will be a soil map equivalent to a traditional hand-delineated NRCS vector-based soil map, at the scale of an order 2 soil survey (1:24,000).
 
-## Another subsection
+## Deliverables
+Produce an innovative raster-based, delineated soil map by segmentation analysis for Katmai National Park and Preserve. 
+
