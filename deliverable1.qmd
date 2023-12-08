@@ -2,15 +2,14 @@
 
 ## Data Contributors
 
-- University of Alaska Fairbanks 
-- University of Minnesota 
-- National Park Service - Arctic Research Coordination Network (NPS-ACRN) 
-- U.S. Army Corps of Engineers Cold Regions Research and Engineering Laborotory (CRREL) 
-- BLM-AIM Database 
-- Alaska Biological Resarch (ABR, Inc., Anchorage AK)
-- US Department of Energy (DOE) 
-- Bureau of Land Management (BLM) 
-- US Forest Service (USFS)
+-   University of Alaska Fairbanks
+-   University of Minnesota
+-   National Park Service - Arctic Research Coordination Network (NPS-ACRN)
+-   U.S. Army Corps of Engineers Cold Regions Research and Engineering Laborotory (CRREL)
+-   Alaska Biological Resarch (ABR, Inc., Anchorage AK)
+-   US Department of Energy (DOE)
+-   Bureau of Land Management (BLM)
+-   US Forest Service (USFS)
 
 ## Data Description
 
@@ -43,12 +42,13 @@ These rankings will be added to the site (geolocated) metadata for each record. 
 
 \[From Colby\] We took a 'tiered' approach for ranking spatial quality:
 
--   Tier 1 -- spatial coordinates were noted as being collected with GPS (there is never enough information to quantify positional accuracy or the type of GPS, but we figured that coordinates from a GPS unit are probably more consistent than from other sources).
--   Tier 2 -- spatial coordinates were collected post 2010. We assume that these were collected with a GPS even if there is nothing that indicates it was collected by GPS.
--   Tier 3 -- spatial coordinates collected between 2000 and 2010. Coordinates may have come from a GPS, but then again they may not have.
--   Tier 4 -- pre-2000 GPS, even if collected with a GPS, selective availability was turned on before this (it specifically ended May 1, 2000) so quality is suspect.
--   Tier 5 -- pre-2000 Aerial Photo/Topo Annotation, georeferencing was accomplished by annotation of approximate site location on an aerial photo or topographic map.
--   Tier 6 -- pre-2000 Location Description, georeferencing was accomplished by a metes and bounds description of the approximate site location (i.e. 200m NE from the NW corner of section 36 in township and range X and Y).
+-   Tier 1 -- spatial coordinates were noted as being collected with GPS anytime after May 1, 2000 (there is seldom enough information to quantify positional accuracy or the type of GPS, but we figured that coordinates from a GPS unit are probably more consistent than from other sources).
+-   Tier 2 -- spatial coordinates were collected post 2010 but not explicitly identified as being collected with GPS. We assume that these were collected with a GPS even if there is nothing that indicates it was collected by GPS.
+-   Tier 3 -- spatial coordinates collected between 2000 and 2010 but not explicitly identified as being collected with GPS. Coordinates may have come from a GPS, but it is possible that they were estimated by alternative means.
+-   Tier 4 -- pre-2000 GPS (US government agency), if a GPS unit was being used by a US government agency prior to selective availability being turned off (May 1, 2000), it is still likely that the government issued GPS unit was not subject to selective availability, however we cannot be certain.
+-   Tier 5 -- pre-2000 GPS (non-US government), even if collected with a GPS, selective availability was turned on before this (it specifically ended May 1, 2000) so quality is suspect.
+-   Tier 6 -- pre-2000 Aerial Photo/Topo Annotation, georeferencing was accomplished by annotation of approximate site location on an aerial photo or topographic map.
+-   Tier 7 -- pre-2000 Location Description, georeferencing was accomplished by a metes and bounds description of the approximate site location (i.e. 200m NE from the NW corner of section 36 in township and range X and Y).
 
 ## Soil Classification Quality Rankings
 
