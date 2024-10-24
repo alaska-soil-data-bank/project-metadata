@@ -1,0 +1,233 @@
+# Alaska Soil Data Bank (AKSDB) Data Model Documentation
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Related Data Models](#related-data-models)
+3. [Core Concepts](#core-concepts)
+4. [Data Levels](#data-levels)
+5. [Data Dictionary and Thesaurus](#data-dictionary-and-thesaurus)
+6. [Key Data Structures](#key-data-structures)
+7. [Metadata and Annotations](#metadata-and-annotations)
+8. [Data Quality and Standards](#data-quality-and-standards)
+
+## Introduction
+
+The Alaska Soil Data Bank (AKSDB) project aims to acquire, curate, and harmonize non-NRCS legacy soil data across Alaska. Unlike similar efforts in the conterminous United States that primarily rely on USDA-NRCS NASIS and KSSL databases, Alaska presents unique challenges due to significant gaps in NASIS/KSSL coverage and the existence of numerous diverse non-NRCS datasets with limited spatial overlap.
+
+The AKSDB data model has been developed with several key principles:
+- Transparent sourcing of raw data
+- No modification of source data on ingestion
+- Enhanced metadata enrichment
+- Transparent harmonization via scripting
+- Delivery of publicly available datasets to WoSIS/NASIS/ISCN
+
+## Related Data Models
+
+The AKSDB data model draws inspiration from several existing soil data frameworks:
+
+1. **WoSIS (World Soil Information Service)**
+   - Primary influence for dataset and profile concepts
+   - Provides foundation for standardization approaches
+   - Offers established controlled vocabulary framework
+
+2. **SOC-DRaH and SOC-DRaH2**
+   - Early iterations of soil carbon data harmonization
+   - Used for International Soil Carbon Network (ISCN) data compilation
+   - Provides baseline for metadata handling
+
+3. **Soil-DRaH**
+   - Most recent iteration of harmonization approaches
+   - Introduces level-based data processing concept
+   - Provides template for data annotations
+
+## Core Concepts
+
+### Dataset Concept
+```
+Table: Dataset Structure
+
+Field                       | Description
+---------------------------|-------------
+dataset_id                 | Unique identifier for the dataset
+dataset_sub_id             | Optional identifier for subset within compilation datasets
+version                    | Version of the dataset
+date                       | Date of dataset snapshot/receipt
+license_file              | URL link to associated license
+publication_date          | Date of formal publication (if applicable)
+reference                 | Citation or reference information
+```
+
+### Pedon Concept
+```
+Table: Pedon Structure
+
+Field                       | Description
+---------------------------|-------------
+dataset_id                 | Link to parent dataset
+dataset_sub_id             | Link to dataset subset (if applicable)
+dataset_peid               | Unique pedon identifier within dataset
+date_timestamp            | Observation date in YYYY-MM-DD format
+lat                       | Latitude (WGS 84)
+lon                       | Longitude (WGS 84)
+```
+
+## Data Levels
+
+The AKSDB implements a hierarchical data level system:
+
+### Level 0 (Raw Data)
+- Original data as delivered
+- No modifications from source
+- Requires three components:
+  1. Raw data tables
+  2. Metadata (created or linked)
+  3. Data dictionary (annotations file)
+
+### Level 1 (Standardized Data)
+- Field names standardized using annotation file
+- Maintains original data values
+- Structured according to AKSDB standard format
+- Field names mapped to controlled vocabulary
+
+### Level 2 (Quality Controlled)
+- QA/QC checks implemented
+- Documentation of all modifications
+- Includes:
+  - Horizon depth validation
+  - Value range checks
+  - Typo corrections
+  - Data quality annotations
+
+### Level 3 (Harmonized Data)
+- Multiple datasets integrated
+- Standardized formats and units
+- Ready for modeling applications
+- Complete provenance tracking
+
+## Data Dictionary and Thesaurus
+
+The AKSDB implements two distinct but related concepts:
+
+### Data Dictionary (Annotations File)
+```
+Table: Annotation File Structure
+
+Field                       | Description
+---------------------------|-------------
+dataset_id                 | Dataset identifier
+dataset_sub_id             | Dataset subset identifier
+table_id                   | Raw table name
+column_id                  | Original column name
+aksdb_field_key            | Standardization key
+type                       | Data type
+with_entry                | Original data notes
+```
+
+### Thesaurus
+```
+Table: Thesaurus Structure
+
+Field                       | Description
+---------------------------|-------------
+aksdb_field_key            | Standardized field identifier
+name                       | Human-readable field name
+full_name                 | Complete descriptive name
+synonyms                   | List of equivalent terms
+descriptor                 | Detailed field description
+enforced_standards        | Required standards for Level 1+
+```
+
+## Key Data Structures
+
+### Site/Pedon Relationship
+The AKSDB model uses a flattened structure that combines site and pedon concepts:
+- Unique identification through dataset_peid
+- Temporal component included in identifier
+- Spatial component (lat/lon) required
+- WGS 84 coordinate system enforced at Level 1
+
+### Horizon Data
+```
+Table: Horizon Structure
+
+Field                       | Description
+---------------------------|-------------
+dataset_peid               | Link to parent pedon
+top_depth                 | Upper boundary depth
+bottom_depth              | Lower boundary depth
+horizon_designation       | Soil horizon label
+```
+
+## Metadata and Annotations
+
+### Dataset Package Components
+1. Raw Data Files
+   - Original format preserved
+   - No modifications on ingestion
+   
+2. Metadata
+   - XML format
+   - Either linked (published data) or generated
+   - Follows standard metadata schema
+
+3. Annotation File
+   - Maps raw fields to standard vocabulary
+   - Documents data types and constraints
+   - Provides field-level metadata
+
+### Standardization Process
+1. Ingest raw data (Level 0)
+2. Create/link metadata
+3. Generate annotations file
+4. Apply standardization rules (Level 1)
+5. Implement QA/QC (Level 2)
+6. Harmonize across datasets (Level 3)
+
+## Data Quality and Standards
+
+### Quality Control Measures
+- Horizon depth consistency checks
+- Value range validation
+- Unit standardization
+- Coordinate system verification
+- Temporal data validation
+
+### Standards Enforcement
+- WGS 84 coordinate system
+- Standard date formats (YYYY-MM-DD)
+- Controlled vocabulary for field names
+- Required metadata elements
+- Documentation of modifications
+
+### Quality Annotations
+- Confidence levels for measurements
+- Data source reliability
+- Spatial accuracy assessments
+- Temporal precision indicators
+- Modification tracking
+
+## Implementation Notes
+
+The AKSDB data model is implemented with several key considerations:
+
+1. **Flexibility**
+   - Accommodates diverse data sources
+   - Handles varying levels of detail
+   - Supports multiple data types
+
+2. **Traceability**
+   - Maintains links to source data
+   - Documents all transformations
+   - Preserves original values
+
+3. **Interoperability**
+   - Compatible with NASIS conventions
+   - Supports WoSIS export
+   - Enables ISCN integration
+
+4. **Scalability**
+   - Handles large datasets
+   - Supports incremental updates
+   - Enables distributed processing
+
+The model continues to evolve as new datasets are incorporated and additional requirements are identified. Regular review and updates ensure the model remains aligned with project goals and community needs.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Alaska Soil Data Bank Project Metadata - 2&nbsp; Metadata for Deliverable 1: Building the Alaska Soil Data Bank</title>
+<title>Alaska Soil Data Bank Project Metadata - 5&nbsp; Alaska Soil Data Bank (AKSDB) Data Model Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./deliverable2.html" rel="next">
-<link href="./datamanagementplan.html" rel="prev">
+<link href="./authorship-guidelines.html" rel="next">
+<link href="./deliverable3.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./deliverable1.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data-model.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Alaska Soil Data Bank (AKSDB) Data Model Documentation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -120,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./deliverable1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./deliverable1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span></span></a>
   </div>
 </li>
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data-model.html" class="sidebar-item-text sidebar-link">
+  <a href="./data-model.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Alaska Soil Data Bank (AKSDB) Data Model Documentation</span></span></a>
   </div>
 </li>
@@ -193,20 +193,43 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#data-contributors" id="toc-data-contributors" class="nav-link active" data-scroll-target="#data-contributors"><span class="header-section-number">2.1</span> Data Contributors</a></li>
-  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description"><span class="header-section-number">2.2</span> Data Description</a></li>
-  <li><a href="#description-of-data-mining-procedures" id="toc-description-of-data-mining-procedures" class="nav-link" data-scroll-target="#description-of-data-mining-procedures"><span class="header-section-number">2.3</span> Description of Data Mining Procedures</a></li>
-  <li><a href="#standardized-projection" id="toc-standardized-projection" class="nav-link" data-scroll-target="#standardized-projection"><span class="header-section-number">2.4</span> Standardized Projection</a></li>
-  <li><a href="#data-completeness-geospatial-data-quality-and-soil-classification-quality-rankings" id="toc-data-completeness-geospatial-data-quality-and-soil-classification-quality-rankings" class="nav-link" data-scroll-target="#data-completeness-geospatial-data-quality-and-soil-classification-quality-rankings"><span class="header-section-number">2.5</span> Data Completeness, Geospatial Data Quality, and Soil Classification Quality Rankings</a>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents"><span class="header-section-number">5.1</span> Table of Contents</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">5.2</span> Introduction</a></li>
+  <li><a href="#related-data-models" id="toc-related-data-models" class="nav-link" data-scroll-target="#related-data-models"><span class="header-section-number">5.3</span> Related Data Models</a></li>
+  <li><a href="#core-concepts" id="toc-core-concepts" class="nav-link" data-scroll-target="#core-concepts"><span class="header-section-number">5.4</span> Core Concepts</a>
   <ul class="collapse">
-  <li><a href="#data-completeness-rankings" id="toc-data-completeness-rankings" class="nav-link" data-scroll-target="#data-completeness-rankings"><span class="header-section-number">2.5.1</span> Data Completeness Rankings</a></li>
+  <li><a href="#dataset-concept" id="toc-dataset-concept" class="nav-link" data-scroll-target="#dataset-concept"><span class="header-section-number">5.4.1</span> Dataset Concept</a></li>
+  <li><a href="#pedon-concept" id="toc-pedon-concept" class="nav-link" data-scroll-target="#pedon-concept"><span class="header-section-number">5.4.2</span> Pedon Concept</a></li>
   </ul></li>
-  <li><a href="#geospatial-data-quality-rankings" id="toc-geospatial-data-quality-rankings" class="nav-link" data-scroll-target="#geospatial-data-quality-rankings"><span class="header-section-number">2.6</span> Geospatial Data Quality Rankings</a></li>
-  <li><a href="#soil-classification-quality-rankings" id="toc-soil-classification-quality-rankings" class="nav-link" data-scroll-target="#soil-classification-quality-rankings"><span class="header-section-number">2.7</span> Soil Classification Quality Rankings</a></li>
-  <li><a href="#description-of-data-wrangling-procedures-gems-import" id="toc-description-of-data-wrangling-procedures-gems-import" class="nav-link" data-scroll-target="#description-of-data-wrangling-procedures-gems-import"><span class="header-section-number">2.8</span> Description of Data Wrangling Procedures-GEMS import</a></li>
-  <li><a href="#description-of-controlled-vocabularytaxonomy" id="toc-description-of-controlled-vocabularytaxonomy" class="nav-link" data-scroll-target="#description-of-controlled-vocabularytaxonomy"><span class="header-section-number">2.9</span> Description of Controlled Vocabulary/Taxonomy</a></li>
-  <li><a href="#description-of-post-ingestion-scripting-harmonization-procedures" id="toc-description-of-post-ingestion-scripting-harmonization-procedures" class="nav-link" data-scroll-target="#description-of-post-ingestion-scripting-harmonization-procedures"><span class="header-section-number">2.10</span> Description of post-ingestion scripting, harmonization procedures</a></li>
-  <li><a href="#description-of-export-procedures" id="toc-description-of-export-procedures" class="nav-link" data-scroll-target="#description-of-export-procedures"><span class="header-section-number">2.11</span> Description of export procedures</a></li>
+  <li><a href="#data-levels" id="toc-data-levels" class="nav-link" data-scroll-target="#data-levels"><span class="header-section-number">5.5</span> Data Levels</a>
+  <ul class="collapse">
+  <li><a href="#level-0-raw-data" id="toc-level-0-raw-data" class="nav-link" data-scroll-target="#level-0-raw-data"><span class="header-section-number">5.5.1</span> Level 0 (Raw Data)</a></li>
+  <li><a href="#level-1-standardized-data" id="toc-level-1-standardized-data" class="nav-link" data-scroll-target="#level-1-standardized-data"><span class="header-section-number">5.5.2</span> Level 1 (Standardized Data)</a></li>
+  <li><a href="#level-2-quality-controlled" id="toc-level-2-quality-controlled" class="nav-link" data-scroll-target="#level-2-quality-controlled"><span class="header-section-number">5.5.3</span> Level 2 (Quality Controlled)</a></li>
+  <li><a href="#level-3-harmonized-data" id="toc-level-3-harmonized-data" class="nav-link" data-scroll-target="#level-3-harmonized-data"><span class="header-section-number">5.5.4</span> Level 3 (Harmonized Data)</a></li>
+  </ul></li>
+  <li><a href="#data-dictionary-and-thesaurus" id="toc-data-dictionary-and-thesaurus" class="nav-link" data-scroll-target="#data-dictionary-and-thesaurus"><span class="header-section-number">5.6</span> Data Dictionary and Thesaurus</a>
+  <ul class="collapse">
+  <li><a href="#data-dictionary-annotations-file" id="toc-data-dictionary-annotations-file" class="nav-link" data-scroll-target="#data-dictionary-annotations-file"><span class="header-section-number">5.6.1</span> Data Dictionary (Annotations File)</a></li>
+  <li><a href="#thesaurus" id="toc-thesaurus" class="nav-link" data-scroll-target="#thesaurus"><span class="header-section-number">5.6.2</span> Thesaurus</a></li>
+  </ul></li>
+  <li><a href="#key-data-structures" id="toc-key-data-structures" class="nav-link" data-scroll-target="#key-data-structures"><span class="header-section-number">5.7</span> Key Data Structures</a>
+  <ul class="collapse">
+  <li><a href="#sitepedon-relationship" id="toc-sitepedon-relationship" class="nav-link" data-scroll-target="#sitepedon-relationship"><span class="header-section-number">5.7.1</span> Site/Pedon Relationship</a></li>
+  <li><a href="#horizon-data" id="toc-horizon-data" class="nav-link" data-scroll-target="#horizon-data"><span class="header-section-number">5.7.2</span> Horizon Data</a></li>
+  </ul></li>
+  <li><a href="#metadata-and-annotations" id="toc-metadata-and-annotations" class="nav-link" data-scroll-target="#metadata-and-annotations"><span class="header-section-number">5.8</span> Metadata and Annotations</a>
+  <ul class="collapse">
+  <li><a href="#dataset-package-components" id="toc-dataset-package-components" class="nav-link" data-scroll-target="#dataset-package-components"><span class="header-section-number">5.8.1</span> Dataset Package Components</a></li>
+  <li><a href="#standardization-process" id="toc-standardization-process" class="nav-link" data-scroll-target="#standardization-process"><span class="header-section-number">5.8.2</span> Standardization Process</a></li>
+  </ul></li>
+  <li><a href="#data-quality-and-standards" id="toc-data-quality-and-standards" class="nav-link" data-scroll-target="#data-quality-and-standards"><span class="header-section-number">5.9</span> Data Quality and Standards</a>
+  <ul class="collapse">
+  <li><a href="#quality-control-measures" id="toc-quality-control-measures" class="nav-link" data-scroll-target="#quality-control-measures"><span class="header-section-number">5.9.1</span> Quality Control Measures</a></li>
+  <li><a href="#standards-enforcement" id="toc-standards-enforcement" class="nav-link" data-scroll-target="#standards-enforcement"><span class="header-section-number">5.9.2</span> Standards Enforcement</a></li>
+  <li><a href="#quality-annotations" id="toc-quality-annotations" class="nav-link" data-scroll-target="#quality-annotations"><span class="header-section-number">5.9.3</span> Quality Annotations</a></li>
+  </ul></li>
+  <li><a href="#implementation-notes" id="toc-implementation-notes" class="nav-link" data-scroll-target="#implementation-notes"><span class="header-section-number">5.10</span> Implementation Notes</a></li>
   </ul>
 </nav>
     </div>
@@ -215,7 +238,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Alaska Soil Data Bank (AKSDB) Data Model Documentation</span></h1>
 </div>
 
 
@@ -232,86 +255,275 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="data-contributors" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="data-contributors"><span class="header-section-number">2.1</span> Data Contributors</h2>
+<section id="table-of-contents" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="table-of-contents"><span class="header-section-number">5.1</span> Table of Contents</h2>
+<ol type="1">
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#related-data-models">Related Data Models</a></li>
+<li><a href="#core-concepts">Core Concepts</a></li>
+<li><a href="#data-levels">Data Levels</a></li>
+<li><a href="#data-dictionary-and-thesaurus">Data Dictionary and Thesaurus</a></li>
+<li><a href="#key-data-structures">Key Data Structures</a></li>
+<li><a href="#metadata-and-annotations">Metadata and Annotations</a></li>
+<li><a href="#data-quality-and-standards">Data Quality and Standards</a></li>
+</ol>
+</section>
+<section id="introduction" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="introduction"><span class="header-section-number">5.2</span> Introduction</h2>
+<p>The Alaska Soil Data Bank (AKSDB) project aims to acquire, curate, and harmonize non-NRCS legacy soil data across Alaska. Unlike similar efforts in the conterminous United States that primarily rely on USDA-NRCS NASIS and KSSL databases, Alaska presents unique challenges due to significant gaps in NASIS/KSSL coverage and the existence of numerous diverse non-NRCS datasets with limited spatial overlap.</p>
+<p>The AKSDB data model has been developed with several key principles: - Transparent sourcing of raw data - No modification of source data on ingestion - Enhanced metadata enrichment - Transparent harmonization via scripting - Delivery of publicly available datasets to WoSIS/NASIS/ISCN</p>
+</section>
+<section id="related-data-models" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="related-data-models"><span class="header-section-number">5.3</span> Related Data Models</h2>
+<p>The AKSDB data model draws inspiration from several existing soil data frameworks:</p>
+<ol type="1">
+<li><strong>WoSIS (World Soil Information Service)</strong>
 <ul>
-<li>University of Alaska Fairbanks</li>
-<li>University of Minnesota</li>
-<li>National Park Service - Arctic Research Coordination Network (NPS-ACRN)</li>
-<li>U.S. Army Corps of Engineers Cold Regions Research and Engineering Laborotory (CRREL)</li>
-<li>Alaska Biological Resarch (ABR, Inc., Anchorage AK)</li>
-<li>US Department of Energy (DOE)</li>
-<li>Bureau of Land Management (BLM)</li>
-<li>US Forest Service (USFS)</li>
+<li>Primary influence for dataset and profile concepts</li>
+<li>Provides foundation for standardization approaches</li>
+<li>Offers established controlled vocabulary framework</li>
+</ul></li>
+<li><strong>SOC-DRaH and SOC-DRaH2</strong>
+<ul>
+<li>Early iterations of soil carbon data harmonization</li>
+<li>Used for International Soil Carbon Network (ISCN) data compilation</li>
+<li>Provides baseline for metadata handling</li>
+</ul></li>
+<li><strong>Soil-DRaH</strong>
+<ul>
+<li>Most recent iteration of harmonization approaches</li>
+<li>Introduces level-based data processing concept</li>
+<li>Provides template for data annotations</li>
+</ul></li>
+</ol>
+</section>
+<section id="core-concepts" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="core-concepts"><span class="header-section-number">5.4</span> Core Concepts</h2>
+<section id="dataset-concept" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="dataset-concept"><span class="header-section-number">5.4.1</span> Dataset Concept</h3>
+<pre><code>Table: Dataset Structure
+
+Field                       | Description
+---------------------------|-------------
+dataset_id                 | Unique identifier for the dataset
+dataset_sub_id             | Optional identifier for subset within compilation datasets
+version                    | Version of the dataset
+date                       | Date of dataset snapshot/receipt
+license_file              | URL link to associated license
+publication_date          | Date of formal publication (if applicable)
+reference                 | Citation or reference information</code></pre>
+</section>
+<section id="pedon-concept" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="pedon-concept"><span class="header-section-number">5.4.2</span> Pedon Concept</h3>
+<pre><code>Table: Pedon Structure
+
+Field                       | Description
+---------------------------|-------------
+dataset_id                 | Link to parent dataset
+dataset_sub_id             | Link to dataset subset (if applicable)
+dataset_peid               | Unique pedon identifier within dataset
+date_timestamp            | Observation date in YYYY-MM-DD format
+lat                       | Latitude (WGS 84)
+lon                       | Longitude (WGS 84)</code></pre>
+</section>
+</section>
+<section id="data-levels" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="data-levels"><span class="header-section-number">5.5</span> Data Levels</h2>
+<p>The AKSDB implements a hierarchical data level system:</p>
+<section id="level-0-raw-data" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="level-0-raw-data"><span class="header-section-number">5.5.1</span> Level 0 (Raw Data)</h3>
+<ul>
+<li>Original data as delivered</li>
+<li>No modifications from source</li>
+<li>Requires three components:
+<ol type="1">
+<li>Raw data tables</li>
+<li>Metadata (created or linked)</li>
+<li>Data dictionary (annotations file)</li>
+</ol></li>
 </ul>
 </section>
-<section id="data-description" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="data-description"><span class="header-section-number">2.2</span> Data Description</h2>
-<p>[output from GEMS]</p>
-</section>
-<section id="description-of-data-mining-procedures" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="description-of-data-mining-procedures"><span class="header-section-number">2.3</span> Description of Data Mining Procedures</h2>
+<section id="level-1-standardized-data" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="level-1-standardized-data"><span class="header-section-number">5.5.2</span> Level 1 (Standardized Data)</h3>
 <ul>
-<li>hardcopy data</li>
-<li>digital data</li>
+<li>Field names standardized using annotation file</li>
+<li>Maintains original data values</li>
+<li>Structured according to AKSDB standard format</li>
+<li>Field names mapped to controlled vocabulary</li>
 </ul>
 </section>
-<section id="standardized-projection" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="standardized-projection"><span class="header-section-number">2.4</span> Standardized Projection</h2>
-<p>Projection: Alaska Albers NAD83, EPSG: 3338 Scope: Topographic Mapping (small scale) Area of Use: United States (USA) - Alaska Coordinate System: Cartesian 2D CS. Axes: easting, northing (X,Y). Orientations: east, north. Unit: meters (m) Geodetic CRS: NAD83 Datum: North American Datum 1983 Ellipsoid: GRS 1980 Prime meridian: Greenwich Data Source: EPSG Information Source: State of Alaska Department of Natural Resources Revision Date: 11-11-2006</p>
-</section>
-<section id="data-completeness-geospatial-data-quality-and-soil-classification-quality-rankings" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="data-completeness-geospatial-data-quality-and-soil-classification-quality-rankings"><span class="header-section-number">2.5</span> Data Completeness, Geospatial Data Quality, and Soil Classification Quality Rankings</h2>
-<p>These rankings will be added to the site (geolocated) metadata for each record. They will be added as field metadata tags in the site id field (data completeness), latitude and longitude fields (geospatial data quality), and classification fields (soil classification quality).</p>
-<section id="data-completeness-rankings" class="level3" data-number="2.5.1">
-<h3 data-number="2.5.1" class="anchored" data-anchor-id="data-completeness-rankings"><span class="header-section-number">2.5.1</span> Data Completeness Rankings</h3>
-<p>[From Nic] These data completeness rankings will be assigned programmatically, but they may still hold value for dataset users who would like a single field to filter all data on:</p>
+<section id="level-2-quality-controlled" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="level-2-quality-controlled"><span class="header-section-number">5.5.3</span> Level 2 (Quality Controlled)</h3>
 <ul>
-<li>Tier 1 – Soil morphology and physical/chemical data to a depth of at least 1 meter</li>
-<li>Tier 2 – Soil morphology and physical/chemical data to a depth of &lt; 1m</li>
-<li>Tier 3 – Soil morphology to a depth of at least 1m</li>
-<li>Tier 4 – Soil morphology to a depth of &lt; 1m</li>
-<li>Tier 5 – Site characteristics only (i.e.&nbsp;thickness of organics, thaw depth, etc)</li>
+<li>QA/QC checks implemented</li>
+<li>Documentation of all modifications</li>
+<li>Includes:
+<ul>
+<li>Horizon depth validation</li>
+<li>Value range checks</li>
+<li>Typo corrections</li>
+<li>Data quality annotations</li>
+</ul></li>
+</ul>
+</section>
+<section id="level-3-harmonized-data" class="level3" data-number="5.5.4">
+<h3 data-number="5.5.4" class="anchored" data-anchor-id="level-3-harmonized-data"><span class="header-section-number">5.5.4</span> Level 3 (Harmonized Data)</h3>
+<ul>
+<li>Multiple datasets integrated</li>
+<li>Standardized formats and units</li>
+<li>Ready for modeling applications</li>
+<li>Complete provenance tracking</li>
 </ul>
 </section>
 </section>
-<section id="geospatial-data-quality-rankings" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="geospatial-data-quality-rankings"><span class="header-section-number">2.6</span> Geospatial Data Quality Rankings</h2>
-<p>[From Colby] We took a ‘tiered’ approach for ranking spatial quality:</p>
+<section id="data-dictionary-and-thesaurus" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="data-dictionary-and-thesaurus"><span class="header-section-number">5.6</span> Data Dictionary and Thesaurus</h2>
+<p>The AKSDB implements two distinct but related concepts:</p>
+<section id="data-dictionary-annotations-file" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="data-dictionary-annotations-file"><span class="header-section-number">5.6.1</span> Data Dictionary (Annotations File)</h3>
+<pre><code>Table: Annotation File Structure
+
+Field                       | Description
+---------------------------|-------------
+dataset_id                 | Dataset identifier
+dataset_sub_id             | Dataset subset identifier
+table_id                   | Raw table name
+column_id                  | Original column name
+aksdb_field_key            | Standardization key
+type                       | Data type
+with_entry                | Original data notes</code></pre>
+</section>
+<section id="thesaurus" class="level3" data-number="5.6.2">
+<h3 data-number="5.6.2" class="anchored" data-anchor-id="thesaurus"><span class="header-section-number">5.6.2</span> Thesaurus</h3>
+<pre><code>Table: Thesaurus Structure
+
+Field                       | Description
+---------------------------|-------------
+aksdb_field_key            | Standardized field identifier
+name                       | Human-readable field name
+full_name                 | Complete descriptive name
+synonyms                   | List of equivalent terms
+descriptor                 | Detailed field description
+enforced_standards        | Required standards for Level 1+</code></pre>
+</section>
+</section>
+<section id="key-data-structures" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="key-data-structures"><span class="header-section-number">5.7</span> Key Data Structures</h2>
+<section id="sitepedon-relationship" class="level3" data-number="5.7.1">
+<h3 data-number="5.7.1" class="anchored" data-anchor-id="sitepedon-relationship"><span class="header-section-number">5.7.1</span> Site/Pedon Relationship</h3>
+<p>The AKSDB model uses a flattened structure that combines site and pedon concepts: - Unique identification through dataset_peid - Temporal component included in identifier - Spatial component (lat/lon) required - WGS 84 coordinate system enforced at Level 1</p>
+</section>
+<section id="horizon-data" class="level3" data-number="5.7.2">
+<h3 data-number="5.7.2" class="anchored" data-anchor-id="horizon-data"><span class="header-section-number">5.7.2</span> Horizon Data</h3>
+<pre><code>Table: Horizon Structure
+
+Field                       | Description
+---------------------------|-------------
+dataset_peid               | Link to parent pedon
+top_depth                 | Upper boundary depth
+bottom_depth              | Lower boundary depth
+horizon_designation       | Soil horizon label</code></pre>
+</section>
+</section>
+<section id="metadata-and-annotations" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="metadata-and-annotations"><span class="header-section-number">5.8</span> Metadata and Annotations</h2>
+<section id="dataset-package-components" class="level3" data-number="5.8.1">
+<h3 data-number="5.8.1" class="anchored" data-anchor-id="dataset-package-components"><span class="header-section-number">5.8.1</span> Dataset Package Components</h3>
+<ol type="1">
+<li>Raw Data Files
 <ul>
-<li>Tier 1 – spatial coordinates were noted as being collected with GPS anytime after May 1, 2000 (there is seldom enough information to quantify positional accuracy or the type of GPS, but we figured that coordinates from a GPS unit are probably more consistent than from other sources).</li>
-<li>Tier 2 – spatial coordinates were collected post 2010 but not explicitly identified as being collected with GPS. We assume that these were collected with a GPS even if there is nothing that indicates it was collected by GPS.</li>
-<li>Tier 3 – spatial coordinates collected between 2000 and 2010 but not explicitly identified as being collected with GPS. Coordinates may have come from a GPS, but it is possible that they were estimated by alternative means.</li>
-<li>Tier 4 – pre-2000 GPS (US government agency), if a GPS unit was being used by a US government agency prior to selective availability being turned off (May 1, 2000), it is still likely that the government issued GPS unit was not subject to selective availability, however we cannot be certain.</li>
-<li>Tier 5 – pre-2000 GPS (non-US government), even if collected with a GPS, selective availability was turned on before this (it specifically ended May 1, 2000) so quality is suspect.</li>
-<li>Tier 6 – pre-2000 Aerial Photo/Topo Annotation, georeferencing was accomplished by annotation of approximate site location on an aerial photo or topographic map.</li>
-<li>Tier 7 – pre-2000 Location Description, georeferencing was accomplished by a metes and bounds description of the approximate site location (i.e.&nbsp;200m NE from the NW corner of section 36 in township and range X and Y).</li>
+<li>Original format preserved</li>
+<li>No modifications on ingestion</li>
+</ul></li>
+<li>Metadata
+<ul>
+<li>XML format</li>
+<li>Either linked (published data) or generated</li>
+<li>Follows standard metadata schema</li>
+</ul></li>
+<li>Annotation File
+<ul>
+<li>Maps raw fields to standard vocabulary</li>
+<li>Documents data types and constraints</li>
+<li>Provides field-level metadata</li>
+</ul></li>
+</ol>
+</section>
+<section id="standardization-process" class="level3" data-number="5.8.2">
+<h3 data-number="5.8.2" class="anchored" data-anchor-id="standardization-process"><span class="header-section-number">5.8.2</span> Standardization Process</h3>
+<ol type="1">
+<li>Ingest raw data (Level 0)</li>
+<li>Create/link metadata</li>
+<li>Generate annotations file</li>
+<li>Apply standardization rules (Level 1)</li>
+<li>Implement QA/QC (Level 2)</li>
+<li>Harmonize across datasets (Level 3)</li>
+</ol>
+</section>
+</section>
+<section id="data-quality-and-standards" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="data-quality-and-standards"><span class="header-section-number">5.9</span> Data Quality and Standards</h2>
+<section id="quality-control-measures" class="level3" data-number="5.9.1">
+<h3 data-number="5.9.1" class="anchored" data-anchor-id="quality-control-measures"><span class="header-section-number">5.9.1</span> Quality Control Measures</h3>
+<ul>
+<li>Horizon depth consistency checks</li>
+<li>Value range validation</li>
+<li>Unit standardization</li>
+<li>Coordinate system verification</li>
+<li>Temporal data validation</li>
 </ul>
 </section>
-<section id="soil-classification-quality-rankings" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="soil-classification-quality-rankings"><span class="header-section-number">2.7</span> Soil Classification Quality Rankings</h2>
-<p>[From Nic] We took a ‘tiered’ approach for ranking spatial quality:</p>
-<p>Soil classification quality rankings will allow users of the database to discern between soil classes which were assigned with varying degrees of uncertainty. Note that the depths of observation and soil physical and chemical properties required to make unambiguous classifications depend on the taxonomic entity in question. For example, if there is permafrost within 1m of the soil surface, no morphology or laboratory data is necessary to make the unambiguous classification to the Gelisol soil order (Tier 1). However, if no other information is available, then classification to the suborder is not possible (Tier 4). This classification certainty ranking is there applied as a field metadata tag to each level of taxonomic classification, which are held in independent fields:</p>
+<section id="standards-enforcement" class="level3" data-number="5.9.2">
+<h3 data-number="5.9.2" class="anchored" data-anchor-id="standards-enforcement"><span class="header-section-number">5.9.2</span> Standards Enforcement</h3>
 <ul>
-<li>Tier 1 – unambiguous classification; all necessary morphological or soil physical and chemical data are available</li>
-<li>Tier 2 – partially ambiguous classification; unambiguous morphological data, but missing some required soil physical or chemical data, few assumptions made regarding soil features and properties</li>
-<li>Tier 3 – largely ambiguous classification; morphological data not available to requisite depth or missing key properties, and and/or missing required soil physical or chemical data</li>
-<li>Tier 4 – no classification possible; limited morphological data and laboratory data available</li>
+<li>WGS 84 coordinate system</li>
+<li>Standard date formats (YYYY-MM-DD)</li>
+<li>Controlled vocabulary for field names</li>
+<li>Required metadata elements</li>
+<li>Documentation of modifications</li>
 </ul>
-<p>There may be other tiers that are worth considering.</p>
 </section>
-<section id="description-of-data-wrangling-procedures-gems-import" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="description-of-data-wrangling-procedures-gems-import"><span class="header-section-number">2.8</span> Description of Data Wrangling Procedures-GEMS import</h2>
+<section id="quality-annotations" class="level3" data-number="5.9.3">
+<h3 data-number="5.9.3" class="anchored" data-anchor-id="quality-annotations"><span class="header-section-number">5.9.3</span> Quality Annotations</h3>
+<ul>
+<li>Confidence levels for measurements</li>
+<li>Data source reliability</li>
+<li>Spatial accuracy assessments</li>
+<li>Temporal precision indicators</li>
+<li>Modification tracking</li>
+</ul>
 </section>
-<section id="description-of-controlled-vocabularytaxonomy" class="level2" data-number="2.9">
-<h2 data-number="2.9" class="anchored" data-anchor-id="description-of-controlled-vocabularytaxonomy"><span class="header-section-number">2.9</span> Description of Controlled Vocabulary/Taxonomy</h2>
-<p>This project utilizes a project-specific, hierarchical controlled vocabulary or taxonomy (which is crosswalked to NRCS field and laboratory codes where they exist) to tag field metadata. The current version of the controlled vocabulary is in this repository.</p>
 </section>
-<section id="description-of-post-ingestion-scripting-harmonization-procedures" class="level2" data-number="2.10">
-<h2 data-number="2.10" class="anchored" data-anchor-id="description-of-post-ingestion-scripting-harmonization-procedures"><span class="header-section-number">2.10</span> Description of post-ingestion scripting, harmonization procedures</h2>
-</section>
-<section id="description-of-export-procedures" class="level2" data-number="2.11">
-<h2 data-number="2.11" class="anchored" data-anchor-id="description-of-export-procedures"><span class="header-section-number">2.11</span> Description of export procedures</h2>
+<section id="implementation-notes" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="implementation-notes"><span class="header-section-number">5.10</span> Implementation Notes</h2>
+<p>The AKSDB data model is implemented with several key considerations:</p>
+<ol type="1">
+<li><strong>Flexibility</strong>
+<ul>
+<li>Accommodates diverse data sources</li>
+<li>Handles varying levels of detail</li>
+<li>Supports multiple data types</li>
+</ul></li>
+<li><strong>Traceability</strong>
+<ul>
+<li>Maintains links to source data</li>
+<li>Documents all transformations</li>
+<li>Preserves original values</li>
+</ul></li>
+<li><strong>Interoperability</strong>
+<ul>
+<li>Compatible with NASIS conventions</li>
+<li>Supports WoSIS export</li>
+<li>Enables ISCN integration</li>
+</ul></li>
+<li><strong>Scalability</strong>
+<ul>
+<li>Handles large datasets</li>
+<li>Supports incremental updates</li>
+<li>Enables distributed processing</li>
+</ul></li>
+</ol>
+<p>The model continues to evolve as new datasets are incorporated and additional requirements are identified. Regular review and updates ensure the model remains aligned with project goals and community needs.</p>
 
 
 </section>
@@ -706,13 +918,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./datamanagementplan.html" class="pagination-link" aria-label="Data Management Plan">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Management Plan</span></span>
+      <a href="./deliverable3.html" class="pagination-link" aria-label="Metadata for Deliverable 3: Segmentation Analysis  - Katmai National Park and Preserve">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 3: Segmentation Analysis - Katmai National Park and Preserve</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./deliverable2.html" class="pagination-link" aria-label="Metadata for Deliverable 2: Statewide soil class mapping">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 2: Statewide soil class mapping</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./authorship-guidelines.html" class="pagination-link" aria-label="Authorship Guidelines">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Authorship Guidelines</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

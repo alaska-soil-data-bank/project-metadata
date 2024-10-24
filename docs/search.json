@@ -4,405 +4,728 @@
     "href": "index.html",
     "title": "Alaska Soil Data Bank Project Metadata",
     "section": "",
-    "text": "Preface\nThis quarto book documents the metadata architecture for “The Alaska Soil Data Bank (AKSDB): A database for delivering non-NRCS legacy data for digital soil mapping initiatives in Alaska” - USDA-NRCS SPSD Award #NR223A750025C013."
+    "text": "Preface\nThis quarto book documents the metadata architecture for “The Alaska Soil Data Bank (AKSDB): A database for delivering non-NRCS legacy data for digital soil mapping initiatives in Alaska” - USDA-NRCS SPSD Award #NR223A750025C013.",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#project-description",
     "href": "index.html#project-description",
     "title": "Alaska Soil Data Bank Project Metadata",
     "section": "Project Description",
-    "text": "Project Description\n[From Project Proposal] Approximately 300 million acres (&gt; 70%) of the NOTCOM areas in the United States are in Alaska. Little data is available in unmapped areas of Alaska in the NASIS database. Harnessing disparate non-NRCS legacy datasets for digital soil mapping initiatives in Alaska will therefore be critical for completing the Soils2026 initiative. In order to properly harness big data in soil survey in Alaska, where a significant amount of non-NRCS soil data exists in critical areas, we need to develop a platform that allows public/private data, provides attribution, is flexible and nimble enough to accept ongoing contributions without a large burden on the submitter, can be easily scaled, and can provide export workflows to ingest data into NASIS. The utility of such a database (what we will refer to as the Alaska Soil Data Bank – ASDB) will be demonstrated through the production of digital soil mapping products at multiple scales and using multiple methods. We will use the harmonized ASDB dataset and NASIS together to produce the first digital statewide predictive map of Alaska soil orders and suborders at 30m resolution, and apply a novel approach to digital soil mapping (using landscape segmentation analysis) for Katmai National Park and Preserve."
+    "text": "Project Description\n[From Project Proposal] Approximately 300 million acres (&gt; 70%) of the NOTCOM areas in the United States are in Alaska. Little data is available in unmapped areas of Alaska in the NASIS database. Harnessing disparate non-NRCS legacy datasets for digital soil mapping initiatives in Alaska will therefore be critical for completing the Soils2026 initiative. In order to properly harness big data in soil survey in Alaska, where a significant amount of non-NRCS soil data exists in critical areas, we need to develop a platform that allows public/private data, provides attribution, is flexible and nimble enough to accept ongoing contributions without a large burden on the submitter, can be easily scaled, and can provide export workflows to ingest data into NASIS. The utility of such a database (what we will refer to as the Alaska Soil Data Bank – ASDB) will be demonstrated through the production of digital soil mapping products at multiple scales and using multiple methods. We will use the harmonized ASDB dataset and NASIS together to produce the first digital statewide predictive map of Alaska soil orders and suborders at 30m resolution, and apply a novel approach to digital soil mapping (using landscape segmentation analysis) for Katmai National Park and Preserve.",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#structure-and-deliverables",
     "href": "index.html#structure-and-deliverables",
     "title": "Alaska Soil Data Bank Project Metadata",
     "section": "Structure and Deliverables",
-    "text": "Structure and Deliverables\nThis document contains metadata for each of the grant deliverables, as well as general project metadata and information. Each of the deliverables also has a unique GitHub repository nested under the alaska-soil-data-bank organization. These deliverables are:\n1. The Alaska Soil Data Bank (AKSDB). We will acquire, curate, and centralize non-NRCS legacy data for the state of Alaska and stand up a database for continuing contributions on the G.E.M.S. platform of the University of Minnesota Supercomputing Institute. The ASDB will result in a harmonized dataset for use in digital soil mapping in Alaska and scripts will be written to export the data into a NASIS-readable format for ingestion.\n2. AK Statewide Predictive Soil Order/Suborder Map. We will generate digital predictive soil order and soil suborder maps of the state of Alaska at a resolution of 30m.\n3. Segmentation Analysis Approach to DSM for Katmai National Park and Preserve. We will utilize a novel landscape segmentation analysis approach to digital soil mapping for Katmai National Park and Preserve."
+    "text": "Structure and Deliverables\nThis document contains metadata for each of the grant deliverables, as well as general project metadata and information. Each of the deliverables also has a unique GitHub repository nested under the alaska-soil-data-bank organization. These deliverables are:\n1. The Alaska Soil Data Bank (AKSDB). We will acquire, curate, and centralize non-NRCS legacy data for the state of Alaska and stand up a database for continuing contributions on the G.E.M.S. platform of the University of Minnesota Supercomputing Institute. The ASDB will result in a harmonized dataset for use in digital soil mapping in Alaska and scripts will be written to export the data into a NASIS-readable format for ingestion.\n2. AK Statewide Predictive Soil Order/Suborder Map. We will generate digital predictive soil order and soil suborder maps of the state of Alaska at a resolution of 30m.\n3. Segmentation Analysis Approach to DSM for Katmai National Park and Preserve. We will utilize a novel landscape segmentation analysis approach to digital soil mapping for Katmai National Park and Preserve.",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#key-personnel",
     "href": "index.html#key-personnel",
     "title": "Alaska Soil Data Bank Project Metadata",
     "section": "Key Personnel",
-    "text": "Key Personnel\n\nNic Jelinski; Associate Professor, University of Minnesota (PI)\nColby Brungard; Associate Professor, New Mexico State University (Co-PI)\nSabine Grunwald; Professor, University of Florida (Co-PI);\nMatt Macander; Senior Scientist, ABR, Inc. (Co-PI)\nSue Ives; Senior Scientist, ABR, Inc. (Co-PI)\nIrfan Ainuddin; PhD Student, University of Minnesota"
+    "text": "Key Personnel\n\nNic Jelinski; Associate Professor, University of Minnesota (PI)\nColby Brungard; Associate Professor, New Mexico State University (Co-PI)\nSabine Grunwald; Professor, University of Florida (Co-PI);\nMatt Macander; Senior Scientist, ABR, Inc. (Co-PI)\nSue Ives; Senior Scientist, ABR, Inc. (Co-PI)\nIrfan Ainuddin; PhD Student, University of Minnesota\nMichael Sousa; Soil Scientist, USDA-NRCS\nTravis Nauman; Research Soil Scientist, USDA-NRCS\nDave D’Amore; Research Soil Scientist, US Forest Service\nJacquie Foss; Soil Scientist, US Forest Service\nFrances Biles; Geographer, US Forest Service\nTimm Nawrocki, Terrestrial Ecologist, Alaska Center for Conservation Science - UAA\nJosh Minai, Postdoctoral Researcher, Argonne National Laboratory\nNeil Pastick, Physical Scientist, USGS",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#additional-collaborators",
     "href": "index.html#additional-collaborators",
     "title": "Alaska Soil Data Bank Project Metadata",
     "section": "Additional Collaborators",
-    "text": "Additional Collaborators\n\nMichael Sousa; Soil Scientist, USDA-NRCS\nTravis Nauman; Research Soil Scientist, USDA-NRCS\nDave D’Amore; Research Soil Scientist, US Forest Service\nJacquie Foss; Soil Scientist, US Forest Service\nFrances Biles; Geographer, US Forest Service\nTimm Nawrocki, Terrestrial Ecologist, Alaska Center for Conservation Science - UAA\nJosh Minai, Postdoctoral Researcher, Argonne National Laboratory"
+    "text": "Additional Collaborators",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#co-authorship-and-data-sharing-agreements",
     "href": "index.html#co-authorship-and-data-sharing-agreements",
     "title": "Alaska Soil Data Bank Project Metadata",
     "section": "Co-Authorship and Data Sharing Agreements",
-    "text": "Co-Authorship and Data Sharing Agreements\nCo-authorship agreement Data Sharing agreement"
+    "text": "Co-Authorship and Data Sharing Agreements\nCo-authorship agreement Data Sharing agreement",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#funding-source-and-rfp",
     "href": "index.html#funding-source-and-rfp",
     "title": "Alaska Soil Data Bank Project Metadata",
     "section": "Funding Source and RFP",
-    "text": "Funding Source and RFP\nThis project was awarded for a proposal submitted to the USDA-NRCS 2022 Soil Science Collaborative Research Proposals RFP\nYou can find the original RFP here https://www.grants.gov/web/grants/view-opportunity.html?oppId=337972."
+    "text": "Funding Source and RFP\nThis project was awarded for a proposal submitted to the USDA-NRCS 2022 Soil Science Collaborative Research Proposals RFP\nYou can find the original RFP here https://www.grants.gov/web/grants/view-opportunity.html?oppId=337972.",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#project-website",
     "href": "index.html#project-website",
     "title": "Alaska Soil Data Bank Project Metadata",
     "section": "Project Website",
-    "text": "Project Website\nhttps://github.com/alaska-soil-data-bank"
+    "text": "Project Website\nhttps://github.com/alaska-soil-data-bank",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
-    "objectID": "datamanagementplan.html#expected-data-types",
-    "href": "datamanagementplan.html#expected-data-types",
+    "objectID": "datamanagementplan.html",
+    "href": "datamanagementplan.html",
     "title": "1  Data Management Plan",
-    "section": "1.1 Expected Data Types",
-    "text": "1.1 Expected Data Types\nThe data generated by this project will be digital soil data generated by acquiring existing non-NRCS soil datasets from academic and agency partners, peer-reviewed literature, and grey literature (i.e. government publications and reports). It is expected that this project will include the acquisition of over 200 datasets and add over 14,000 new observations to the NASIS database for Alaska, particularly in underrepresented areas in the NASIS datasets that are critical areas to gap fill to meet Soil2026 goals."
+    "section": "",
+    "text": "1.1 Expected Data Types\nThe data generated by this project will be digital soil data generated by acquiring existing non-NRCS soil datasets from academic and agency partners, peer-reviewed literature, and grey literature (i.e. government publications and reports). It is expected that this project will include the acquisition of over 200 datasets and add over 14,000 new observations to the NASIS database for Alaska, particularly in underrepresented areas in the NASIS datasets that are critical areas to gap fill to meet Soil2026 goals.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Management Plan</span>"
+    ]
   },
   {
     "objectID": "datamanagementplan.html#data-format",
     "href": "datamanagementplan.html#data-format",
     "title": "1  Data Management Plan",
     "section": "1.2 Data Format",
-    "text": "1.2 Data Format\nThis original data will be acquired and ingested “as is” – if the original data is digital, it will remain in its original format. If the data is held as hard copy records, those will be scanned, digitized, and formatted for NASIS ingestion prior to input into GEMS. The output will be a harmonized dataset in machine-readable format prepared for automated input into NASIS and following all NASIS formatting standards."
+    "text": "1.2 Data Format\nThis original data will be acquired and ingested “as is” – if the original data is digital, it will remain in its original format. If the data is held as hard copy records, those will be scanned, digitized, and formatted for NASIS ingestion prior to input into GEMS. The output will be a harmonized dataset in machine-readable format prepared for automated input into NASIS and following all NASIS formatting standards.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Management Plan</span>"
+    ]
   },
   {
     "objectID": "datamanagementplan.html#data-storage-and-preservation",
     "href": "datamanagementplan.html#data-storage-and-preservation",
     "title": "1  Data Management Plan",
     "section": "1.3 Data Storage and Preservation",
-    "text": "1.3 Data Storage and Preservation\nData generated by activities outlined in this proposal will be initially stored and maintained in the GEMS platform hosted in the data center of the Minnesota Supercomputing Institute (MSI). MSI performs full off-site backups as part of their disaster recovery plan. GEMS has recurrent Minnesota State Government funding to maintain its core operations, currently with no expiry date. All registered data in GEMS is persistent, given a DataCite DOI minted by our University of Minnesota Libraries partners. In addition to storage in GEMS and linkage in metadata to original data sources whenever possible, harmonized data will be imported into NASIS in compatible, machine- readable format and therefore all data produced by the project will also be imported into NASIS prior to project end. Per the project narrative, the power of the GEMS platform is that datasets are input “as is”, maintaining the data structure of the original authors. GEMS metadata for each dataset includes full reference information. If the dataset is publicly available, the GEMS metadata for that dataset will include information on dataset access, storage platform, and author contact information. This metadata is in JSON format and can be reconfigured and exported for any metadata catalog (in this case specifically targeting the NOTCOM catalog maintained by the NRCS Initial Mapping Team) that may be maintained by NRCS. The GEMS platform excels at utilizing field metadata and fuzzy matching to enable post-input data harmonization. During the dataset input process, in addition to constructing dataset metadata, metadata tags are assigned to each dataset field from a dynamic data dictionary which can be expanded as necessary as more datasets are added. These field metadata tags then become the primary vehicle through which scripts are written to subsequently harmonize the data for export and usage in DSM. There are many advantages to this approach. The primary advantage is that datasets are imported “as is”, meaning that data will match the original data source and author format. This increases transparency because there is no prior “re-working” of data before it is added to the database. As scripts are written to harmonize datasets to a defined format using field metadata tags, these scripts will also be available on GitHub to enable any potential user to recreate the eventual harmonized dataset that is utilized for DSM. Finally, because scripting is used for harmonization, output format is flexible. This is critical, because scripts will be developed to harmonize data and output in a format which can be ingested into NASIS.\n\n1.3.1 Data Sharing, Protection and Public Access\nThe GEMS agroinformatics platform developed by the University of Minnesota supports the data interoperability and sharing needs of this project. GEMS adheres to and, via its extensive (and still expanding) data handling toolkit, makes practically possible, FAIR(ER) data sharing principles; findable, accessible, interoperable, reusable, ethical—i.e., respects data sensitivities (e.g., partner sourced) or any proprietary (e.g., privately-sourced) data—and reproducible. Non-private data will be made open to the public via GEMS-Open, an open database of functionally interoperable and documented data that adheres to standard and harmonized meta-data protocols. When viewing and analyzing datasets, GEMS requires users to click licenses of each primary data source prior to receiving access to the data. Similarly, all data product derivatives are electronically tagged with links to the product sources in their metadata, ensuring proper credit attributions, as often described by their license agreements. The ASDB will adopt a data policy that accounts for data ownership, allows reuse of data and creation of data derivatives (e.g., pooling of soil data into new larger continental soil applications). We will adopt the Creative Commons Licensing scheme for data sharing and attributions. Importantly, the spectrum of private-public data sharing is accounted for in the ASDB. This is an important aspect because some soil data have inherent restrictions of data usage (e.g., soil projects funded by private companies or corporations, soil data with privacy/confidentiality protection), while other soil projects funded by federal resources are considered public goods without data restrictions. Geographic coordinates are in some cases private data that need to be protected for confidentiality reasons and may be released only for public use in aggregated/masked format."
+    "text": "1.3 Data Storage and Preservation\nData generated by activities outlined in this proposal will be initially stored and maintained in the GEMS platform hosted in the data center of the Minnesota Supercomputing Institute (MSI). MSI performs full off-site backups as part of their disaster recovery plan. GEMS has recurrent Minnesota State Government funding to maintain its core operations, currently with no expiry date. All registered data in GEMS is persistent, given a DataCite DOI minted by our University of Minnesota Libraries partners. In addition to storage in GEMS and linkage in metadata to original data sources whenever possible, harmonized data will be imported into NASIS in compatible, machine- readable format and therefore all data produced by the project will also be imported into NASIS prior to project end. Per the project narrative, the power of the GEMS platform is that datasets are input “as is”, maintaining the data structure of the original authors. GEMS metadata for each dataset includes full reference information. If the dataset is publicly available, the GEMS metadata for that dataset will include information on dataset access, storage platform, and author contact information. This metadata is in JSON format and can be reconfigured and exported for any metadata catalog (in this case specifically targeting the NOTCOM catalog maintained by the NRCS Initial Mapping Team) that may be maintained by NRCS. The GEMS platform excels at utilizing field metadata and fuzzy matching to enable post-input data harmonization. During the dataset input process, in addition to constructing dataset metadata, metadata tags are assigned to each dataset field from a dynamic data dictionary which can be expanded as necessary as more datasets are added. These field metadata tags then become the primary vehicle through which scripts are written to subsequently harmonize the data for export and usage in DSM. There are many advantages to this approach. The primary advantage is that datasets are imported “as is”, meaning that data will match the original data source and author format. This increases transparency because there is no prior “re-working” of data before it is added to the database. As scripts are written to harmonize datasets to a defined format using field metadata tags, these scripts will also be available on GitHub to enable any potential user to recreate the eventual harmonized dataset that is utilized for DSM. Finally, because scripting is used for harmonization, output format is flexible. This is critical, because scripts will be developed to harmonize data and output in a format which can be ingested into NASIS.\n\n1.3.1 Data Sharing, Protection and Public Access\nThe GEMS agroinformatics platform developed by the University of Minnesota supports the data interoperability and sharing needs of this project. GEMS adheres to and, via its extensive (and still expanding) data handling toolkit, makes practically possible, FAIR(ER) data sharing principles; findable, accessible, interoperable, reusable, ethical—i.e., respects data sensitivities (e.g., partner sourced) or any proprietary (e.g., privately-sourced) data—and reproducible. Non-private data will be made open to the public via GEMS-Open, an open database of functionally interoperable and documented data that adheres to standard and harmonized meta-data protocols. When viewing and analyzing datasets, GEMS requires users to click licenses of each primary data source prior to receiving access to the data. Similarly, all data product derivatives are electronically tagged with links to the product sources in their metadata, ensuring proper credit attributions, as often described by their license agreements. The ASDB will adopt a data policy that accounts for data ownership, allows reuse of data and creation of data derivatives (e.g., pooling of soil data into new larger continental soil applications). We will adopt the Creative Commons Licensing scheme for data sharing and attributions. Importantly, the spectrum of private-public data sharing is accounted for in the ASDB. This is an important aspect because some soil data have inherent restrictions of data usage (e.g., soil projects funded by private companies or corporations, soil data with privacy/confidentiality protection), while other soil projects funded by federal resources are considered public goods without data restrictions. Geographic coordinates are in some cases private data that need to be protected for confidentiality reasons and may be released only for public use in aggregated/masked format.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Management Plan</span>"
+    ]
   },
   {
     "objectID": "datamanagementplan.html#data-security",
     "href": "datamanagementplan.html#data-security",
     "title": "1  Data Management Plan",
     "section": "1.4 Data Security",
-    "text": "1.4 Data Security\n[From GEMS Platform FAQ] All GEMS staff members, including those at the data center at MSI who maintain GEMS have been fully trained on HIPAA privacy protocols. GEMS also has policies reviewed by MSI’s Research Security and Compliance Analyst. All GEMS staff with access to private data sign an internal non-disclosure agreement designed by UMN’s Office of the General Counsel. All operations within the platform are isolated into encrypted containers where no other users have access (hence no snooping). Data entering or leaving these containers is also encrypted to prevent opportunity for leaks. All identifiable data residing in the platform are legally deemed private and non-public by the State of Minnesota, and hence not FOIAble. Finally, we provide users with various anonymization tools to de-identify their own data sets prior to sharing. These include removal of named identifiers, fuzzing and jittering of geo-coordinates and geospatial aggregation.\n\n1.4.1 Roles and Responsibilities\nPI Jelinski will be responsible ensuring the data management plan is followed by all project participants and will also be responsible for reporting compliance with this data management plan to NRCS. The annual and final reports to NRCS will have an expanded data management plan as an integral component, and will include progress in data sharing (e.g., statistics on shared and accessed data sets, publications, DOIs, outreach materials). The final report will describe the data that was produced during the award period and the components that will be stored and preserved (including the expected duration) after the award ends. The GEMS platform data steward will ensure that the data management plan will be compliant with the Research Terms and Conditions that govern NRCS-funded projects."
+    "text": "1.4 Data Security\n[From GEMS Platform FAQ] All GEMS staff members, including those at the data center at MSI who maintain GEMS have been fully trained on HIPAA privacy protocols. GEMS also has policies reviewed by MSI’s Research Security and Compliance Analyst. All GEMS staff with access to private data sign an internal non-disclosure agreement designed by UMN’s Office of the General Counsel. All operations within the platform are isolated into encrypted containers where no other users have access (hence no snooping). Data entering or leaving these containers is also encrypted to prevent opportunity for leaks. All identifiable data residing in the platform are legally deemed private and non-public by the State of Minnesota, and hence not FOIAble. Finally, we provide users with various anonymization tools to de-identify their own data sets prior to sharing. These include removal of named identifiers, fuzzing and jittering of geo-coordinates and geospatial aggregation.\n\n1.4.1 Roles and Responsibilities\nPI Jelinski will be responsible ensuring the data management plan is followed by all project participants and will also be responsible for reporting compliance with this data management plan to NRCS. The annual and final reports to NRCS will have an expanded data management plan as an integral component, and will include progress in data sharing (e.g., statistics on shared and accessed data sets, publications, DOIs, outreach materials). The final report will describe the data that was produced during the award period and the components that will be stored and preserved (including the expected duration) after the award ends. The GEMS platform data steward will ensure that the data management plan will be compliant with the Research Terms and Conditions that govern NRCS-funded projects.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Data Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "deliverable1.html",
+    "href": "deliverable1.html",
+    "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
+    "section": "",
+    "text": "2.1 Data Contributors",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
     "objectID": "deliverable1.html#data-contributors",
     "href": "deliverable1.html#data-contributors",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
-    "section": "2.1 Data Contributors",
-    "text": "2.1 Data Contributors\n\nUniversity of Alaska Fairbanks\nUniversity of Minnesota\nNational Park Service - Arctic Research Coordination Network (NPS-ACRN)\nU.S. Army Corps of Engineers Cold Regions Research and Engineering Laborotory (CRREL)\nAlaska Biological Resarch (ABR, Inc., Anchorage AK)\nUS Department of Energy (DOE)\nBureau of Land Management (BLM)\nUS Forest Service (USFS)"
+    "section": "",
+    "text": "University of Alaska Fairbanks\nUniversity of Minnesota\nNational Park Service - Arctic Research Coordination Network (NPS-ACRN)\nU.S. Army Corps of Engineers Cold Regions Research and Engineering Laborotory (CRREL)\nAlaska Biological Resarch (ABR, Inc., Anchorage AK)\nUS Department of Energy (DOE)\nBureau of Land Management (BLM)\nUS Forest Service (USFS)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
     "objectID": "deliverable1.html#data-description",
     "href": "deliverable1.html#data-description",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
     "section": "2.2 Data Description",
-    "text": "2.2 Data Description\n[output from GEMS]"
+    "text": "2.2 Data Description\n[output from GEMS]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
     "objectID": "deliverable1.html#description-of-data-mining-procedures",
     "href": "deliverable1.html#description-of-data-mining-procedures",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
     "section": "2.3 Description of Data Mining Procedures",
-    "text": "2.3 Description of Data Mining Procedures\n\nhardcopy data\ndigital data"
+    "text": "2.3 Description of Data Mining Procedures\n\nhardcopy data\ndigital data",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
     "objectID": "deliverable1.html#standardized-projection",
     "href": "deliverable1.html#standardized-projection",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
     "section": "2.4 Standardized Projection",
-    "text": "2.4 Standardized Projection\nProjection: Alaska Albers NAD83, EPSG: 3338 Scope: Topographic Mapping (small scale) Area of Use: United States (USA) - Alaska Coordinate System: Cartesian 2D CS. Axes: easting, northing (X,Y). Orientations: east, north. Unit: meters (m) Geodetic CRS: NAD83 Datum: North American Datum 1983 Ellipsoid: GRS 1980 Prime meridian: Greenwich Data Source: EPSG Information Source: State of Alaska Department of Natural Resources Revision Date: 11-11-2006"
+    "text": "2.4 Standardized Projection\nProjection: Alaska Albers NAD83, EPSG: 3338 Scope: Topographic Mapping (small scale) Area of Use: United States (USA) - Alaska Coordinate System: Cartesian 2D CS. Axes: easting, northing (X,Y). Orientations: east, north. Unit: meters (m) Geodetic CRS: NAD83 Datum: North American Datum 1983 Ellipsoid: GRS 1980 Prime meridian: Greenwich Data Source: EPSG Information Source: State of Alaska Department of Natural Resources Revision Date: 11-11-2006",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
     "objectID": "deliverable1.html#data-completeness-geospatial-data-quality-and-soil-classification-quality-rankings",
     "href": "deliverable1.html#data-completeness-geospatial-data-quality-and-soil-classification-quality-rankings",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
     "section": "2.5 Data Completeness, Geospatial Data Quality, and Soil Classification Quality Rankings",
-    "text": "2.5 Data Completeness, Geospatial Data Quality, and Soil Classification Quality Rankings\nThese rankings will be added to the site (geolocated) metadata for each record. They will be added as field metadata tags in the site id field (data completeness), latitude and longitude fields (geospatial data quality), and classification fields (soil classification quality).\n\n2.5.1 Data Completeness Rankings\n[From Nic] These data completeness rankings will be assigned programmatically, but they may still hold value for dataset users who would like a single field to filter all data on:\n\nTier 1 – Soil morphology and physical/chemical data to a depth of at least 1 meter\nTier 2 – Soil morphology and physical/chemical data to a depth of &lt; 1m\nTier 3 – Soil morphology to a depth of at least 1m\nTier 4 – Soil morphology to a depth of &lt; 1m\nTier 5 – Site characteristics only (i.e. thickness of organics, thaw depth, etc)"
+    "text": "2.5 Data Completeness, Geospatial Data Quality, and Soil Classification Quality Rankings\nThese rankings will be added to the site (geolocated) metadata for each record. They will be added as field metadata tags in the site id field (data completeness), latitude and longitude fields (geospatial data quality), and classification fields (soil classification quality).\n\n2.5.1 Data Completeness Rankings\n[From Nic] These data completeness rankings will be assigned programmatically, but they may still hold value for dataset users who would like a single field to filter all data on:\n\nTier 1 – Soil morphology and physical/chemical data to a depth of at least 1 meter\nTier 2 – Soil morphology and physical/chemical data to a depth of &lt; 1m\nTier 3 – Soil morphology to a depth of at least 1m\nTier 4 – Soil morphology to a depth of &lt; 1m\nTier 5 – Site characteristics only (i.e. thickness of organics, thaw depth, etc)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
     "objectID": "deliverable1.html#geospatial-data-quality-rankings",
     "href": "deliverable1.html#geospatial-data-quality-rankings",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
     "section": "2.6 Geospatial Data Quality Rankings",
-    "text": "2.6 Geospatial Data Quality Rankings\n[From Colby] We took a ‘tiered’ approach for ranking spatial quality:\n\nTier 1 – spatial coordinates were noted as being collected with GPS anytime after May 1, 2000 (there is seldom enough information to quantify positional accuracy or the type of GPS, but we figured that coordinates from a GPS unit are probably more consistent than from other sources).\nTier 2 – spatial coordinates were collected post 2010 but not explicitly identified as being collected with GPS. We assume that these were collected with a GPS even if there is nothing that indicates it was collected by GPS.\nTier 3 – spatial coordinates collected between 2000 and 2010 but not explicitly identified as being collected with GPS. Coordinates may have come from a GPS, but it is possible that they were estimated by alternative means.\nTier 4 – pre-2000 GPS (US government agency), if a GPS unit was being used by a US government agency prior to selective availability being turned off (May 1, 2000), it is still likely that the government issued GPS unit was not subject to selective availability, however we cannot be certain.\nTier 5 – pre-2000 GPS (non-US government), even if collected with a GPS, selective availability was turned on before this (it specifically ended May 1, 2000) so quality is suspect.\nTier 6 – pre-2000 Aerial Photo/Topo Annotation, georeferencing was accomplished by annotation of approximate site location on an aerial photo or topographic map.\nTier 7 – pre-2000 Location Description, georeferencing was accomplished by a metes and bounds description of the approximate site location (i.e. 200m NE from the NW corner of section 36 in township and range X and Y)."
+    "text": "2.6 Geospatial Data Quality Rankings\n[From Colby] We took a ‘tiered’ approach for ranking spatial quality:\n\nTier 1 – spatial coordinates were noted as being collected with GPS anytime after May 1, 2000 (there is seldom enough information to quantify positional accuracy or the type of GPS, but we figured that coordinates from a GPS unit are probably more consistent than from other sources).\nTier 2 – spatial coordinates were collected post 2010 but not explicitly identified as being collected with GPS. We assume that these were collected with a GPS even if there is nothing that indicates it was collected by GPS.\nTier 3 – spatial coordinates collected between 2000 and 2010 but not explicitly identified as being collected with GPS. Coordinates may have come from a GPS, but it is possible that they were estimated by alternative means.\nTier 4 – pre-2000 GPS (US government agency), if a GPS unit was being used by a US government agency prior to selective availability being turned off (May 1, 2000), it is still likely that the government issued GPS unit was not subject to selective availability, however we cannot be certain.\nTier 5 – pre-2000 GPS (non-US government), even if collected with a GPS, selective availability was turned on before this (it specifically ended May 1, 2000) so quality is suspect.\nTier 6 – pre-2000 Aerial Photo/Topo Annotation, georeferencing was accomplished by annotation of approximate site location on an aerial photo or topographic map.\nTier 7 – pre-2000 Location Description, georeferencing was accomplished by a metes and bounds description of the approximate site location (i.e. 200m NE from the NW corner of section 36 in township and range X and Y).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
     "objectID": "deliverable1.html#soil-classification-quality-rankings",
     "href": "deliverable1.html#soil-classification-quality-rankings",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
     "section": "2.7 Soil Classification Quality Rankings",
-    "text": "2.7 Soil Classification Quality Rankings\n[From Nic] We took a ‘tiered’ approach for ranking spatial quality:\nSoil classification quality rankings will allow users of the database to discern between soil classes which were assigned with varying degrees of uncertainty. Note that the depths of observation and soil physical and chemical properties required to make unambiguous classifications depend on the taxonomic entity in question. For example, if there is permafrost within 1m of the soil surface, no morphology or laboratory data is necessary to make the unambiguous classification to the Gelisol soil order (Tier 1). However, if no other information is available, then classification to the suborder is not possible (Tier 4). This classification certainty ranking is there applied as a field metadata tag to each level of taxonomic classification, which are held in independent fields:\n\nTier 1 – unambiguous classification; all necessary morphological or soil physical and chemical data are available\nTier 2 – partially ambiguous classification; unambiguous morphological data, but missing some required soil physical or chemical data, few assumptions made regarding soil features and properties\nTier 3 – largely ambiguous classification; morphological data not available to requisite depth or missing key properties, and and/or missing required soil physical or chemical data\nTier 4 – no classification possible; limited morphological data and laboratory data available\n\nThere may be other tiers that are worth considering."
+    "text": "2.7 Soil Classification Quality Rankings\n[From Nic] We took a ‘tiered’ approach for ranking spatial quality:\nSoil classification quality rankings will allow users of the database to discern between soil classes which were assigned with varying degrees of uncertainty. Note that the depths of observation and soil physical and chemical properties required to make unambiguous classifications depend on the taxonomic entity in question. For example, if there is permafrost within 1m of the soil surface, no morphology or laboratory data is necessary to make the unambiguous classification to the Gelisol soil order (Tier 1). However, if no other information is available, then classification to the suborder is not possible (Tier 4). This classification certainty ranking is there applied as a field metadata tag to each level of taxonomic classification, which are held in independent fields:\n\nTier 1 – unambiguous classification; all necessary morphological or soil physical and chemical data are available\nTier 2 – partially ambiguous classification; unambiguous morphological data, but missing some required soil physical or chemical data, few assumptions made regarding soil features and properties\nTier 3 – largely ambiguous classification; morphological data not available to requisite depth or missing key properties, and and/or missing required soil physical or chemical data\nTier 4 – no classification possible; limited morphological data and laboratory data available\n\nThere may be other tiers that are worth considering.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
     "objectID": "deliverable1.html#description-of-data-wrangling-procedures-gems-import",
     "href": "deliverable1.html#description-of-data-wrangling-procedures-gems-import",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
     "section": "2.8 Description of Data Wrangling Procedures-GEMS import",
-    "text": "2.8 Description of Data Wrangling Procedures-GEMS import"
+    "text": "2.8 Description of Data Wrangling Procedures-GEMS import",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
     "objectID": "deliverable1.html#description-of-controlled-vocabularytaxonomy",
     "href": "deliverable1.html#description-of-controlled-vocabularytaxonomy",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
     "section": "2.9 Description of Controlled Vocabulary/Taxonomy",
-    "text": "2.9 Description of Controlled Vocabulary/Taxonomy\nThis project utilizes a project-specific, hierarchical controlled vocabulary or taxonomy (which is crosswalked to NRCS field and laboratory codes where they exist) to tag field metadata. The current version of the controlled vocabulary is in this repository."
+    "text": "2.9 Description of Controlled Vocabulary/Taxonomy\nThis project utilizes a project-specific, hierarchical controlled vocabulary or taxonomy (which is crosswalked to NRCS field and laboratory codes where they exist) to tag field metadata. The current version of the controlled vocabulary is in this repository.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
     "objectID": "deliverable1.html#description-of-post-ingestion-scripting-harmonization-procedures",
     "href": "deliverable1.html#description-of-post-ingestion-scripting-harmonization-procedures",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
     "section": "2.10 Description of post-ingestion scripting, harmonization procedures",
-    "text": "2.10 Description of post-ingestion scripting, harmonization procedures"
+    "text": "2.10 Description of post-ingestion scripting, harmonization procedures",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
     "objectID": "deliverable1.html#description-of-export-procedures",
     "href": "deliverable1.html#description-of-export-procedures",
     "title": "2  Metadata for Deliverable 1: Building the Alaska Soil Data Bank",
     "section": "2.11 Description of export procedures",
-    "text": "2.11 Description of export procedures"
+    "text": "2.11 Description of export procedures",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span>"
+    ]
   },
   {
-    "objectID": "deliverable2.html#approach",
-    "href": "deliverable2.html#approach",
+    "objectID": "deliverable2.html",
+    "href": "deliverable2.html",
     "title": "3  Metadata for Deliverable 2: Statewide soil class mapping",
-    "section": "3.1 Approach",
-    "text": "3.1 Approach"
+    "section": "",
+    "text": "3.1 Approach",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Metadata for Deliverable 2: Statewide soil class mapping</span>"
+    ]
   },
   {
     "objectID": "deliverable2.html#covariate-development-and-curation",
     "href": "deliverable2.html#covariate-development-and-curation",
     "title": "3  Metadata for Deliverable 2: Statewide soil class mapping",
     "section": "3.2 Covariate Development and Curation",
-    "text": "3.2 Covariate Development and Curation"
+    "text": "3.2 Covariate Development and Curation",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Metadata for Deliverable 2: Statewide soil class mapping</span>"
+    ]
   },
   {
-    "objectID": "deliverable3.html#approach",
-    "href": "deliverable3.html#approach",
+    "objectID": "deliverable3.html",
+    "href": "deliverable3.html",
     "title": "4  Metadata for Deliverable 3: Segmentation Analysis - Katmai National Park and Preserve",
-    "section": "4.1 Approach",
-    "text": "4.1 Approach\nTraining data from KATM curated and prepared by ABR includes approximately 407 points along 67 transects in KATM. This data will be used to classify the segments from imagery analysis to soil map-unit components using random forest models (Breiman 2001) and spectral metrics from high-resolution imagery and other co-variates. The end product will be a soil map equivalent to a traditional hand-delineated NRCS vector-based soil map, at the scale of an order 2 soil survey (1:24,000)."
+    "section": "",
+    "text": "4.1 Approach\nTraining data from KATM curated and prepared by ABR includes approximately 407 points along 67 transects in KATM. This data will be used to classify the segments from imagery analysis to soil map-unit components using random forest models (Breiman 2001) and spectral metrics from high-resolution imagery and other co-variates. The end product will be a soil map equivalent to a traditional hand-delineated NRCS vector-based soil map, at the scale of an order 2 soil survey (1:24,000).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Metadata for Deliverable 3: Segmentation Analysis  - Katmai National Park and Preserve</span>"
+    ]
   },
   {
     "objectID": "deliverable3.html#deliverables",
     "href": "deliverable3.html#deliverables",
     "title": "4  Metadata for Deliverable 3: Segmentation Analysis - Katmai National Park and Preserve",
     "section": "4.2 Deliverables",
-    "text": "4.2 Deliverables\nProduce an innovative raster-based, delineated soil map by segmentation analysis for Katmai National Park and Preserve."
+    "text": "4.2 Deliverables\nProduce an innovative raster-based, delineated soil map by segmentation analysis for Katmai National Park and Preserve.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Metadata for Deliverable 3: Segmentation Analysis  - Katmai National Park and Preserve</span>"
+    ]
+  },
+  {
+    "objectID": "data-model.html",
+    "href": "data-model.html",
+    "title": "5  Alaska Soil Data Bank (AKSDB) Data Model Documentation",
+    "section": "",
+    "text": "5.1 Table of Contents",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Alaska Soil Data Bank (AKSDB) Data Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "data-model.html#table-of-contents",
+    "href": "data-model.html#table-of-contents",
+    "title": "5  Alaska Soil Data Bank (AKSDB) Data Model Documentation",
+    "section": "",
+    "text": "Introduction\nRelated Data Models\nCore Concepts\nData Levels\nData Dictionary and Thesaurus\nKey Data Structures\nMetadata and Annotations\nData Quality and Standards",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Alaska Soil Data Bank (AKSDB) Data Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "data-model.html#introduction",
+    "href": "data-model.html#introduction",
+    "title": "5  Alaska Soil Data Bank (AKSDB) Data Model Documentation",
+    "section": "5.2 Introduction",
+    "text": "5.2 Introduction\nThe Alaska Soil Data Bank (AKSDB) project aims to acquire, curate, and harmonize non-NRCS legacy soil data across Alaska. Unlike similar efforts in the conterminous United States that primarily rely on USDA-NRCS NASIS and KSSL databases, Alaska presents unique challenges due to significant gaps in NASIS/KSSL coverage and the existence of numerous diverse non-NRCS datasets with limited spatial overlap.\nThe AKSDB data model has been developed with several key principles: - Transparent sourcing of raw data - No modification of source data on ingestion - Enhanced metadata enrichment - Transparent harmonization via scripting - Delivery of publicly available datasets to WoSIS/NASIS/ISCN",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Alaska Soil Data Bank (AKSDB) Data Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "data-model.html#related-data-models",
+    "href": "data-model.html#related-data-models",
+    "title": "5  Alaska Soil Data Bank (AKSDB) Data Model Documentation",
+    "section": "5.3 Related Data Models",
+    "text": "5.3 Related Data Models\nThe AKSDB data model draws inspiration from several existing soil data frameworks:\n\nWoSIS (World Soil Information Service)\n\nPrimary influence for dataset and profile concepts\nProvides foundation for standardization approaches\nOffers established controlled vocabulary framework\n\nSOC-DRaH and SOC-DRaH2\n\nEarly iterations of soil carbon data harmonization\nUsed for International Soil Carbon Network (ISCN) data compilation\nProvides baseline for metadata handling\n\nSoil-DRaH\n\nMost recent iteration of harmonization approaches\nIntroduces level-based data processing concept\nProvides template for data annotations",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Alaska Soil Data Bank (AKSDB) Data Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "data-model.html#core-concepts",
+    "href": "data-model.html#core-concepts",
+    "title": "5  Alaska Soil Data Bank (AKSDB) Data Model Documentation",
+    "section": "5.4 Core Concepts",
+    "text": "5.4 Core Concepts\n\n5.4.1 Dataset Concept\nTable: Dataset Structure\n\nField                       | Description\n---------------------------|-------------\ndataset_id                 | Unique identifier for the dataset\ndataset_sub_id             | Optional identifier for subset within compilation datasets\nversion                    | Version of the dataset\ndate                       | Date of dataset snapshot/receipt\nlicense_file              | URL link to associated license\npublication_date          | Date of formal publication (if applicable)\nreference                 | Citation or reference information\n\n\n5.4.2 Pedon Concept\nTable: Pedon Structure\n\nField                       | Description\n---------------------------|-------------\ndataset_id                 | Link to parent dataset\ndataset_sub_id             | Link to dataset subset (if applicable)\ndataset_peid               | Unique pedon identifier within dataset\ndate_timestamp            | Observation date in YYYY-MM-DD format\nlat                       | Latitude (WGS 84)\nlon                       | Longitude (WGS 84)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Alaska Soil Data Bank (AKSDB) Data Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "data-model.html#data-levels",
+    "href": "data-model.html#data-levels",
+    "title": "5  Alaska Soil Data Bank (AKSDB) Data Model Documentation",
+    "section": "5.5 Data Levels",
+    "text": "5.5 Data Levels\nThe AKSDB implements a hierarchical data level system:\n\n5.5.1 Level 0 (Raw Data)\n\nOriginal data as delivered\nNo modifications from source\nRequires three components:\n\nRaw data tables\nMetadata (created or linked)\nData dictionary (annotations file)\n\n\n\n\n5.5.2 Level 1 (Standardized Data)\n\nField names standardized using annotation file\nMaintains original data values\nStructured according to AKSDB standard format\nField names mapped to controlled vocabulary\n\n\n\n5.5.3 Level 2 (Quality Controlled)\n\nQA/QC checks implemented\nDocumentation of all modifications\nIncludes:\n\nHorizon depth validation\nValue range checks\nTypo corrections\nData quality annotations\n\n\n\n\n5.5.4 Level 3 (Harmonized Data)\n\nMultiple datasets integrated\nStandardized formats and units\nReady for modeling applications\nComplete provenance tracking",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Alaska Soil Data Bank (AKSDB) Data Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "data-model.html#data-dictionary-and-thesaurus",
+    "href": "data-model.html#data-dictionary-and-thesaurus",
+    "title": "5  Alaska Soil Data Bank (AKSDB) Data Model Documentation",
+    "section": "5.6 Data Dictionary and Thesaurus",
+    "text": "5.6 Data Dictionary and Thesaurus\nThe AKSDB implements two distinct but related concepts:\n\n5.6.1 Data Dictionary (Annotations File)\nTable: Annotation File Structure\n\nField                       | Description\n---------------------------|-------------\ndataset_id                 | Dataset identifier\ndataset_sub_id             | Dataset subset identifier\ntable_id                   | Raw table name\ncolumn_id                  | Original column name\naksdb_field_key            | Standardization key\ntype                       | Data type\nwith_entry                | Original data notes\n\n\n5.6.2 Thesaurus\nTable: Thesaurus Structure\n\nField                       | Description\n---------------------------|-------------\naksdb_field_key            | Standardized field identifier\nname                       | Human-readable field name\nfull_name                 | Complete descriptive name\nsynonyms                   | List of equivalent terms\ndescriptor                 | Detailed field description\nenforced_standards        | Required standards for Level 1+",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Alaska Soil Data Bank (AKSDB) Data Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "data-model.html#key-data-structures",
+    "href": "data-model.html#key-data-structures",
+    "title": "5  Alaska Soil Data Bank (AKSDB) Data Model Documentation",
+    "section": "5.7 Key Data Structures",
+    "text": "5.7 Key Data Structures\n\n5.7.1 Site/Pedon Relationship\nThe AKSDB model uses a flattened structure that combines site and pedon concepts: - Unique identification through dataset_peid - Temporal component included in identifier - Spatial component (lat/lon) required - WGS 84 coordinate system enforced at Level 1\n\n\n5.7.2 Horizon Data\nTable: Horizon Structure\n\nField                       | Description\n---------------------------|-------------\ndataset_peid               | Link to parent pedon\ntop_depth                 | Upper boundary depth\nbottom_depth              | Lower boundary depth\nhorizon_designation       | Soil horizon label",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Alaska Soil Data Bank (AKSDB) Data Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "data-model.html#metadata-and-annotations",
+    "href": "data-model.html#metadata-and-annotations",
+    "title": "5  Alaska Soil Data Bank (AKSDB) Data Model Documentation",
+    "section": "5.8 Metadata and Annotations",
+    "text": "5.8 Metadata and Annotations\n\n5.8.1 Dataset Package Components\n\nRaw Data Files\n\nOriginal format preserved\nNo modifications on ingestion\n\nMetadata\n\nXML format\nEither linked (published data) or generated\nFollows standard metadata schema\n\nAnnotation File\n\nMaps raw fields to standard vocabulary\nDocuments data types and constraints\nProvides field-level metadata\n\n\n\n\n5.8.2 Standardization Process\n\nIngest raw data (Level 0)\nCreate/link metadata\nGenerate annotations file\nApply standardization rules (Level 1)\nImplement QA/QC (Level 2)\nHarmonize across datasets (Level 3)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Alaska Soil Data Bank (AKSDB) Data Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "data-model.html#data-quality-and-standards",
+    "href": "data-model.html#data-quality-and-standards",
+    "title": "5  Alaska Soil Data Bank (AKSDB) Data Model Documentation",
+    "section": "5.9 Data Quality and Standards",
+    "text": "5.9 Data Quality and Standards\n\n5.9.1 Quality Control Measures\n\nHorizon depth consistency checks\nValue range validation\nUnit standardization\nCoordinate system verification\nTemporal data validation\n\n\n\n5.9.2 Standards Enforcement\n\nWGS 84 coordinate system\nStandard date formats (YYYY-MM-DD)\nControlled vocabulary for field names\nRequired metadata elements\nDocumentation of modifications\n\n\n\n5.9.3 Quality Annotations\n\nConfidence levels for measurements\nData source reliability\nSpatial accuracy assessments\nTemporal precision indicators\nModification tracking",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Alaska Soil Data Bank (AKSDB) Data Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "data-model.html#implementation-notes",
+    "href": "data-model.html#implementation-notes",
+    "title": "5  Alaska Soil Data Bank (AKSDB) Data Model Documentation",
+    "section": "5.10 Implementation Notes",
+    "text": "5.10 Implementation Notes\nThe AKSDB data model is implemented with several key considerations:\n\nFlexibility\n\nAccommodates diverse data sources\nHandles varying levels of detail\nSupports multiple data types\n\nTraceability\n\nMaintains links to source data\nDocuments all transformations\nPreserves original values\n\nInteroperability\n\nCompatible with NASIS conventions\nSupports WoSIS export\nEnables ISCN integration\n\nScalability\n\nHandles large datasets\nSupports incremental updates\nEnables distributed processing\n\n\nThe model continues to evolve as new datasets are incorporated and additional requirements are identified. Regular review and updates ensure the model remains aligned with project goals and community needs.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Alaska Soil Data Bank (AKSDB) Data Model Documentation</span>"
+    ]
   },
   {
     "objectID": "authorship-guidelines.html",
     "href": "authorship-guidelines.html",
-    "title": "5  Authorship Guidelines",
+    "title": "6  Authorship Guidelines",
     "section": "",
-    "text": "Notes/questions on this section:\n\n[ is there a good example we can draw from?, authorship if our data is used externally, or authorship within our group?]\n\nhttps://besjournals.onlinelibrary.wiley.com/doi/full/10.1002/2688-8319.12060\n\nCreative Commons Licensing?\nAuthorship for us internal\nAuthorship for external groups that use our data"
+    "text": "Notes/questions on this section:\n\n[ is there a good example we can draw from?, authorship if our data is used externally, or authorship within our group?]\n\nhttps://besjournals.onlinelibrary.wiley.com/doi/full/10.1002/2688-8319.12060\n\nCreative Commons Licensing?\nAuthorship for us internal\nAuthorship for external groups that use our data",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Authorship Guidelines</span>"
+    ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "6  Summary",
+    "title": "7  Summary",
     "section": "",
-    "text": "Do we need a summary chapter?"
+    "text": "Do we need a summary chapter?",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Summary</span>"
+    ]
   },
   {
-    "objectID": "co-authorship-template.html#general-criteria-for-prospective-co-authorship-in-the-context-of-this-project.",
-    "href": "co-authorship-template.html#general-criteria-for-prospective-co-authorship-in-the-context-of-this-project.",
+    "objectID": "co-authorship-template.html",
+    "href": "co-authorship-template.html",
     "title": "Appendix A — Co-Authorship Agreement Template - Alaska Soil Data Bank Project",
-    "section": "A.1 General Criteria for prospective co-authorship in the context of this project.",
-    "text": "A.1 General Criteria for prospective co-authorship in the context of this project.\nA co-author should be someone “who contributes a minimum of 2 of the 6 “key” parts of the project: getting funded, conceiving the idea, designing the project, collecting the data, analyzing the data, writing/revising/reviewing the manuscript.”[^1]. This rule can be adapted to data contributors in the context of what is likely to be a large data acquisition effort for this project. If someone was substantially involved in data collection or curation on datasets that form a core part of this work and also provides substantive comment or feedback on a manuscript draft, they should be considered for co-authorship."
+    "section": "",
+    "text": "A.1 General Criteria for prospective co-authorship in the context of this project.\nA co-author should be someone “who contributes a minimum of 2 of the 6 “key” parts of the project: getting funded, conceiving the idea, designing the project, collecting the data, analyzing the data, writing/revising/reviewing the manuscript.”[^1]. This rule can be adapted to data contributors in the context of what is likely to be a large data acquisition effort for this project. If someone was substantially involved in data collection or curation on datasets that form a core part of this work and also provides substantive comment or feedback on a manuscript draft, they should be considered for co-authorship.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Co-Authorship Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "co-authorship-template.html#statement.",
     "href": "co-authorship-template.html#statement.",
     "title": "Appendix A — Co-Authorship Agreement Template - Alaska Soil Data Bank Project",
     "section": "A.2 Statement.",
-    "text": "A.2 Statement.\n“We have agreed to collaborate in this research and publish our results in a peer-reviewed journal. We agree to the following guidelines. This agreement ends after the paper is published and media inquiries conclude. We enter into this agreement voluntarily, and we can leave the agreement voluntarily as described below.”[^2]"
+    "text": "A.2 Statement.\n“We have agreed to collaborate in this research and publish our results in a peer-reviewed journal. We agree to the following guidelines. This agreement ends after the paper is published and media inquiries conclude. We enter into this agreement voluntarily, and we can leave the agreement voluntarily as described below.”[^2]",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Co-Authorship Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "co-authorship-template.html#roles.",
     "href": "co-authorship-template.html#roles.",
     "title": "Appendix A — Co-Authorship Agreement Template - Alaska Soil Data Bank Project",
     "section": "A.3 Roles.",
-    "text": "A.3 Roles.\nEstablish who is doing what – Author contribution Statement using CRediT (Contributor Roles Taxonomy) standards."
+    "text": "A.3 Roles.\nEstablish who is doing what – Author contribution Statement using CRediT (Contributor Roles Taxonomy) standards.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Co-Authorship Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "co-authorship-template.html#credit-and-responsibility2",
     "href": "co-authorship-template.html#credit-and-responsibility2",
     "title": "Appendix A — Co-Authorship Agreement Template - Alaska Soil Data Bank Project",
     "section": "A.4 Credit and Responsibility[^2]",
-    "text": "A.4 Credit and Responsibility[^2]\n\nAll co-authors share some degree of responsibility for the entire paper as an accurate, verifiable research report. Co-authors are responsible for the accuracy of their contributions, but may have only limited responsibility for material in other sections. This means that while all co-authors approve the submitted version of the manuscript, they are not obliged to agree entirely with all aspects of this article.\n\n\nAll co-authors give their permission for publication prior to submission of each version of the paper.\n\n\nAll co-authors can give presentations of this paper after publication, using material in the paper, providing they reference the paper and their co-authors. Ideally, they will also notify the co-authors of these presentations beforehand.\n\n\nAll co-authors can respond to media inquiries relating to this paper. Press releases can be issued from each co-author’s institution, but should be coordinated through the lead author(s). Co-authors should acknowledge the contributions of other co-authors during interviews and encourage reporters to contact them."
+    "text": "A.4 Credit and Responsibility[^2]\n\nAll co-authors share some degree of responsibility for the entire paper as an accurate, verifiable research report. Co-authors are responsible for the accuracy of their contributions, but may have only limited responsibility for material in other sections. This means that while all co-authors approve the submitted version of the manuscript, they are not obliged to agree entirely with all aspects of this article.\n\n\nAll co-authors give their permission for publication prior to submission of each version of the paper.\n\n\nAll co-authors can give presentations of this paper after publication, using material in the paper, providing they reference the paper and their co-authors. Ideally, they will also notify the co-authors of these presentations beforehand.\n\n\nAll co-authors can respond to media inquiries relating to this paper. Press releases can be issued from each co-author’s institution, but should be coordinated through the lead author(s). Co-authors should acknowledge the contributions of other co-authors during interviews and encourage reporters to contact them.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Co-Authorship Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "co-authorship-template.html#contingencies2",
     "href": "co-authorship-template.html#contingencies2",
     "title": "Appendix A — Co-Authorship Agreement Template - Alaska Soil Data Bank Project",
     "section": "A.5 Contingencies[^2]",
-    "text": "A.5 Contingencies[^2]\n\nNo co-author can block publication of the paper except because of concerns related to soundness — e.g., demonstrably incorrect statements (supported by evidence). Differences of opinion are not valid grounds for blockage. Concerns related to policy, management, or implications are not grounds for a co-author to block publication. If most (i.e., &gt; 50%) co-authors agree the paper should be published based on sound information, the paper will move forward. Every reasonable effort will be made by the other co-authors to reach a consensus on moving forward with a publication.\n\n\nCo-authors may voluntarily remove themselves from the project, and from co-authorship, at any point if they no longer have time for the project or if they disagree vehemently with some aspect of the project or paper. If a co-author voluntarily leaves the project or is asked to leave the Co-author Team because they are opposed to the paper being published, the co-authors will need to discuss with the dissenting member if her/his contributions can still be used, and perhaps described in the Acknowledgements, or will have to be removed from the paper."
+    "text": "A.5 Contingencies[^2]\n\nNo co-author can block publication of the paper except because of concerns related to soundness — e.g., demonstrably incorrect statements (supported by evidence). Differences of opinion are not valid grounds for blockage. Concerns related to policy, management, or implications are not grounds for a co-author to block publication. If most (i.e., &gt; 50%) co-authors agree the paper should be published based on sound information, the paper will move forward. Every reasonable effort will be made by the other co-authors to reach a consensus on moving forward with a publication.\n\n\nCo-authors may voluntarily remove themselves from the project, and from co-authorship, at any point if they no longer have time for the project or if they disagree vehemently with some aspect of the project or paper. If a co-author voluntarily leaves the project or is asked to leave the Co-author Team because they are opposed to the paper being published, the co-authors will need to discuss with the dissenting member if her/his contributions can still be used, and perhaps described in the Acknowledgements, or will have to be removed from the paper.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Co-Authorship Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "co-authorship-template.html#communication-2.",
     "href": "co-authorship-template.html#communication-2.",
     "title": "Appendix A — Co-Authorship Agreement Template - Alaska Soil Data Bank Project",
     "section": "A.6 Communication [^2].",
-    "text": "A.6 Communication [^2].\n\nAll co-authors agree to reply to emails and video/telephone calls concerning the project, especially when approaching final drafts and revisions of the paper, within a reasonable period of time, such as within one week.\n\n\nAll co-authors agree to notify the rest of the team prior to sharing the manuscript with people outside the Co-Author Team. Co-authors will be given a chance to comment prior to sharing.\n\n\nCo-authors are free to develop their own collaborations and directions using the ideas in the paper, once it is published. Co-authors should make every reasonable effort to inform each other when starting new collaborations and spin-off projects that result from this paper. In practice, the co-authors may continue to work together on follow-up projects, but this needs to be discussed among the group, and should not be assumed."
+    "text": "A.6 Communication [^2].\n\nAll co-authors agree to reply to emails and video/telephone calls concerning the project, especially when approaching final drafts and revisions of the paper, within a reasonable period of time, such as within one week.\n\n\nAll co-authors agree to notify the rest of the team prior to sharing the manuscript with people outside the Co-Author Team. Co-authors will be given a chance to comment prior to sharing.\n\n\nCo-authors are free to develop their own collaborations and directions using the ideas in the paper, once it is published. Co-authors should make every reasonable effort to inform each other when starting new collaborations and spin-off projects that result from this paper. In practice, the co-authors may continue to work together on follow-up projects, but this needs to be discussed among the group, and should not be assumed.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Co-Authorship Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "co-authorship-template.html#conflicts-of-interest-2.",
     "href": "co-authorship-template.html#conflicts-of-interest-2.",
     "title": "Appendix A — Co-Authorship Agreement Template - Alaska Soil Data Bank Project",
     "section": "A.7 Conflicts of Interest [^2].",
-    "text": "A.7 Conflicts of Interest [^2].\n\nAll co-authors will disclose to the Co-author Team any real or perceived conflicts of interest related to this project and paper.\n\n\nAll co-authors will disclose to the Co-author Team whether they or any close family members or associates will benefit financially from this project and paper."
+    "text": "A.7 Conflicts of Interest [^2].\n\nAll co-authors will disclose to the Co-author Team any real or perceived conflicts of interest related to this project and paper.\n\n\nAll co-authors will disclose to the Co-author Team whether they or any close family members or associates will benefit financially from this project and paper.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Co-Authorship Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "co-authorship-template.html#derivative-works-2",
     "href": "co-authorship-template.html#derivative-works-2",
     "title": "Appendix A — Co-Authorship Agreement Template - Alaska Soil Data Bank Project",
     "section": "A.8 Derivative Works [^2]",
-    "text": "A.8 Derivative Works [^2]\n\nIf any co-author is invited to be an author on a subsequent manuscript or presentation as a result of the work of this co-author team in the context of this project, they will notify all other co-authors on the list in this document to allow discussion of proper attribution and co-authorship on any derivative works."
+    "text": "A.8 Derivative Works [^2]\n\nIf any co-author is invited to be an author on a subsequent manuscript or presentation as a result of the work of this co-author team in the context of this project, they will notify all other co-authors on the list in this document to allow discussion of proper attribution and co-authorship on any derivative works.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Co-Authorship Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "co-authorship-template.html#prospective-personnel-meeting-co-authorship-criteria-in-no-particular-order-just-a-running-list",
     "href": "co-authorship-template.html#prospective-personnel-meeting-co-authorship-criteria-in-no-particular-order-just-a-running-list",
     "title": "Appendix A — Co-Authorship Agreement Template - Alaska Soil Data Bank Project",
     "section": "A.9 Prospective personnel meeting co-authorship criteria (in no particular order! Just a running list):",
-    "text": "A.9 Prospective personnel meeting co-authorship criteria (in no particular order! Just a running list):\nNic Jelinski (UMN) Matt Macander (ABR) Sue Ives (ABR) Colby Brungard (NMSU) Sabine Grunwald (UFL) Irfan Ainuddin (UMN) Dave D’Amore (USFS) Jaqcuie Foss (USFS) Frances Biles (USFS) Michael Sousa (USDA-NRCS) Timm Nawrocki (ACCC) Aaron Wells? Others??"
+    "text": "A.9 Prospective personnel meeting co-authorship criteria (in no particular order! Just a running list):\nNic Jelinski (UMN) Matt Macander (ABR) Sue Ives (ABR) Colby Brungard (NMSU) Sabine Grunwald (UFL) Irfan Ainuddin (UMN) Dave D’Amore (USFS) Jaqcuie Foss (USFS) Frances Biles (USFS) Michael Sousa (USDA-NRCS) Timm Nawrocki (ACCC) Aaron Wells? Others??",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Co-Authorship Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "co-authorship-template.html#personnel-who-should-be-included-in-acknowledgements",
     "href": "co-authorship-template.html#personnel-who-should-be-included-in-acknowledgements",
     "title": "Appendix A — Co-Authorship Agreement Template - Alaska Soil Data Bank Project",
     "section": "A.10 Personnel who should be included in acknowledgements:",
-    "text": "A.10 Personnel who should be included in acknowledgements:\nParker Martyn (NPS) Tina Boucher (BLM) Dave Swanson (NPS) Ben Stratton (BLM) Matt Ferderbar (BLM) NRCS Staff Aaron Wells? MANY others….\nReferences: [^1]: Dr. Manuela González Suárez::Who Should Be a Co-Author - Rules and Etiquette of Academic Authorship [^2]: CJA Bradshaw::Smoothing Over Content Issues with Co-Author Agreements"
+    "text": "A.10 Personnel who should be included in acknowledgements:\nParker Martyn (NPS) Tina Boucher (BLM) Dave Swanson (NPS) Ben Stratton (BLM) Matt Ferderbar (BLM) NRCS Staff Aaron Wells? MANY others….\nReferences: [^1]: Dr. Manuela González Suárez::Who Should Be a Co-Author - Rules and Etiquette of Academic Authorship [^2]: CJA Bradshaw::Smoothing Over Content Issues with Co-Author Agreements",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Co-Authorship Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
-    "objectID": "data-use-and-sharing.html#purpose-of-this-agreement",
-    "href": "data-use-and-sharing.html#purpose-of-this-agreement",
+    "objectID": "data-use-and-sharing.html",
+    "href": "data-use-and-sharing.html",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
-    "section": "B.1 Purpose of this agreement:",
-    "text": "B.1 Purpose of this agreement:\nThis data use agreement is a formal contract that clearly documents the data being shared and the parameters under which the data may be used—including description of project, term of use, and method of transmission. This agreement serves two purposes. First, it protects the entity providing the data [heneceforth “data provider”] to ensure that the data will not be misused. Second, it protects the intended recipient of the data [heneceforth “data recipient”] by providing confirmation that they are authorized to use that data for the proposed purpose and that the data transfer is compliant with legal and ethical standards[^1]."
+    "section": "",
+    "text": "B.1 Purpose of this agreement:\nThis data use agreement is a formal contract that clearly documents the data being shared and the parameters under which the data may be used—including description of project, term of use, and method of transmission. This agreement serves two purposes. First, it protects the entity providing the data [heneceforth “data provider”] to ensure that the data will not be misused. Second, it protects the intended recipient of the data [heneceforth “data recipient”] by providing confirmation that they are authorized to use that data for the proposed purpose and that the data transfer is compliant with legal and ethical standards[^1].",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#agreement-entities-and-points-of-contact",
     "href": "data-use-and-sharing.html#agreement-entities-and-points-of-contact",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.2 Agreement Entities and Points of Contact",
-    "text": "B.2 Agreement Entities and Points of Contact\nData Provider/POC: [==Fill in name of data providing entity/POC==] Data Recipient/POC: [==Dr. Nicolas Jelinski, Associate Professor, University of Minnesota==] Data Recipient/Project Team: [==Information about personnel on the project team who may have access to this data - when and how==]."
+    "text": "B.2 Agreement Entities and Points of Contact\nData Provider/POC: [==Fill in name of data providing entity/POC==] Data Recipient/POC: [==Dr. Nicolas Jelinski, Associate Professor, University of Minnesota==] Data Recipient/Project Team: [==Information about personnel on the project team who may have access to this data - when and how==].",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#dataset-scope",
     "href": "data-use-and-sharing.html#dataset-scope",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.3 Dataset Scope:",
-    "text": "B.3 Dataset Scope:\nThis agreement encompasses soil and vegetation data collected from ==XXXX-XXXX – fill in years== under the context of project [==project name and or number==] by [==data collection entity==]. The scope of this dataset includes [==description of numbers of point data or spatial data and data types/description==]."
+    "text": "B.3 Dataset Scope:\nThis agreement encompasses soil and vegetation data collected from ==XXXX-XXXX – fill in years== under the context of project [==project name and or number==] by [==data collection entity==]. The scope of this dataset includes [==description of numbers of point data or spatial data and data types/description==].",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#data-recipient-use-and-request-purpose",
     "href": "data-use-and-sharing.html#data-recipient-use-and-request-purpose",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.4 Data Recipient Use and Request Purpose:",
-    "text": "B.4 Data Recipient Use and Request Purpose:\nThe purpose of this request by the data recipient is to acquire soil and/or vegetation data in critical, underrepresented areas of the state of Alaska in order to build a statewide dataset to be used in conjunction with data in the USDA-NRCS National Soil Information Service (NASIS) database to generate novel, statewide maps of soil classes and properties in support of the USDA-NRCS Soils 2026 initiative which aims to complete a modern, digital soil map of the entire United States by 2026. Alaska represents &gt; 80% of currently non-complete lands, and therefore is a major focus area under a current project funded by USDA-NRCS to the project recipient (PI, Dr. Nic Jelinski, University of Minnesota). Data contributed to this project will only be used in aggregate, with other, statewide data to produce these maps. At no time will specific/individual point data be shared or displayed outside of the project team without the written consent of the data provider."
+    "text": "B.4 Data Recipient Use and Request Purpose:\nThe purpose of this request by the data recipient is to acquire soil and/or vegetation data in critical, underrepresented areas of the state of Alaska in order to build a statewide dataset to be used in conjunction with data in the USDA-NRCS National Soil Information Service (NASIS) database to generate novel, statewide maps of soil classes and properties in support of the USDA-NRCS Soils 2026 initiative which aims to complete a modern, digital soil map of the entire United States by 2026. Alaska represents &gt; 80% of currently non-complete lands, and therefore is a major focus area under a current project funded by USDA-NRCS to the project recipient (PI, Dr. Nic Jelinski, University of Minnesota). Data contributed to this project will only be used in aggregate, with other, statewide data to produce these maps. At no time will specific/individual point data be shared or displayed outside of the project team without the written consent of the data provider.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#license2",
     "href": "data-use-and-sharing.html#license2",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.5 License[^2]",
-    "text": "B.5 License[^2]\nThe data provider shall provide to the data requestor a nonexclusive, nontransferable, paid-up license to use data provider’s [==name of dataset==] in accordance with the terms of this Agreement. The data recipient will use the [==name of dataset==] to achieve the use and request purpose described in article 4, above. The data provider should select one of the creative commons licenses (https://creativecommons.org/about/cclicenses/) if they wish data to be shared publicly. Otherwise, the data recipient will operate under a default agreement, which specifies that the dataset will be used only in accordance with the stated purpose in this data use and sharing agreement, and will not be released to any third parties or made public without the express written consent of the data provider."
+    "text": "B.5 License[^2]\nThe data provider shall provide to the data requestor a nonexclusive, nontransferable, paid-up license to use data provider’s [==name of dataset==] in accordance with the terms of this Agreement. The data recipient will use the [==name of dataset==] to achieve the use and request purpose described in article 4, above. The data provider should select one of the creative commons licenses (https://creativecommons.org/about/cclicenses/) if they wish data to be shared publicly. Otherwise, the data recipient will operate under a default agreement, which specifies that the dataset will be used only in accordance with the stated purpose in this data use and sharing agreement, and will not be released to any third parties or made public without the express written consent of the data provider.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#ownership2",
     "href": "data-use-and-sharing.html#ownership2",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.6 Ownership[^2]",
-    "text": "B.6 Ownership[^2]\nThe [==name of dataset==] is owned by the data provider. The data recipient acknowledges to only use [==name of dataset==] pursuant to Article 4, and that no right, title, or interest in or to any copyrights, trademarks, or other proprietary rights relating to the [==name of dataset==] is transferred or licensed from the data provider to the data requestor."
+    "text": "B.6 Ownership[^2]\nThe [==name of dataset==] is owned by the data provider. The data recipient acknowledges to only use [==name of dataset==] pursuant to Article 4, and that no right, title, or interest in or to any copyrights, trademarks, or other proprietary rights relating to the [==name of dataset==] is transferred or licensed from the data provider to the data requestor.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#confidentiality2.",
     "href": "data-use-and-sharing.html#confidentiality2.",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.7 Confidentiality[^2].",
-    "text": "B.7 Confidentiality[^2].\nThe data recipient acknowledges the information provided by data provider may contain confidential information and is the property of the data provider. The data recipient shall take appropriate measures to protect the confidentiality and security of such confidential information. The data recipient shall not disclose, use, or distribute any data provider confidential information, except as expressly permitted in this Agreement. The data recipient may use the data provider’s confidential information as needed to accomplish the SOW."
+    "text": "B.7 Confidentiality[^2].\nThe data recipient acknowledges the information provided by data provider may contain confidential information and is the property of the data provider. The data recipient shall take appropriate measures to protect the confidentiality and security of such confidential information. The data recipient shall not disclose, use, or distribute any data provider confidential information, except as expressly permitted in this Agreement. The data recipient may use the data provider’s confidential information as needed to accomplish the SOW.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#data-transfer-plan2",
     "href": "data-use-and-sharing.html#data-transfer-plan2",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.8 Data Transfer Plan[^2]:",
-    "text": "B.8 Data Transfer Plan[^2]:\nData will be transferred from the data provider to the data requestor via a secure Box file link sent to the data provider. The University of Minnesota utilizes Box as its preferred inter-entity data transfer, sharing and storage application, as Box is “…FIPS 140-2 certified, and every file is encrypted using AES 256-bit encryption at rest and in transit.”"
+    "text": "B.8 Data Transfer Plan[^2]:\nData will be transferred from the data provider to the data requestor via a secure Box file link sent to the data provider. The University of Minnesota utilizes Box as its preferred inter-entity data transfer, sharing and storage application, as Box is “…FIPS 140-2 certified, and every file is encrypted using AES 256-bit encryption at rest and in transit.”",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#data-storage2",
     "href": "data-use-and-sharing.html#data-storage2",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.9 Data Storage[^2]:",
-    "text": "B.9 Data Storage[^2]:\nOnce uploaded to the secure Box folder, the dataset will be directly accessible only by the project PI (Dr. Jelinski), who can access via institution password protection. The data will be transferred directly from the shared Box folder to the University of Minnesota Genomics, Environment, Management and Socioeconomic (GEMS) database, where it will be held as private data, non-discoverable and non-shareable. Once on GEMS, the dataset can only be accessed by members of the project team who have access to the encrypted container where the data resides. The dataset will be deleted from the Box secure storage folder [30] days after receipt of data from the data provider, leaving only a single copy of the dataset on GEMS.\nAll GEMS staff members, including those at the data center at MSI who maintain GEMS and with access to private data on the platform sign an internal non-disclosure agreement designed by UMN’s Office of the General Counsel. All operations within the platform are isolated into encrypted containers where no other users have access (hence no snooping). Data entering or leaving these containers is also encrypted to prevent opportunity for leaks. All identifiable data residing in the platform are legally deemed private and non-public by the State of Minnesota, and hence not FOIAble."
+    "text": "B.9 Data Storage[^2]:\nOnce uploaded to the secure Box folder, the dataset will be directly accessible only by the project PI (Dr. Jelinski), who can access via institution password protection. The data will be transferred directly from the shared Box folder to the University of Minnesota Genomics, Environment, Management and Socioeconomic (GEMS) database, where it will be held as private data, non-discoverable and non-shareable. Once on GEMS, the dataset can only be accessed by members of the project team who have access to the encrypted container where the data resides. The dataset will be deleted from the Box secure storage folder [30] days after receipt of data from the data provider, leaving only a single copy of the dataset on GEMS.\nAll GEMS staff members, including those at the data center at MSI who maintain GEMS and with access to private data on the platform sign an internal non-disclosure agreement designed by UMN’s Office of the General Counsel. All operations within the platform are isolated into encrypted containers where no other users have access (hence no snooping). Data entering or leaving these containers is also encrypted to prevent opportunity for leaks. All identifiable data residing in the platform are legally deemed private and non-public by the State of Minnesota, and hence not FOIAble.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#access-and-modification-provisions",
     "href": "data-use-and-sharing.html#access-and-modification-provisions",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.10 Access and Modification Provisions:",
-    "text": "B.10 Access and Modification Provisions:\nThe dataset files existing on GEMS reside in a secure, isolated, encrypted container. Only project team members with password protected access to the project container on GEMS will be able to access the dataset. Once in the GEMS container, the dataset is part of a larger project “workspace”, which includes all datasets compiled as part of the project scope. Project team members will conduct scripting operations on datasets in the secure R Studio workspace provided on the GEMS platform. This means that all data access and usage of the individual dataset can occur through the secure GEMS platform.\nThe integrity of the dataset as delivered will not be violated or changed in any way. However, additional metadata information, particularly column or field metadata, may be added to an accompanying .json metadata file which will exist on the GEMS workspace. The .json metadata files from all project datasets (including this dataset) will be used to harmonize data for the purposes of achieving the project purpose as stated in Article 4. The single large harmonized dataset will exist in a secure, virtual state in GEMS, but only publicly accessible portions of the harmonized dataset will be made discoverable and shareable."
+    "text": "B.10 Access and Modification Provisions:\nThe dataset files existing on GEMS reside in a secure, isolated, encrypted container. Only project team members with password protected access to the project container on GEMS will be able to access the dataset. Once in the GEMS container, the dataset is part of a larger project “workspace”, which includes all datasets compiled as part of the project scope. Project team members will conduct scripting operations on datasets in the secure R Studio workspace provided on the GEMS platform. This means that all data access and usage of the individual dataset can occur through the secure GEMS platform.\nThe integrity of the dataset as delivered will not be violated or changed in any way. However, additional metadata information, particularly column or field metadata, may be added to an accompanying .json metadata file which will exist on the GEMS workspace. The .json metadata files from all project datasets (including this dataset) will be used to harmonize data for the purposes of achieving the project purpose as stated in Article 4. The single large harmonized dataset will exist in a secure, virtual state in GEMS, but only publicly accessible portions of the harmonized dataset will be made discoverable and shareable.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#term2.",
     "href": "data-use-and-sharing.html#term2.",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.11 Term[^2].",
-    "text": "B.11 Term[^2].\nThe data use license outlined in this Agreement will commence on the effective date of this Agreement. The effective date of this Agreement shall be the later date of (1) [insert start date] or (2) the date of the last signature by the Parties. The expiration date of this Agreement shall be [insert end date of Agreement - 5 years after start date]. The Agreement may be extended by mutual written Agreement of the Parties."
+    "text": "B.11 Term[^2].\nThe data use license outlined in this Agreement will commence on the effective date of this Agreement. The effective date of this Agreement shall be the later date of (1) [insert start date] or (2) the date of the last signature by the Parties. The expiration date of this Agreement shall be [insert end date of Agreement - 5 years after start date]. The Agreement may be extended by mutual written Agreement of the Parties.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#termination2.",
     "href": "data-use-and-sharing.html#termination2.",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.12 Termination[^2].",
-    "text": "B.12 Termination[^2].\nThe data recipient and data provider may terminate this Agreement at any time by mutual written consent. This Agreement may be terminated by either Party 1) on sixty (60) days written notice to the other in accordance with Article 8; or 2) immediately upon a material breach for good cause. Upon notice of termination, the data requestor shall have sixty (60) days to return, delete, or destroy, any hard copy or digital copies of data provider confidential data from all storage media and platforms."
+    "text": "B.12 Termination[^2].\nThe data recipient and data provider may terminate this Agreement at any time by mutual written consent. This Agreement may be terminated by either Party 1) on sixty (60) days written notice to the other in accordance with Article 8; or 2) immediately upon a material breach for good cause. Upon notice of termination, the data requestor shall have sixty (60) days to return, delete, or destroy, any hard copy or digital copies of data provider confidential data from all storage media and platforms.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#publicationsreports2.",
     "href": "data-use-and-sharing.html#publicationsreports2.",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.13 Publications/Reports[^2].",
-    "text": "B.13 Publications/Reports[^2].\nIf the data provider desires, the data recipient will acknowledge the data provider as a source of information in any publications or reports that use the data provider’s data in accordance with customary scientific practices."
+    "text": "B.13 Publications/Reports[^2].\nIf the data provider desires, the data recipient will acknowledge the data provider as a source of information in any publications or reports that use the data provider’s data in accordance with customary scientific practices.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#review-of-publications2.",
     "href": "data-use-and-sharing.html#review-of-publications2.",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.14 Review of Publications[^2].",
-    "text": "B.14 Review of Publications[^2].\nThe data requestor shall submit to data provider for review a draft of each proposed publication performed under this Agreement. The data provider shall have a review period of thirty (30) days. The data provider may comment upon, but may not make editorial changes to the results and conclusions set forth in the draft. The draft may be submitted for publication upon receipt of data provider’s written comments or upon expiration of the review period with no comments received from the data provider. Reasonable consideration shall be given to all requested edits received from the data provider. The data requestor shall excise data provider confidential information from any publication or report identified by the data provider in the draft."
+    "text": "B.14 Review of Publications[^2].\nThe data requestor shall submit to data provider for review a draft of each proposed publication performed under this Agreement. The data provider shall have a review period of thirty (30) days. The data provider may comment upon, but may not make editorial changes to the results and conclusions set forth in the draft. The draft may be submitted for publication upon receipt of data provider’s written comments or upon expiration of the review period with no comments received from the data provider. Reasonable consideration shall be given to all requested edits received from the data provider. The data requestor shall excise data provider confidential information from any publication or report identified by the data provider in the draft.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#notices2.",
     "href": "data-use-and-sharing.html#notices2.",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.15 Notices[^2].",
-    "text": "B.15 Notices[^2].\nAny notice required to be given or which shall be given under this Agreement shall be to the undersigned."
+    "text": "B.15 Notices[^2].\nAny notice required to be given or which shall be given under this Agreement shall be to the undersigned.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#independent-entity2.",
     "href": "data-use-and-sharing.html#independent-entity2.",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.16 Independent Entity[^2].",
-    "text": "B.16 Independent Entity[^2].\nFor purposes of this Agreement and all research conducted hereunder, each Party shall be, and shall be deemed to be, an independent Party and not an agent or employee of the other Party. Each Party shall have exclusive control over its employees in the performance of the work."
+    "text": "B.16 Independent Entity[^2].\nFor purposes of this Agreement and all research conducted hereunder, each Party shall be, and shall be deemed to be, an independent Party and not an agent or employee of the other Party. Each Party shall have exclusive control over its employees in the performance of the work.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#statement-and-representation-authority2.",
     "href": "data-use-and-sharing.html#statement-and-representation-authority2.",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.17 Statement and Representation Authority[^2].",
-    "text": "B.17 Statement and Representation Authority[^2].\nNeither Party shall have authority to make any statements, representations, or commitments of any kind, or take any action, which shall be binding on the other Party, except as may be explicitly provided for herein or authorized in writing. Neither Party may use the name of the other in advertising or other forms of publicity without the written consent of the other."
+    "text": "B.17 Statement and Representation Authority[^2].\nNeither Party shall have authority to make any statements, representations, or commitments of any kind, or take any action, which shall be binding on the other Party, except as may be explicitly provided for herein or authorized in writing. Neither Party may use the name of the other in advertising or other forms of publicity without the written consent of the other.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#data-management-plan-see-current-version-of-project-data-management-plan",
     "href": "data-use-and-sharing.html#data-management-plan-see-current-version-of-project-data-management-plan",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.18 Data Management Plan: See current version of project data management plan:",
-    "text": "B.18 Data Management Plan: See current version of project data management plan:\nhttps://alaska-soil-data-bank.github.io/project-metadata/datamanagementplan.html"
+    "text": "B.18 Data Management Plan: See current version of project data management plan:\nhttps://alaska-soil-data-bank.github.io/project-metadata/datamanagementplan.html",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   },
   {
     "objectID": "data-use-and-sharing.html#roles-and-responsibilities",
     "href": "data-use-and-sharing.html#roles-and-responsibilities",
     "title": "Appendix B — Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project",
     "section": "B.19 Roles and Responsibilities:",
-    "text": "B.19 Roles and Responsibilities:\nThe data requestor PI (Dr. Nic Jelinski) is responsible for ensuring the terms of this data use and sharing agreement are implemented in conjunction with the project data management plan and metadata.\nReferences: [^1]: University of Chicago::University Research Administration - Data Use Agreements [^2]: [USGS::Data Sharing Agreements] (https://www.usgs.gov/data-management/data-sharing-agreements#:~:text=Data%20sharing%20agreements%20are%20formal,appropriate%20use%20for%20the%20data)"
+    "text": "B.19 Roles and Responsibilities:\nThe data requestor PI (Dr. Nic Jelinski) is responsible for ensuring the terms of this data use and sharing agreement are implemented in conjunction with the project data management plan and metadata.\nReferences: [^1]: University of Chicago::University Research Administration - Data Use Agreements [^2]: [USGS::Data Sharing Agreements] (https://www.usgs.gov/data-management/data-sharing-agreements#:~:text=Data%20sharing%20agreements%20are%20formal,appropriate%20use%20for%20the%20data)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span>"
+    ]
   }
 ]

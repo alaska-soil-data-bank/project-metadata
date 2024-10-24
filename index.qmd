@@ -24,9 +24,6 @@ This document contains metadata for each of the grant deliverables, as well as g
 -   Matt Macander; Senior Scientist, ABR, Inc. (Co-PI)
 -   Sue Ives; Senior Scientist, ABR, Inc. (Co-PI)
 -   Irfan Ainuddin; PhD Student, University of Minnesota
-
-## Additional Collaborators
-
 -   Michael Sousa; Soil Scientist, USDA-NRCS
 -   Travis Nauman; Research Soil Scientist, USDA-NRCS
 -   Dave D'Amore; Research Soil Scientist, US Forest Service
@@ -34,6 +31,9 @@ This document contains metadata for each of the grant deliverables, as well as g
 -   Frances Biles; Geographer, US Forest Service
 -   Timm Nawrocki, Terrestrial Ecologist, Alaska Center for Conservation Science - UAA
 -   Josh Minai, Postdoctoral Researcher, Argonne National Laboratory
+-   Neil Pastick, Physical Scientist, USGS
+
+## Additional Collaborators
 
 ## Co-Authorship and Data Sharing Agreements
 
