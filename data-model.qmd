@@ -9,6 +9,7 @@
 6. [Key Data Structures](#key-data-structures)
 7. [Metadata and Annotations](#metadata-and-annotations)
 8. [Data Quality and Standards](#data-quality-and-standards)
+9. [Implementation Notes](#implementation-notes)
 
 ## Introduction
 
@@ -25,20 +26,41 @@ The AKSDB data model has been developed with several key principles:
 
 The AKSDB data model draws inspiration from several existing soil data frameworks:
 
-1. **WoSIS (World Soil Information Service)**
-   - Primary influence for dataset and profile concepts
+1. **NASIS (National Soil Information System)**
+   - Primary influence for pedon and site concepts
+   - Provides foundation for field key standardization
+   - Used as alignment target for eventual data export
+   - References:
+     - [NASIS Overview](https://www.nrcs.usda.gov/resources/education-and-teaching-materials/national-soil-information-system-nasis)
+     - [NASIS Database Metadata](https://www.nrcs.usda.gov/resources/education-and-teaching-materials/nasis-database-metadata)
+
+2. **WoSIS (World Soil Information Service)**
+   - Primary influence for dataset concepts
    - Provides foundation for standardization approaches
    - Offers established controlled vocabulary framework
+   - References:
+     - [Documentation Repository](https://git.wur.nl/isric/databases/wosis-docs)
+     - [WoSIS Procedures Manual 2020](https://doi.org/10.17027/ISRIC-WDC-2020-01)
+     - [Standardised soil profile data (2019 snapshot)](https://git.wur.nl/Batje001/wosis)
+     - [WoSIS Standardizing Soil Analytical Methods](https://doi.org/10.17027/ISRIC-1DQ0-1M83)
+     - [Options for Harmonising Soil Data](https://doi.org/10.17027/ISRIC-WDC-6ZTD-EB19)
+     - [Quality-assessed standardised soil data (2023 snapshot)](https://doi.org/10.5194/essd-2024-14)
 
-2. **SOC-DRaH and SOC-DRaH2**
+3. **SOC-DRaH and SOC-DRaH2**
    - Early iterations of soil carbon data harmonization
    - Used for International Soil Carbon Network (ISCN) data compilation
    - Provides baseline for metadata handling
+   - References:
+     - [SOC-DRaH Repository](https://github.com/ISCN/SOC-DRaHR)
+     - [SOC-DRaH2 Repository](https://github.com/ISCN/SOCDRaHR2)
+     - [ISCN Data Information](https://iscn.fluxdata.org/data/data-information/)
 
-3. **Soil-DRaH**
+4. **Soil-DRaH**
    - Most recent iteration of harmonization approaches
    - Introduces level-based data processing concept
    - Provides template for data annotations
+   - Reference:
+     - [Repository](https://github.com/ktoddbrown/SoilDRaH)
 
 ## Core Concepts
 
@@ -48,8 +70,8 @@ Table: Dataset Structure
 
 Field                       | Description
 ---------------------------|-------------
-dataset_id                 | Unique identifier for the dataset
-dataset_sub_id             | Optional identifier for subset within compilation datasets
+dataset_iid                | Primary identifier for the dataset
+dataset_sub_iid            | Optional identifier for subset within compilation datasets
 version                    | Version of the dataset
 date                       | Date of dataset snapshot/receipt
 license_file              | URL link to associated license
@@ -63,12 +85,71 @@ Table: Pedon Structure
 
 Field                       | Description
 ---------------------------|-------------
-dataset_id                 | Link to parent dataset
-dataset_sub_id             | Link to dataset subset (if applicable)
-dataset_peid               | Unique pedon identifier within dataset
-date_timestamp            | Observation date in YYYY-MM-DD format
+dataset_iid_ref            | Foreign key link to dataset
+dataset_sub_iid_ref        | Foreign key link to dataset subset (if applicable)
+dataset_peiid              | Unique pedon identifier
+dts_pedon                  | Observation date in YYYY-MM-DD format
 lat                       | Latitude (WGS 84)
 lon                       | Longitude (WGS 84)
+tax_order                 | Taxonomic order (US Soil Taxonomy)
+tax_suborder              | Taxonomic suborder
+tax_grtgrp                | Great group taxonomy 
+tax_subgrp                | Subgroup taxonomy
+o_thick_surf              | Surface organic layer thickness (cm)
+o_thick_cum40             | Cumulative organic layer thickness to 40cm
+ph_10                     | Soil pH at 10cm
+ph_30                     | Soil pH at 30cm
+ec_10                     | Soil EC at 10cm
+ec_30                     | Soil EC at 30cm
+```
+
+### Horizon Concept  
+```
+Table: Horizon Structure
+
+Field                       | Description
+---------------------------|-------------
+dataset_peiid_ref          | Foreign key link to pedon
+dataset_hziid              | Unique horizon identifier
+hz_name                    | Horizon designation
+hz_seq                     | Horizon sequence number
+hz_dept                    | Top depth (cm)
+hz_depb                    | Bottom depth (cm)
+text_field                 | Field texture class
+text_mod_field             | Field texture modifier
+sand_pct_field             | Field-estimated sand percent
+clay_pct_field             | Field-estimated clay percent
+grpct_field               | Field-estimated gravel percent
+cbpct_field               | Field-estimated cobble percent
+stpct_field               | Field-estimated stone percent
+blpct_field               | Field-estimated boulder percent
+ph_field                  | Field pH measurement
+ec_field                  | Field EC measurement
+```
+
+### Sample Concept
+```
+Table: Sample Structure 
+
+Field                       | Description
+---------------------------|-------------
+dataset_hziid_ref          | Foreign key link to horizon(s)
+dataset_peiid_ref          | Foreign key link to pedon
+samp_dept                  | Sample top depth (cm)
+samp_depb                  | Sample bottom depth (cm)
+sand_pct_lab               | Lab-measured sand percent
+clay_pct_lab               | Lab-measured clay percent
+silt_pct_lab               | Lab-measured silt percent
+soct_lab                   | Lab-measured organic carbon percent
+sicpct_lab                 | Lab-measured inorganic carbon percent 
+tcpct_lab                  | Lab-measured total carbon percent
+tnpct_lab                  | Lab-measured total nitrogen percent
+loipct_lab                 | Lab-measured loss on ignition percent
+ph_lab                     | Lab-measured pH
+ec_lab                     | Lab-measured EC
+grpct_lab                  | Lab-measured gravel percent
+cbpct_lab                  | Lab-measured cobble percent
+cftot_pct_lab             | Lab-measured total coarse fragments
 ```
 
 ## Data Levels
@@ -83,13 +164,20 @@ The AKSDB implements a hierarchical data level system:
   2. Metadata (created or linked)
   3. Data dictionary (annotations file)
 
-### Level 1 (Standardized Data)
+### Level 1 (Validated Data)
+- Data format validation
+- Standard treatment of missing values
+- Removal of empty/null columns
+- Basic format correctness checks
+- Raw data values maintained
+
+### Level 2 (Standardized Data)
 - Field names standardized using annotation file
 - Maintains original data values
-- Structured according to AKSDB standard format
+- Structured according to AKSDB data model concepts
 - Field names mapped to controlled vocabulary
 
-### Level 2 (Quality Controlled)
+### Level 3 (Quality Controlled)
 - QA/QC checks implemented
 - Documentation of all modifications
 - Includes:
@@ -98,7 +186,7 @@ The AKSDB implements a hierarchical data level system:
   - Typo corrections
   - Data quality annotations
 
-### Level 3 (Harmonized Data)
+### Level 4 (Harmonized Data)
 - Multiple datasets integrated
 - Standardized formats and units
 - Ready for modeling applications
@@ -110,18 +198,20 @@ The AKSDB implements two distinct but related concepts:
 
 ### Data Dictionary (Annotations File)
 ```
-Table: Annotation File Structure
+Table: Annotation File Structure 
 
 Field                       | Description
 ---------------------------|-------------
 dataset_id                 | Dataset identifier
 dataset_sub_id             | Dataset subset identifier
-table_id                   | Raw table name
+table_id                   | Raw table/file name including extension
 column_id                  | Original column name
 aksdb_field_key            | Standardization key
-type                       | Data type
-with_entry                | Original data notes
+is_type                    | Data type descriptor (identifier/description/unit/method/value)
+with_entry                | Content for the is_type
 ```
+
+The annotation file follows the naming convention: `<dataset_id>_annotations` (all lowercase)
 
 ### Thesaurus
 ```
@@ -137,27 +227,6 @@ descriptor                 | Detailed field description
 enforced_standards        | Required standards for Level 1+
 ```
 
-## Key Data Structures
-
-### Site/Pedon Relationship
-The AKSDB model uses a flattened structure that combines site and pedon concepts:
-- Unique identification through dataset_peid
-- Temporal component included in identifier
-- Spatial component (lat/lon) required
-- WGS 84 coordinate system enforced at Level 1
-
-### Horizon Data
-```
-Table: Horizon Structure
-
-Field                       | Description
----------------------------|-------------
-dataset_peid               | Link to parent pedon
-top_depth                 | Upper boundary depth
-bottom_depth              | Lower boundary depth
-horizon_designation       | Soil horizon label
-```
-
 ## Metadata and Annotations
 
 ### Dataset Package Components
@@ -166,9 +235,14 @@ horizon_designation       | Soil horizon label
    - No modifications on ingestion
    
 2. Metadata
-   - XML format
+   - XML format using EML (Ecological Metadata Language)
    - Either linked (published data) or generated
-   - Follows standard metadata schema
+   - Follows EML schema and best practices
+   - Resources:
+     - [EML Documentation](https://eml.ecoinformatics.org)
+     - [EDI Publishing Guide](https://edirepository.org/resources/creating-metadata-for-publication)
+     - [EML Best Practices](https://ediorg.github.io/data-package-best-practices/eml-best-practices.html)
+     - [LTER EML Guide](https://lter.github.io/im-manual/eml.html)
 
 3. Annotation File
    - Maps raw fields to standard vocabulary
@@ -176,12 +250,10 @@ horizon_designation       | Soil horizon label
    - Provides field-level metadata
 
 ### Standardization Process
-1. Ingest raw data (Level 0)
-2. Create/link metadata
-3. Generate annotations file
-4. Apply standardization rules (Level 1)
-5. Implement QA/QC (Level 2)
-6. Harmonize across datasets (Level 3)
+1. Validate data format (Level 1)
+2. Apply standardization rules (Level 2) 
+3. Implement QA/QC (Level 3)
+4. Harmonize across datasets (Level 4)
 
 ## Data Quality and Standards
 
@@ -231,3 +303,9 @@ The AKSDB data model is implemented with several key considerations:
    - Enables distributed processing
 
 The model continues to evolve as new datasets are incorporated and additional requirements are identified. Regular review and updates ensure the model remains aligned with project goals and community needs.
+
+## Style Guidelines
+
+- File and field names should be lowercase
+- Use underscores for word separation
+- Consistent naming conventions across all components
