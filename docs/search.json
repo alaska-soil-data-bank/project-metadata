@@ -390,23 +390,143 @@
     ]
   },
   {
+    "objectID": "pedon-morphological-model.html",
+    "href": "pedon-morphological-model.html",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "",
+    "text": "6.1 Table of Contents",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "pedon-morphological-model.html#table-of-contents",
+    "href": "pedon-morphological-model.html#table-of-contents",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "",
+    "text": "Introduction\nCore Concepts\nData Structure and Implementation\nStorage Format Considerations\nIntegration with AKSDB\nSpecial Cases and Edge Conditions\nTechnical Implementation\nAction Items and Future Development",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "pedon-morphological-model.html#introduction",
+    "href": "pedon-morphological-model.html#introduction",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "6.2 Introduction",
+    "text": "6.2 Introduction\nThe Alaska Soil Data Bank (AKSDB) pedon morphological model represents a novel approach to storing and representing soil pedon morphological data. Unlike traditional one-dimensional representations that treat soil horizons as simple layers with top and bottom depths, this model allows for the representation of complex two-dimensional soil morphology, particularly important in cryoturbated soils and other situations where horizon boundaries are not strictly horizontal.\n\n6.2.1 Background and Motivation\nTraditional soil databases typically represent soil horizons using a one-dimensional model where each horizon is defined by its top and bottom depths. While this approach works well for many situations, it fails to capture the complexity of soil morphology in cases where:\n\nHorizons have irregular boundaries\nMultiple horizons exist at the same depth (overlapping horizons)\nCryoturbation has created complex patterns\nHorizon components are distributed non-uniformly\n\nThe AKSDB pedon morphological model aims to address these limitations while maintaining compatibility with existing soil databases and ensuring efficient data storage and retrieval.\n\n\n6.2.2 Design Goals\nThe pedon morphological model has been developed with several key objectives:\n\nFlexibility: Support both simple one-dimensional and complex two-dimensional representations\nEfficiency: Minimize storage requirements while maintaining data integrity\nInteroperability: Ensure compatibility with both Python and R\nHuman Readability: Maintain reasonable human readability in the stored format\nIntegration: Seamless integration with the existing AKSDB data model\nScalability: Support for large datasets (40,000+ pedons)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "pedon-morphological-model.html#core-concepts",
+    "href": "pedon-morphological-model.html#core-concepts",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "6.3 Core Concepts",
+    "text": "6.3 Core Concepts\n\n6.3.1 Basic Structure\nThe pedon morphological model represents soil morphology as a matrix where:\n\nEach cell represents a 1cm × 1cm area of the soil profile\nThe width of the matrix can vary based on complexity:\n\nOne column for simple 1D profiles\nMultiple columns for overlapping horizons\nFull 2D representation for complex morphology\n\n\n\n\n6.3.2 Data Resolution\nThe model enforces a standard 1cm resolution for several reasons:\n\nMatches the precision level of typical field measurements\nProvides sufficient detail for most morphological features\nAligns with existing horizon depth measurements in the AKSDB\nBalances storage requirements with precision needs\n\n\n\n6.3.3 Matrix Compression\nTo efficiently store the matrix data, the model uses a simplified run-length encoding (RLE) approach that:\n\nGroups identical values within rows\nCombines identical rows\nMaintains human readability\nSupports both string and numeric identifiers",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "pedon-morphological-model.html#data-structure-and-implementation",
+    "href": "pedon-morphological-model.html#data-structure-and-implementation",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "6.4 Data Structure and Implementation",
+    "text": "6.4 Data Structure and Implementation\n\n6.4.1 JSON Format\nThe model uses JSON as the primary storage format. For example:\n{\n    \"0\": [[\"3\", 8]],\n    \"1\": [[\"4\", 2], [\"3\", 4], [\"4\", 2]],\n    \"2,3\": [[\"4\", 2], [\"5\", 3], [\"1\", 1], [\"4\", 2]],\n    \"4\": [[\"5\", 1], [\"0\", 1], [\"5\", 3], [\"1\", 1], [\"4\", 2]],\n    \"5,6\": [[\"5\", 1], [\"0\", 2], [\"2\", 5]],\n    \"7\": [[\"5\", 1], [\"0\", 7]]\n}\nThis format provides several advantages:\n\nNative support in both Python and R\nHuman-readable structure\nEfficient compression of repeated values\nClear representation of row combinations\nEasy validation and parsing\n\n\n\n6.4.2 File Naming Convention\nEach pedon morphological model is stored in a separate JSON file with the naming convention:\n&lt;dataset_id&gt;_&lt;peiid&gt;_pemorph_mod.json\nThis convention ensures: 1. Clear association with specific pedons 2. Easy integration with existing AKSDB structure 3. Unique identification of morphological models 4. Consistent file organization",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "pedon-morphological-model.html#storage-format-considerations",
+    "href": "pedon-morphological-model.html#storage-format-considerations",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "6.5 Storage Format Considerations",
+    "text": "6.5 Storage Format Considerations\n\n6.5.1 Evaluation of Alternative Formats\nSeveral storage formats were considered before selecting JSON:\n\nRaw Matrix\n\nPros:\n\nSimple implementation\nDirect access to values\n\nCons:\n\nLarge storage requirements\nPoor compression\nLimited metadata support\n\n\nPython Dictionary\n\nPros:\n\nNative Python support\nEfficient access\n\nCons:\n\nLimited interoperability\nPlatform-dependent serialization\n\n\nCSV Format\n\nPros:\n\nUniversal support\nHuman-readable\n\nCons:\n\nLess efficient for sparse data\nComplex representation of merged rows\nOverhead from repeated column headers\n\n\nJSON Format (Selected)\n\nPros:\n\nExcellent language support\nHuman-readable\nEfficient compression\nFlexible structure\n\nCons:\n\nSlightly larger than raw binary formats\nParsing overhead\n\n\n\n\n\n6.5.2 Storage Efficiency Analysis\nAnalysis of storage requirements for different formats with 16-character horizon identifiers:\n\n6.5.2.1 Single Pedon (200×200 matrix)\n\nRaw Matrix: 640 KB\nDictionary: 50-60 KB\nJSON: 50-60 KB\nCSV: 50-60 KB\n\n\n\n6.5.2.2 Complete Dataset (40,000 pedons)\n\nRaw Matrix: ~25 GB\nDictionary: ~2.4 GB\nJSON: ~2.4 GB\nCSV: ~2.4 GB\n\nThe JSON format provides a reasonable balance between storage efficiency and usability, with compression ratios around 8-10x compared to raw storage.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "pedon-morphological-model.html#example-implementation",
+    "href": "pedon-morphological-model.html#example-implementation",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "6.6 Example Implementation",
+    "text": "6.6 Example Implementation\nThis section demonstrates a concrete example of the pedon morphological model using randomly generated 16-character horizon identifiers.\n\n6.6.1 Sample Matrix\nConsider a 13×8 soil profile matrix. We’ll replace the integers with 16-character alphanumeric strings to represent horizon identifiers (as would be stored in a real implementation):\nOriginal integer values:\n8 8 8 8 8 8 8 8 8 8 8 8 8\n8 4 8 8 1 1 1 1 1 8 8 8 8\n8 4 8 8 1 1 1 1 1 8 8 8 8\n8 4 8 8 1 1 1 1 1 8 8 8 8\n8 4 8 8 1 1 1 1 1 8 8 8 8\n8 4 8 8 1 1 1 1 1 8 8 8 8\n8 8 8 8 8 8 8 8 8 8 8 8 8\n8 8 3 3 3 3 3 3 3 3 3 3 3\nReplacing with random 16-character horizon identifiers: - 8 → “j2k4m5n7p9q8v3w6” - 4 → “h7r5t2x9y4z8m3n6” - 1 → “a9c6e4g2j5k8m7p3” - 3 → “b2d5f8h3j6l9n4q7”\n\n\n6.6.2 Raw Matrix Representation\nj2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6\nj2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6\nj2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6\nj2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6\nj2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6\nj2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6\nj2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6\nj2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7\n\n\n6.6.3 Simplified RLE JSON Representation\n{\n    \"0\": [[\"j2k4m5n7p9q8v3w6\", 13]],\n    \"1,2,3,4,5\": [\n        [\"j2k4m5n7p9q8v3w6\", 1],\n        [\"h7r5t2x9y4z8m3n6\", 1],\n        [\"j2k4m5n7p9q8v3w6\", 2],\n        [\"a9c6e4g2j5k8m7p3\", 5],\n        [\"j2k4m5n7p9q8v3w6\", 4]\n    ],\n    \"6\": [[\"j2k4m5n7p9q8v3w6\", 13]],\n    \"7\": [\n        [\"j2k4m5n7p9q8v3w6\", 2],\n        [\"b2d5f8h3j6l9n4q7\", 11]\n    ]\n}\n\n\n6.6.4 Size Calculations\n\nRaw Matrix Size:\n\nMatrix dimensions: 8 rows × 13 columns = 104 cells\nEach cell contains a 16-character string\nSize per cell = 16 bytes\nTotal size = 104 cells × 16 bytes = 1,664 bytes (≈ 1.66 KB)\n\nJSON RLE Format Size:\n\nJSON structure overhead ≈ 100 bytes\nRow indices and formatting ≈ 50 bytes\nFour unique horizon IDs × 16 bytes = 64 bytes\nCount values and brackets ≈ 100 bytes\nTotal size ≈ 314 bytes (≈ 0.31 KB)\n\n\n\n\n6.6.5 Compression Analysis\n\nRaw size: 1,664 bytes\nCompressed size: 314 bytes\nCompression ratio: ≈ 5.3:1 (81% reduction in size)\nThe compression is particularly effective due to:\n\nRepeated horizon IDs in rows\nSimilar patterns across multiple rows (rows 1-5 share the same pattern)\nLong runs of identical values (row 0, row 6)\n\n\nThis example demonstrates how the simplified RLE JSON format can efficiently store horizon data while maintaining readability and accessibility. The compression is particularly effective for this type of data due to the common occurrence of repeated patterns and long runs of identical values.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "pedon-morphological-model.html#integration-with-aksdb",
+    "href": "pedon-morphological-model.html#integration-with-aksdb",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "6.7 Integration with AKSDB",
+    "text": "6.7 Integration with AKSDB\n\n6.7.1 Relationship to Existing Tables\nThe pedon morphological model integrates with the AKSDB through several key relationships:\n\nPedon Table\n\nForeign key: dataset_peiid\nNew fields:\n\nmorph_model_type (1D, 1D_overlap, 2D)\nmorph_model_exists (boolean)\n\n\nHorizon Table\n\nForeign key: dataset_hziid\nReferenced in morphological model cells\n\nComponent Table (proposed)\n\nNew table for horizon components\nSupports percentage-based horizon divisions\n\n\n\n\n6.7.2 Data Flow\nThe integration process follows these steps:\n\nPedon data ingestion\nHorizon identification and registration\nMorphological model creation\nReference validation\nStorage and indexing",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "pedon-morphological-model.html#special-cases-and-edge-conditions",
+    "href": "pedon-morphological-model.html#special-cases-and-edge-conditions",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "6.8 Special Cases and Edge Conditions",
+    "text": "6.8 Special Cases and Edge Conditions\n\n6.8.1 One-Dimensional Profiles\nFor simple 1D profiles, the model uses a single-column matrix:\n{\n    \"0-20\": [[\"Hz1\", 20]],\n    \"20-45\": [[\"Hz2\", 25]],\n    \"45-100\": [[\"Hz3\", 55]]\n}\n\n\n6.8.2 Overlapping Horizons\nWhen horizons overlap, the matrix width expands:\n{\n    \"0-25\": [[\"Hz1\", 25]],\n    \"25-50\": [[\"Hz1\", 25], [\"Hz2\", 25]],\n    \"50-75\": [[\"Hz2\", 25]]\n}\n\n\n6.8.3 Horizon Components\nThe model can represent horizon components through matrix expansion:\n\nEach component gets a unique identifier\nMatrix width reflects component count\nSpatial distribution is preserved",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "pedon-morphological-model.html#technical-implementation",
+    "href": "pedon-morphological-model.html#technical-implementation",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "6.9 Technical Implementation",
+    "text": "6.9 Technical Implementation\n\n6.9.1 Python Implementation\nclass PedonMorphModel:\n    def __init__(self, dataset_id, peiid):\n        self.dataset_id = dataset_id\n        self.peiid = peiid\n        self.matrix = {}\n        \n    def add_row(self, row_index, values):\n        self.matrix[row_index] = values\n        \n    def compress(self):\n        # Implement RLE compression\n        pass\n        \n    def to_json(self):\n        # Export to JSON format\n        pass\n\n\n6.9.2 R Implementation\npedon_morph_model &lt;- function(dataset_id, peiid) {\n    structure(\n        list(\n            dataset_id = dataset_id,\n            peiid = peiid,\n            matrix = list()\n        ),\n        class = \"pedon_morph_model\"\n    )\n}\n\nadd_row &lt;- function(model, row_index, values) {\n    # Add row implementation\n}\n\ncompress &lt;- function(model) {\n    # Compression implementation\n}\n\n\n6.9.3 Validation Functions\nKey validation checks include:\n\nMatrix dimensions\nHorizon identifier validity\nRow consistency\nComponent percentages\nReference integrity",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "pedon-morphological-model.html#action-items-and-future-development",
+    "href": "pedon-morphological-model.html#action-items-and-future-development",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "6.10 Action Items and Future Development",
+    "text": "6.10 Action Items and Future Development\n\n6.10.1 Immediate Action Items\n\nHorizon Components\n\nAdd component percentage fields to horizon table\nDevelop component tracking system\nUpdate validation rules\n\nSample-Horizon Matching\n\nImplement sample to horizon matching logic\nHandle one-to-many relationships\nCreate horizon records for orphaned samples\n\nDocumentation Updates\n\nAdd pedon morphological model section to main documentation\nCreate technical specification document\nUpdate data dictionary\n\n\n\n\n6.10.2 Future Development\n\nVisualization Tools\n\nDevelop 2D visualization capabilities\nCreate profile drawing tools\nImplement export to common formats\n\nAnalysis Functions\n\nVolume calculations\nHorizon distribution analysis\nComponent percentage verification\n\nPerformance Optimization\n\nEvaluate compression alternatives\nImplement caching strategies\nOptimize matrix operations\n\n\n\n\n6.10.3 Open Questions\n\nWhat is the optimal storage strategy for very large datasets?\nHow should we handle varying levels of precision in source data?\nWhat additional metadata might be needed for future applications?\nHow can we best support integration with existing soil databases?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "pedon-morphological-model.html#conclusion",
+    "href": "pedon-morphological-model.html#conclusion",
+    "title": "6  AKSDB Pedon Morphological Model Documentation",
+    "section": "6.11 Conclusion",
+    "text": "6.11 Conclusion\nThe AKSDB pedon morphological model will hopefully provide a flexible and efficient way to store both simple and complex soil profile information. The chosen implementation balances storage efficiency with usability and maintains compatibility with existing systems while supporting future expansion.\nThe model’s ability to handle both traditional one-dimensional profiles and complex two-dimensional representations makes it particularly valuable for Arctic and subarctic soils where cryoturbation and other processes create complex morphological patterns. The use of JSON as a storage format provides a good balance of human readability and machine processing efficiency while ensuring broad compatibility across different programming languages and platforms.\nAs development continues, the focus will be on addressing the identified action items and expanding the model’s capabilities while maintaining its core principles of flexibility, efficiency, and usability.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>AKSDB Pedon Morphological Model Documentation</span>"
+    ]
+  },
+  {
     "objectID": "authorship-guidelines.html",
     "href": "authorship-guidelines.html",
-    "title": "6  Authorship Guidelines",
+    "title": "7  Authorship Guidelines",
     "section": "",
     "text": "Notes/questions on this section:\n\n[ is there a good example we can draw from?, authorship if our data is used externally, or authorship within our group?]\n\nhttps://besjournals.onlinelibrary.wiley.com/doi/full/10.1002/2688-8319.12060\n\nCreative Commons Licensing?\nAuthorship for us internal\nAuthorship for external groups that use our data",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Authorship Guidelines</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Authorship Guidelines</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "7  Summary",
+    "title": "8  Summary",
     "section": "",
     "text": "Do we need a summary chapter?",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {

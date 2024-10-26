@@ -1,0 +1,423 @@
+# AKSDB Pedon Morphological Model Documentation
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Core Concepts](#core-concepts)
+3. [Data Structure and Implementation](#data-structure-and-implementation)
+4. [Storage Format Considerations](#storage-format-considerations)
+5. [Integration with AKSDB](#integration-with-aksdb)
+6. [Special Cases and Edge Conditions](#special-cases-and-edge-conditions)
+7. [Technical Implementation](#technical-implementation)
+8. [Action Items and Future Development](#action-items-and-future-development)
+
+## Introduction
+
+The Alaska Soil Data Bank (AKSDB) pedon morphological model represents a novel approach to storing and representing soil pedon morphological data. Unlike traditional one-dimensional representations that treat soil horizons as simple layers with top and bottom depths, this model allows for the representation of complex two-dimensional soil morphology, particularly important in cryoturbated soils and other situations where horizon boundaries are not strictly horizontal.
+
+### Background and Motivation
+
+Traditional soil databases typically represent soil horizons using a one-dimensional model where each horizon is defined by its top and bottom depths. While this approach works well for many situations, it fails to capture the complexity of soil morphology in cases where:
+
+1. Horizons have irregular boundaries
+2. Multiple horizons exist at the same depth (overlapping horizons)
+3. Cryoturbation has created complex patterns
+4. Horizon components are distributed non-uniformly
+
+The AKSDB pedon morphological model aims to address these limitations while maintaining compatibility with existing soil databases and ensuring efficient data storage and retrieval.
+
+### Design Goals
+
+The pedon morphological model has been developed with several key objectives:
+
+1. **Flexibility**: Support both simple one-dimensional and complex two-dimensional representations
+2. **Efficiency**: Minimize storage requirements while maintaining data integrity
+3. **Interoperability**: Ensure compatibility with both Python and R
+4. **Human Readability**: Maintain reasonable human readability in the stored format
+5. **Integration**: Seamless integration with the existing AKSDB data model
+6. **Scalability**: Support for large datasets (40,000+ pedons)
+
+## Core Concepts
+
+### Basic Structure
+
+The pedon morphological model represents soil morphology as a matrix where:
+
+1. Each cell represents a 1cm × 1cm area of the soil profile
+2. The width of the matrix can vary based on complexity:
+   - One column for simple 1D profiles
+   - Multiple columns for overlapping horizons
+   - Full 2D representation for complex morphology
+
+### Data Resolution
+
+The model enforces a standard 1cm resolution for several reasons:
+
+1. Matches the precision level of typical field measurements
+2. Provides sufficient detail for most morphological features
+3. Aligns with existing horizon depth measurements in the AKSDB
+4. Balances storage requirements with precision needs
+
+### Matrix Compression
+
+To efficiently store the matrix data, the model uses a simplified run-length encoding (RLE) approach that:
+
+1. Groups identical values within rows
+2. Combines identical rows
+3. Maintains human readability
+4. Supports both string and numeric identifiers
+
+## Data Structure and Implementation
+
+### JSON Format
+
+The model uses JSON as the primary storage format. For example:
+
+```json
+{
+    "0": [["3", 8]],
+    "1": [["4", 2], ["3", 4], ["4", 2]],
+    "2,3": [["4", 2], ["5", 3], ["1", 1], ["4", 2]],
+    "4": [["5", 1], ["0", 1], ["5", 3], ["1", 1], ["4", 2]],
+    "5,6": [["5", 1], ["0", 2], ["2", 5]],
+    "7": [["5", 1], ["0", 7]]
+}
+```
+
+This format provides several advantages:
+
+1. Native support in both Python and R
+2. Human-readable structure
+3. Efficient compression of repeated values
+4. Clear representation of row combinations
+5. Easy validation and parsing
+
+### File Naming Convention
+
+Each pedon morphological model is stored in a separate JSON file with the naming convention:
+
+```
+<dataset_id>_<peiid>_pemorph_mod.json
+```
+
+This convention ensures:
+1. Clear association with specific pedons
+2. Easy integration with existing AKSDB structure
+3. Unique identification of morphological models
+4. Consistent file organization
+
+## Storage Format Considerations
+
+### Evaluation of Alternative Formats
+
+Several storage formats were considered before selecting JSON:
+
+1. **Raw Matrix**
+   - Pros:
+     - Simple implementation
+     - Direct access to values
+   - Cons:
+     - Large storage requirements
+     - Poor compression
+     - Limited metadata support
+
+2. **Python Dictionary**
+   - Pros:
+     - Native Python support
+     - Efficient access
+   - Cons:
+     - Limited interoperability
+     - Platform-dependent serialization
+
+3. **CSV Format**
+   - Pros:
+     - Universal support
+     - Human-readable
+   - Cons:
+     - Less efficient for sparse data
+     - Complex representation of merged rows
+     - Overhead from repeated column headers
+
+4. **JSON Format (Selected)**
+   - Pros:
+     - Excellent language support
+     - Human-readable
+     - Efficient compression
+     - Flexible structure
+   - Cons:
+     - Slightly larger than raw binary formats
+     - Parsing overhead
+
+### Storage Efficiency Analysis
+
+Analysis of storage requirements for different formats with 16-character horizon identifiers:
+
+#### Single Pedon (200×200 matrix)
+- Raw Matrix: 640 KB
+- Dictionary: 50-60 KB
+- JSON: 50-60 KB
+- CSV: 50-60 KB
+
+#### Complete Dataset (40,000 pedons)
+- Raw Matrix: ~25 GB
+- Dictionary: ~2.4 GB
+- JSON: ~2.4 GB
+- CSV: ~2.4 GB
+
+The JSON format provides a reasonable balance between storage efficiency and usability, with compression ratios around 8-10x compared to raw storage.
+
+## Example Implementation
+
+This section demonstrates a concrete example of the pedon morphological model using randomly generated 16-character horizon identifiers.
+
+### Sample Matrix
+
+Consider a 13×8 soil profile matrix. We'll replace the integers with 16-character alphanumeric strings to represent horizon identifiers (as would be stored in a real implementation):
+
+Original integer values:
+```
+8 8 8 8 8 8 8 8 8 8 8 8 8
+8 4 8 8 1 1 1 1 1 8 8 8 8
+8 4 8 8 1 1 1 1 1 8 8 8 8
+8 4 8 8 1 1 1 1 1 8 8 8 8
+8 4 8 8 1 1 1 1 1 8 8 8 8
+8 4 8 8 1 1 1 1 1 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8 8 8
+8 8 3 3 3 3 3 3 3 3 3 3 3
+```
+
+Replacing with random 16-character horizon identifiers:
+- 8 → "j2k4m5n7p9q8v3w6"
+- 4 → "h7r5t2x9y4z8m3n6"
+- 1 → "a9c6e4g2j5k8m7p3"
+- 3 → "b2d5f8h3j6l9n4q7"
+
+### Raw Matrix Representation
+
+```
+j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7
+```
+
+### Simplified RLE JSON Representation
+
+```json
+{
+    "0": [["j2k4m5n7p9q8v3w6", 13]],
+    "1,2,3,4,5": [
+        ["j2k4m5n7p9q8v3w6", 1],
+        ["h7r5t2x9y4z8m3n6", 1],
+        ["j2k4m5n7p9q8v3w6", 2],
+        ["a9c6e4g2j5k8m7p3", 5],
+        ["j2k4m5n7p9q8v3w6", 4]
+    ],
+    "6": [["j2k4m5n7p9q8v3w6", 13]],
+    "7": [
+        ["j2k4m5n7p9q8v3w6", 2],
+        ["b2d5f8h3j6l9n4q7", 11]
+    ]
+}
+```
+
+### Size Calculations
+
+1. Raw Matrix Size:
+   - Matrix dimensions: 8 rows × 13 columns = 104 cells
+   - Each cell contains a 16-character string
+   - Size per cell = 16 bytes
+   - Total size = 104 cells × 16 bytes = 1,664 bytes (≈ 1.66 KB)
+
+2. JSON RLE Format Size:
+   - JSON structure overhead ≈ 100 bytes
+   - Row indices and formatting ≈ 50 bytes
+   - Four unique horizon IDs × 16 bytes = 64 bytes
+   - Count values and brackets ≈ 100 bytes
+   - Total size ≈ 314 bytes (≈ 0.31 KB)
+
+### Compression Analysis
+
+- Raw size: 1,664 bytes
+- Compressed size: 314 bytes
+- Compression ratio: ≈ 5.3:1 (81% reduction in size)
+- The compression is particularly effective due to:
+  - Repeated horizon IDs in rows
+  - Similar patterns across multiple rows (rows 1-5 share the same pattern)
+  - Long runs of identical values (row 0, row 6)
+
+This example demonstrates how the simplified RLE JSON format can efficiently store horizon data while maintaining readability and accessibility. The compression is particularly effective for this type of data due to the common occurrence of repeated patterns and long runs of identical values.
+
+## Integration with AKSDB
+
+### Relationship to Existing Tables
+
+The pedon morphological model integrates with the AKSDB through several key relationships:
+
+1. **Pedon Table**
+   - Foreign key: dataset_peiid
+   - New fields:
+     - morph_model_type (1D, 1D_overlap, 2D)
+     - morph_model_exists (boolean)
+
+2. **Horizon Table**
+   - Foreign key: dataset_hziid
+   - Referenced in morphological model cells
+
+3. **Component Table** (proposed)
+   - New table for horizon components
+   - Supports percentage-based horizon divisions
+
+### Data Flow
+
+The integration process follows these steps:
+
+1. Pedon data ingestion
+2. Horizon identification and registration
+3. Morphological model creation
+4. Reference validation
+5. Storage and indexing
+
+## Special Cases and Edge Conditions
+
+### One-Dimensional Profiles
+
+For simple 1D profiles, the model uses a single-column matrix:
+
+```json
+{
+    "0-20": [["Hz1", 20]],
+    "20-45": [["Hz2", 25]],
+    "45-100": [["Hz3", 55]]
+}
+```
+
+### Overlapping Horizons
+
+When horizons overlap, the matrix width expands:
+
+```json
+{
+    "0-25": [["Hz1", 25]],
+    "25-50": [["Hz1", 25], ["Hz2", 25]],
+    "50-75": [["Hz2", 25]]
+}
+```
+
+### Horizon Components
+
+The model can represent horizon components through matrix expansion:
+
+1. Each component gets a unique identifier
+2. Matrix width reflects component count
+3. Spatial distribution is preserved
+
+## Technical Implementation
+
+### Python Implementation
+
+```python
+class PedonMorphModel:
+    def __init__(self, dataset_id, peiid):
+        self.dataset_id = dataset_id
+        self.peiid = peiid
+        self.matrix = {}
+        
+    def add_row(self, row_index, values):
+        self.matrix[row_index] = values
+        
+    def compress(self):
+        # Implement RLE compression
+        pass
+        
+    def to_json(self):
+        # Export to JSON format
+        pass
+```
+
+### R Implementation
+
+```r
+pedon_morph_model <- function(dataset_id, peiid) {
+    structure(
+        list(
+            dataset_id = dataset_id,
+            peiid = peiid,
+            matrix = list()
+        ),
+        class = "pedon_morph_model"
+    )
+}
+
+add_row <- function(model, row_index, values) {
+    # Add row implementation
+}
+
+compress <- function(model) {
+    # Compression implementation
+}
+```
+
+### Validation Functions
+
+Key validation checks include:
+
+1. Matrix dimensions
+2. Horizon identifier validity
+3. Row consistency
+4. Component percentages
+5. Reference integrity
+
+## Action Items and Future Development
+
+### Immediate Action Items
+
+1. **Horizon Components**
+   - Add component percentage fields to horizon table
+   - Develop component tracking system
+   - Update validation rules
+
+2. **Sample-Horizon Matching**
+   - Implement sample to horizon matching logic
+   - Handle one-to-many relationships
+   - Create horizon records for orphaned samples
+
+3. **Documentation Updates**
+   - Add pedon morphological model section to main documentation
+   - Create technical specification document
+   - Update data dictionary
+
+### Future Development
+
+1. **Visualization Tools**
+   - Develop 2D visualization capabilities
+   - Create profile drawing tools
+   - Implement export to common formats
+
+2. **Analysis Functions**
+   - Volume calculations
+   - Horizon distribution analysis
+   - Component percentage verification
+
+3. **Performance Optimization**
+   - Evaluate compression alternatives
+   - Implement caching strategies
+   - Optimize matrix operations
+
+### Open Questions
+
+1. What is the optimal storage strategy for very large datasets?
+2. How should we handle varying levels of precision in source data?
+3. What additional metadata might be needed for future applications?
+4. How can we best support integration with existing soil databases?
+
+## Conclusion
+
+The AKSDB pedon morphological model will hopefully provide a flexible and efficient way to store both simple and complex soil profile information. The chosen implementation balances storage efficiency with usability and maintains compatibility with existing systems while supporting future expansion.
+
+The model's ability to handle both traditional one-dimensional profiles and complex two-dimensional representations makes it particularly valuable for Arctic and subarctic soils where cryoturbation and other processes create complex morphological patterns. The use of JSON as a storage format provides a good balance of human readability and machine processing efficiency while ensuring broad compatibility across different programming languages and platforms.
+
+As development continues, the focus will be on addressing the identified action items and expanding the model's capabilities while maintaining its core principles of flexibility, efficiency, and usability.

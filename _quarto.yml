@@ -6,7 +6,7 @@ project:
 book:
   title: "Alaska Soil Data Bank Project Metadata"
   author: "N.A. Jelinski, I.H. Ainuddin and the AKSDB Team"
-  date: "24-October-2024"
+  date: "26-October-2024"
   cover-image: "aksdb-badge-02.png"
   
   chapters:
@@ -16,6 +16,7 @@ book:
     - deliverable2.qmd
     - deliverable3.qmd
     - data-model.qmd
+    - pedon-morphological-model.qmd
     - authorship-guidelines.qmd
     - summary.qmd
     - references.qmd

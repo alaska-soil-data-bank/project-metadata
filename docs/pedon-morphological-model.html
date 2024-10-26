@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.550">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Alaska Soil Data Bank Project Metadata - 6&nbsp; AKSDB Pedon Morphological Model Documentation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./authorship-guidelines.html" rel="next">
+<link href="./data-model.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pedon-morphological-model.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AKSDB Pedon Morphological Model Documentation</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Alaska Soil Data Bank Project Metadata</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datamanagementplan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Management Plan</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./deliverable1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 1: Building the Alaska Soil Data Bank</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./deliverable2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 2: Statewide soil class mapping</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./deliverable3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Metadata for Deliverable 3: Segmentation Analysis - Katmai National Park and Preserve</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Alaska Soil Data Bank (AKSDB) Data Model Documentation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pedon-morphological-model.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AKSDB Pedon Morphological Model Documentation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./authorship-guidelines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Authorship Guidelines</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./co-authorship-template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Co-Authorship Agreement Template - Alaska Soil Data Bank Project</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data-use-and-sharing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Data Use and Sharing Agreement Template - Alaska Soil Data Bank Project</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents"><span class="header-section-number">6.1</span> Table of Contents</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">6.2</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#background-and-motivation" id="toc-background-and-motivation" class="nav-link" data-scroll-target="#background-and-motivation"><span class="header-section-number">6.2.1</span> Background and Motivation</a></li>
+  <li><a href="#design-goals" id="toc-design-goals" class="nav-link" data-scroll-target="#design-goals"><span class="header-section-number">6.2.2</span> Design Goals</a></li>
+  </ul></li>
+  <li><a href="#core-concepts" id="toc-core-concepts" class="nav-link" data-scroll-target="#core-concepts"><span class="header-section-number">6.3</span> Core Concepts</a>
+  <ul class="collapse">
+  <li><a href="#basic-structure" id="toc-basic-structure" class="nav-link" data-scroll-target="#basic-structure"><span class="header-section-number">6.3.1</span> Basic Structure</a></li>
+  <li><a href="#data-resolution" id="toc-data-resolution" class="nav-link" data-scroll-target="#data-resolution"><span class="header-section-number">6.3.2</span> Data Resolution</a></li>
+  <li><a href="#matrix-compression" id="toc-matrix-compression" class="nav-link" data-scroll-target="#matrix-compression"><span class="header-section-number">6.3.3</span> Matrix Compression</a></li>
+  </ul></li>
+  <li><a href="#data-structure-and-implementation" id="toc-data-structure-and-implementation" class="nav-link" data-scroll-target="#data-structure-and-implementation"><span class="header-section-number">6.4</span> Data Structure and Implementation</a>
+  <ul class="collapse">
+  <li><a href="#json-format" id="toc-json-format" class="nav-link" data-scroll-target="#json-format"><span class="header-section-number">6.4.1</span> JSON Format</a></li>
+  <li><a href="#file-naming-convention" id="toc-file-naming-convention" class="nav-link" data-scroll-target="#file-naming-convention"><span class="header-section-number">6.4.2</span> File Naming Convention</a></li>
+  </ul></li>
+  <li><a href="#storage-format-considerations" id="toc-storage-format-considerations" class="nav-link" data-scroll-target="#storage-format-considerations"><span class="header-section-number">6.5</span> Storage Format Considerations</a>
+  <ul class="collapse">
+  <li><a href="#evaluation-of-alternative-formats" id="toc-evaluation-of-alternative-formats" class="nav-link" data-scroll-target="#evaluation-of-alternative-formats"><span class="header-section-number">6.5.1</span> Evaluation of Alternative Formats</a></li>
+  <li><a href="#storage-efficiency-analysis" id="toc-storage-efficiency-analysis" class="nav-link" data-scroll-target="#storage-efficiency-analysis"><span class="header-section-number">6.5.2</span> Storage Efficiency Analysis</a></li>
+  </ul></li>
+  <li><a href="#example-implementation" id="toc-example-implementation" class="nav-link" data-scroll-target="#example-implementation"><span class="header-section-number">6.6</span> Example Implementation</a>
+  <ul class="collapse">
+  <li><a href="#sample-matrix" id="toc-sample-matrix" class="nav-link" data-scroll-target="#sample-matrix"><span class="header-section-number">6.6.1</span> Sample Matrix</a></li>
+  <li><a href="#raw-matrix-representation" id="toc-raw-matrix-representation" class="nav-link" data-scroll-target="#raw-matrix-representation"><span class="header-section-number">6.6.2</span> Raw Matrix Representation</a></li>
+  <li><a href="#simplified-rle-json-representation" id="toc-simplified-rle-json-representation" class="nav-link" data-scroll-target="#simplified-rle-json-representation"><span class="header-section-number">6.6.3</span> Simplified RLE JSON Representation</a></li>
+  <li><a href="#size-calculations" id="toc-size-calculations" class="nav-link" data-scroll-target="#size-calculations"><span class="header-section-number">6.6.4</span> Size Calculations</a></li>
+  <li><a href="#compression-analysis" id="toc-compression-analysis" class="nav-link" data-scroll-target="#compression-analysis"><span class="header-section-number">6.6.5</span> Compression Analysis</a></li>
+  </ul></li>
+  <li><a href="#integration-with-aksdb" id="toc-integration-with-aksdb" class="nav-link" data-scroll-target="#integration-with-aksdb"><span class="header-section-number">6.7</span> Integration with AKSDB</a>
+  <ul class="collapse">
+  <li><a href="#relationship-to-existing-tables" id="toc-relationship-to-existing-tables" class="nav-link" data-scroll-target="#relationship-to-existing-tables"><span class="header-section-number">6.7.1</span> Relationship to Existing Tables</a></li>
+  <li><a href="#data-flow" id="toc-data-flow" class="nav-link" data-scroll-target="#data-flow"><span class="header-section-number">6.7.2</span> Data Flow</a></li>
+  </ul></li>
+  <li><a href="#special-cases-and-edge-conditions" id="toc-special-cases-and-edge-conditions" class="nav-link" data-scroll-target="#special-cases-and-edge-conditions"><span class="header-section-number">6.8</span> Special Cases and Edge Conditions</a>
+  <ul class="collapse">
+  <li><a href="#one-dimensional-profiles" id="toc-one-dimensional-profiles" class="nav-link" data-scroll-target="#one-dimensional-profiles"><span class="header-section-number">6.8.1</span> One-Dimensional Profiles</a></li>
+  <li><a href="#overlapping-horizons" id="toc-overlapping-horizons" class="nav-link" data-scroll-target="#overlapping-horizons"><span class="header-section-number">6.8.2</span> Overlapping Horizons</a></li>
+  <li><a href="#horizon-components" id="toc-horizon-components" class="nav-link" data-scroll-target="#horizon-components"><span class="header-section-number">6.8.3</span> Horizon Components</a></li>
+  </ul></li>
+  <li><a href="#technical-implementation" id="toc-technical-implementation" class="nav-link" data-scroll-target="#technical-implementation"><span class="header-section-number">6.9</span> Technical Implementation</a>
+  <ul class="collapse">
+  <li><a href="#python-implementation" id="toc-python-implementation" class="nav-link" data-scroll-target="#python-implementation"><span class="header-section-number">6.9.1</span> Python Implementation</a></li>
+  <li><a href="#r-implementation" id="toc-r-implementation" class="nav-link" data-scroll-target="#r-implementation"><span class="header-section-number">6.9.2</span> R Implementation</a></li>
+  <li><a href="#validation-functions" id="toc-validation-functions" class="nav-link" data-scroll-target="#validation-functions"><span class="header-section-number">6.9.3</span> Validation Functions</a></li>
+  </ul></li>
+  <li><a href="#action-items-and-future-development" id="toc-action-items-and-future-development" class="nav-link" data-scroll-target="#action-items-and-future-development"><span class="header-section-number">6.10</span> Action Items and Future Development</a>
+  <ul class="collapse">
+  <li><a href="#immediate-action-items" id="toc-immediate-action-items" class="nav-link" data-scroll-target="#immediate-action-items"><span class="header-section-number">6.10.1</span> Immediate Action Items</a></li>
+  <li><a href="#future-development" id="toc-future-development" class="nav-link" data-scroll-target="#future-development"><span class="header-section-number">6.10.2</span> Future Development</a></li>
+  <li><a href="#open-questions" id="toc-open-questions" class="nav-link" data-scroll-target="#open-questions"><span class="header-section-number">6.10.3</span> Open Questions</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">6.11</span> Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AKSDB Pedon Morphological Model Documentation</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="table-of-contents" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="table-of-contents"><span class="header-section-number">6.1</span> Table of Contents</h2>
+<ol type="1">
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#core-concepts">Core Concepts</a></li>
+<li><a href="#data-structure-and-implementation">Data Structure and Implementation</a></li>
+<li><a href="#storage-format-considerations">Storage Format Considerations</a></li>
+<li><a href="#integration-with-aksdb">Integration with AKSDB</a></li>
+<li><a href="#special-cases-and-edge-conditions">Special Cases and Edge Conditions</a></li>
+<li><a href="#technical-implementation">Technical Implementation</a></li>
+<li><a href="#action-items-and-future-development">Action Items and Future Development</a></li>
+</ol>
+</section>
+<section id="introduction" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="introduction"><span class="header-section-number">6.2</span> Introduction</h2>
+<p>The Alaska Soil Data Bank (AKSDB) pedon morphological model represents a novel approach to storing and representing soil pedon morphological data. Unlike traditional one-dimensional representations that treat soil horizons as simple layers with top and bottom depths, this model allows for the representation of complex two-dimensional soil morphology, particularly important in cryoturbated soils and other situations where horizon boundaries are not strictly horizontal.</p>
+<section id="background-and-motivation" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="background-and-motivation"><span class="header-section-number">6.2.1</span> Background and Motivation</h3>
+<p>Traditional soil databases typically represent soil horizons using a one-dimensional model where each horizon is defined by its top and bottom depths. While this approach works well for many situations, it fails to capture the complexity of soil morphology in cases where:</p>
+<ol type="1">
+<li>Horizons have irregular boundaries</li>
+<li>Multiple horizons exist at the same depth (overlapping horizons)</li>
+<li>Cryoturbation has created complex patterns</li>
+<li>Horizon components are distributed non-uniformly</li>
+</ol>
+<p>The AKSDB pedon morphological model aims to address these limitations while maintaining compatibility with existing soil databases and ensuring efficient data storage and retrieval.</p>
+</section>
+<section id="design-goals" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="design-goals"><span class="header-section-number">6.2.2</span> Design Goals</h3>
+<p>The pedon morphological model has been developed with several key objectives:</p>
+<ol type="1">
+<li><strong>Flexibility</strong>: Support both simple one-dimensional and complex two-dimensional representations</li>
+<li><strong>Efficiency</strong>: Minimize storage requirements while maintaining data integrity</li>
+<li><strong>Interoperability</strong>: Ensure compatibility with both Python and R</li>
+<li><strong>Human Readability</strong>: Maintain reasonable human readability in the stored format</li>
+<li><strong>Integration</strong>: Seamless integration with the existing AKSDB data model</li>
+<li><strong>Scalability</strong>: Support for large datasets (40,000+ pedons)</li>
+</ol>
+</section>
+</section>
+<section id="core-concepts" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="core-concepts"><span class="header-section-number">6.3</span> Core Concepts</h2>
+<section id="basic-structure" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="basic-structure"><span class="header-section-number">6.3.1</span> Basic Structure</h3>
+<p>The pedon morphological model represents soil morphology as a matrix where:</p>
+<ol type="1">
+<li>Each cell represents a 1cm × 1cm area of the soil profile</li>
+<li>The width of the matrix can vary based on complexity:
+<ul>
+<li>One column for simple 1D profiles</li>
+<li>Multiple columns for overlapping horizons</li>
+<li>Full 2D representation for complex morphology</li>
+</ul></li>
+</ol>
+</section>
+<section id="data-resolution" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="data-resolution"><span class="header-section-number">6.3.2</span> Data Resolution</h3>
+<p>The model enforces a standard 1cm resolution for several reasons:</p>
+<ol type="1">
+<li>Matches the precision level of typical field measurements</li>
+<li>Provides sufficient detail for most morphological features</li>
+<li>Aligns with existing horizon depth measurements in the AKSDB</li>
+<li>Balances storage requirements with precision needs</li>
+</ol>
+</section>
+<section id="matrix-compression" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3" class="anchored" data-anchor-id="matrix-compression"><span class="header-section-number">6.3.3</span> Matrix Compression</h3>
+<p>To efficiently store the matrix data, the model uses a simplified run-length encoding (RLE) approach that:</p>
+<ol type="1">
+<li>Groups identical values within rows</li>
+<li>Combines identical rows</li>
+<li>Maintains human readability</li>
+<li>Supports both string and numeric identifiers</li>
+</ol>
+</section>
+</section>
+<section id="data-structure-and-implementation" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="data-structure-and-implementation"><span class="header-section-number">6.4</span> Data Structure and Implementation</h2>
+<section id="json-format" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="json-format"><span class="header-section-number">6.4.1</span> JSON Format</h3>
+<p>The model uses JSON as the primary storage format. For example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"0"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"3"</span><span class="ot">,</span> <span class="dv">8</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"1"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"4"</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"3"</span><span class="ot">,</span> <span class="dv">4</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"4"</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"2,3"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"4"</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"5"</span><span class="ot">,</span> <span class="dv">3</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"1"</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"4"</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"4"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"5"</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"0"</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"5"</span><span class="ot">,</span> <span class="dv">3</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"1"</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"4"</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"5,6"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"5"</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"0"</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"2"</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"7"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"5"</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"0"</span><span class="ot">,</span> <span class="dv">7</span><span class="ot">]]</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This format provides several advantages:</p>
+<ol type="1">
+<li>Native support in both Python and R</li>
+<li>Human-readable structure</li>
+<li>Efficient compression of repeated values</li>
+<li>Clear representation of row combinations</li>
+<li>Easy validation and parsing</li>
+</ol>
+</section>
+<section id="file-naming-convention" class="level3" data-number="6.4.2">
+<h3 data-number="6.4.2" class="anchored" data-anchor-id="file-naming-convention"><span class="header-section-number">6.4.2</span> File Naming Convention</h3>
+<p>Each pedon morphological model is stored in a separate JSON file with the naming convention:</p>
+<pre><code>&lt;dataset_id&gt;_&lt;peiid&gt;_pemorph_mod.json</code></pre>
+<p>This convention ensures: 1. Clear association with specific pedons 2. Easy integration with existing AKSDB structure 3. Unique identification of morphological models 4. Consistent file organization</p>
+</section>
+</section>
+<section id="storage-format-considerations" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="storage-format-considerations"><span class="header-section-number">6.5</span> Storage Format Considerations</h2>
+<section id="evaluation-of-alternative-formats" class="level3" data-number="6.5.1">
+<h3 data-number="6.5.1" class="anchored" data-anchor-id="evaluation-of-alternative-formats"><span class="header-section-number">6.5.1</span> Evaluation of Alternative Formats</h3>
+<p>Several storage formats were considered before selecting JSON:</p>
+<ol type="1">
+<li><strong>Raw Matrix</strong>
+<ul>
+<li>Pros:
+<ul>
+<li>Simple implementation</li>
+<li>Direct access to values</li>
+</ul></li>
+<li>Cons:
+<ul>
+<li>Large storage requirements</li>
+<li>Poor compression</li>
+<li>Limited metadata support</li>
+</ul></li>
+</ul></li>
+<li><strong>Python Dictionary</strong>
+<ul>
+<li>Pros:
+<ul>
+<li>Native Python support</li>
+<li>Efficient access</li>
+</ul></li>
+<li>Cons:
+<ul>
+<li>Limited interoperability</li>
+<li>Platform-dependent serialization</li>
+</ul></li>
+</ul></li>
+<li><strong>CSV Format</strong>
+<ul>
+<li>Pros:
+<ul>
+<li>Universal support</li>
+<li>Human-readable</li>
+</ul></li>
+<li>Cons:
+<ul>
+<li>Less efficient for sparse data</li>
+<li>Complex representation of merged rows</li>
+<li>Overhead from repeated column headers</li>
+</ul></li>
+</ul></li>
+<li><strong>JSON Format (Selected)</strong>
+<ul>
+<li>Pros:
+<ul>
+<li>Excellent language support</li>
+<li>Human-readable</li>
+<li>Efficient compression</li>
+<li>Flexible structure</li>
+</ul></li>
+<li>Cons:
+<ul>
+<li>Slightly larger than raw binary formats</li>
+<li>Parsing overhead</li>
+</ul></li>
+</ul></li>
+</ol>
+</section>
+<section id="storage-efficiency-analysis" class="level3" data-number="6.5.2">
+<h3 data-number="6.5.2" class="anchored" data-anchor-id="storage-efficiency-analysis"><span class="header-section-number">6.5.2</span> Storage Efficiency Analysis</h3>
+<p>Analysis of storage requirements for different formats with 16-character horizon identifiers:</p>
+<section id="single-pedon-200200-matrix" class="level4" data-number="6.5.2.1">
+<h4 data-number="6.5.2.1" class="anchored" data-anchor-id="single-pedon-200200-matrix"><span class="header-section-number">6.5.2.1</span> Single Pedon (200×200 matrix)</h4>
+<ul>
+<li>Raw Matrix: 640 KB</li>
+<li>Dictionary: 50-60 KB</li>
+<li>JSON: 50-60 KB</li>
+<li>CSV: 50-60 KB</li>
+</ul>
+</section>
+<section id="complete-dataset-40000-pedons" class="level4" data-number="6.5.2.2">
+<h4 data-number="6.5.2.2" class="anchored" data-anchor-id="complete-dataset-40000-pedons"><span class="header-section-number">6.5.2.2</span> Complete Dataset (40,000 pedons)</h4>
+<ul>
+<li>Raw Matrix: ~25 GB</li>
+<li>Dictionary: ~2.4 GB</li>
+<li>JSON: ~2.4 GB</li>
+<li>CSV: ~2.4 GB</li>
+</ul>
+<p>The JSON format provides a reasonable balance between storage efficiency and usability, with compression ratios around 8-10x compared to raw storage.</p>
+</section>
+</section>
+</section>
+<section id="example-implementation" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="example-implementation"><span class="header-section-number">6.6</span> Example Implementation</h2>
+<p>This section demonstrates a concrete example of the pedon morphological model using randomly generated 16-character horizon identifiers.</p>
+<section id="sample-matrix" class="level3" data-number="6.6.1">
+<h3 data-number="6.6.1" class="anchored" data-anchor-id="sample-matrix"><span class="header-section-number">6.6.1</span> Sample Matrix</h3>
+<p>Consider a 13×8 soil profile matrix. We’ll replace the integers with 16-character alphanumeric strings to represent horizon identifiers (as would be stored in a real implementation):</p>
+<p>Original integer values:</p>
+<pre><code>8 8 8 8 8 8 8 8 8 8 8 8 8
+8 4 8 8 1 1 1 1 1 8 8 8 8
+8 4 8 8 1 1 1 1 1 8 8 8 8
+8 4 8 8 1 1 1 1 1 8 8 8 8
+8 4 8 8 1 1 1 1 1 8 8 8 8
+8 4 8 8 1 1 1 1 1 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8 8 8
+8 8 3 3 3 3 3 3 3 3 3 3 3</code></pre>
+<p>Replacing with random 16-character horizon identifiers: - 8 → “j2k4m5n7p9q8v3w6” - 4 → “h7r5t2x9y4z8m3n6” - 1 → “a9c6e4g2j5k8m7p3” - 3 → “b2d5f8h3j6l9n4q7”</p>
+</section>
+<section id="raw-matrix-representation" class="level3" data-number="6.6.2">
+<h3 data-number="6.6.2" class="anchored" data-anchor-id="raw-matrix-representation"><span class="header-section-number">6.6.2</span> Raw Matrix Representation</h3>
+<pre><code>j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 h7r5t2x9y4z8m3n6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 a9c6e4g2j5k8m7p3 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6
+j2k4m5n7p9q8v3w6 j2k4m5n7p9q8v3w6 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7 b2d5f8h3j6l9n4q7</code></pre>
+</section>
+<section id="simplified-rle-json-representation" class="level3" data-number="6.6.3">
+<h3 data-number="6.6.3" class="anchored" data-anchor-id="simplified-rle-json-representation"><span class="header-section-number">6.6.3</span> Simplified RLE JSON Representation</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"0"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"j2k4m5n7p9q8v3w6"</span><span class="ot">,</span> <span class="dv">13</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"1,2,3,4,5"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="ot">[</span><span class="st">"j2k4m5n7p9q8v3w6"</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">],</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="ot">[</span><span class="st">"h7r5t2x9y4z8m3n6"</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">],</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="ot">[</span><span class="st">"j2k4m5n7p9q8v3w6"</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">],</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="ot">[</span><span class="st">"a9c6e4g2j5k8m7p3"</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">],</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="ot">[</span><span class="st">"j2k4m5n7p9q8v3w6"</span><span class="ot">,</span> <span class="dv">4</span><span class="ot">]</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"6"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"j2k4m5n7p9q8v3w6"</span><span class="ot">,</span> <span class="dv">13</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"7"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        <span class="ot">[</span><span class="st">"j2k4m5n7p9q8v3w6"</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">],</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        <span class="ot">[</span><span class="st">"b2d5f8h3j6l9n4q7"</span><span class="ot">,</span> <span class="dv">11</span><span class="ot">]</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="size-calculations" class="level3" data-number="6.6.4">
+<h3 data-number="6.6.4" class="anchored" data-anchor-id="size-calculations"><span class="header-section-number">6.6.4</span> Size Calculations</h3>
+<ol type="1">
+<li>Raw Matrix Size:
+<ul>
+<li>Matrix dimensions: 8 rows × 13 columns = 104 cells</li>
+<li>Each cell contains a 16-character string</li>
+<li>Size per cell = 16 bytes</li>
+<li>Total size = 104 cells × 16 bytes = 1,664 bytes (≈ 1.66 KB)</li>
+</ul></li>
+<li>JSON RLE Format Size:
+<ul>
+<li>JSON structure overhead ≈ 100 bytes</li>
+<li>Row indices and formatting ≈ 50 bytes</li>
+<li>Four unique horizon IDs × 16 bytes = 64 bytes</li>
+<li>Count values and brackets ≈ 100 bytes</li>
+<li>Total size ≈ 314 bytes (≈ 0.31 KB)</li>
+</ul></li>
+</ol>
+</section>
+<section id="compression-analysis" class="level3" data-number="6.6.5">
+<h3 data-number="6.6.5" class="anchored" data-anchor-id="compression-analysis"><span class="header-section-number">6.6.5</span> Compression Analysis</h3>
+<ul>
+<li>Raw size: 1,664 bytes</li>
+<li>Compressed size: 314 bytes</li>
+<li>Compression ratio: ≈ 5.3:1 (81% reduction in size)</li>
+<li>The compression is particularly effective due to:
+<ul>
+<li>Repeated horizon IDs in rows</li>
+<li>Similar patterns across multiple rows (rows 1-5 share the same pattern)</li>
+<li>Long runs of identical values (row 0, row 6)</li>
+</ul></li>
+</ul>
+<p>This example demonstrates how the simplified RLE JSON format can efficiently store horizon data while maintaining readability and accessibility. The compression is particularly effective for this type of data due to the common occurrence of repeated patterns and long runs of identical values.</p>
+</section>
+</section>
+<section id="integration-with-aksdb" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="integration-with-aksdb"><span class="header-section-number">6.7</span> Integration with AKSDB</h2>
+<section id="relationship-to-existing-tables" class="level3" data-number="6.7.1">
+<h3 data-number="6.7.1" class="anchored" data-anchor-id="relationship-to-existing-tables"><span class="header-section-number">6.7.1</span> Relationship to Existing Tables</h3>
+<p>The pedon morphological model integrates with the AKSDB through several key relationships:</p>
+<ol type="1">
+<li><strong>Pedon Table</strong>
+<ul>
+<li>Foreign key: dataset_peiid</li>
+<li>New fields:
+<ul>
+<li>morph_model_type (1D, 1D_overlap, 2D)</li>
+<li>morph_model_exists (boolean)</li>
+</ul></li>
+</ul></li>
+<li><strong>Horizon Table</strong>
+<ul>
+<li>Foreign key: dataset_hziid</li>
+<li>Referenced in morphological model cells</li>
+</ul></li>
+<li><strong>Component Table</strong> (proposed)
+<ul>
+<li>New table for horizon components</li>
+<li>Supports percentage-based horizon divisions</li>
+</ul></li>
+</ol>
+</section>
+<section id="data-flow" class="level3" data-number="6.7.2">
+<h3 data-number="6.7.2" class="anchored" data-anchor-id="data-flow"><span class="header-section-number">6.7.2</span> Data Flow</h3>
+<p>The integration process follows these steps:</p>
+<ol type="1">
+<li>Pedon data ingestion</li>
+<li>Horizon identification and registration</li>
+<li>Morphological model creation</li>
+<li>Reference validation</li>
+<li>Storage and indexing</li>
+</ol>
+</section>
+</section>
+<section id="special-cases-and-edge-conditions" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="special-cases-and-edge-conditions"><span class="header-section-number">6.8</span> Special Cases and Edge Conditions</h2>
+<section id="one-dimensional-profiles" class="level3" data-number="6.8.1">
+<h3 data-number="6.8.1" class="anchored" data-anchor-id="one-dimensional-profiles"><span class="header-section-number">6.8.1</span> One-Dimensional Profiles</h3>
+<p>For simple 1D profiles, the model uses a single-column matrix:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"0-20"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"Hz1"</span><span class="ot">,</span> <span class="dv">20</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"20-45"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"Hz2"</span><span class="ot">,</span> <span class="dv">25</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"45-100"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"Hz3"</span><span class="ot">,</span> <span class="dv">55</span><span class="ot">]]</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="overlapping-horizons" class="level3" data-number="6.8.2">
+<h3 data-number="6.8.2" class="anchored" data-anchor-id="overlapping-horizons"><span class="header-section-number">6.8.2</span> Overlapping Horizons</h3>
+<p>When horizons overlap, the matrix width expands:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"0-25"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"Hz1"</span><span class="ot">,</span> <span class="dv">25</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"25-50"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"Hz1"</span><span class="ot">,</span> <span class="dv">25</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"Hz2"</span><span class="ot">,</span> <span class="dv">25</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"50-75"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"Hz2"</span><span class="ot">,</span> <span class="dv">25</span><span class="ot">]]</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="horizon-components" class="level3" data-number="6.8.3">
+<h3 data-number="6.8.3" class="anchored" data-anchor-id="horizon-components"><span class="header-section-number">6.8.3</span> Horizon Components</h3>
+<p>The model can represent horizon components through matrix expansion:</p>
+<ol type="1">
+<li>Each component gets a unique identifier</li>
+<li>Matrix width reflects component count</li>
+<li>Spatial distribution is preserved</li>
+</ol>
+</section>
+</section>
+<section id="technical-implementation" class="level2" data-number="6.9">
+<h2 data-number="6.9" class="anchored" data-anchor-id="technical-implementation"><span class="header-section-number">6.9</span> Technical Implementation</h2>
+<section id="python-implementation" class="level3" data-number="6.9.1">
+<h3 data-number="6.9.1" class="anchored" data-anchor-id="python-implementation"><span class="header-section-number">6.9.1</span> Python Implementation</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PedonMorphModel:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, dataset_id, peiid):</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.dataset_id <span class="op">=</span> dataset_id</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.peiid <span class="op">=</span> peiid</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix <span class="op">=</span> {}</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> add_row(<span class="va">self</span>, row_index, values):</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.matrix[row_index] <span class="op">=</span> values</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> compress(<span class="va">self</span>):</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Implement RLE compression</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> to_json(<span class="va">self</span>):</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Export to JSON format</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="r-implementation" class="level3" data-number="6.9.2">
+<h3 data-number="6.9.2" class="anchored" data-anchor-id="r-implementation"><span class="header-section-number">6.9.2</span> R Implementation</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pedon_morph_model <span class="ot">&lt;-</span> <span class="cf">function</span>(dataset_id, peiid) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">structure</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">list</span>(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">dataset_id =</span> dataset_id,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">peiid =</span> peiid,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">matrix =</span> <span class="fu">list</span>()</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">class =</span> <span class="st">"pedon_morph_model"</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>add_row <span class="ot">&lt;-</span> <span class="cf">function</span>(model, row_index, values) {</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add row implementation</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>compress <span class="ot">&lt;-</span> <span class="cf">function</span>(model) {</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Compression implementation</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="validation-functions" class="level3" data-number="6.9.3">
+<h3 data-number="6.9.3" class="anchored" data-anchor-id="validation-functions"><span class="header-section-number">6.9.3</span> Validation Functions</h3>
+<p>Key validation checks include:</p>
+<ol type="1">
+<li>Matrix dimensions</li>
+<li>Horizon identifier validity</li>
+<li>Row consistency</li>
+<li>Component percentages</li>
+<li>Reference integrity</li>
+</ol>
+</section>
+</section>
+<section id="action-items-and-future-development" class="level2" data-number="6.10">
+<h2 data-number="6.10" class="anchored" data-anchor-id="action-items-and-future-development"><span class="header-section-number">6.10</span> Action Items and Future Development</h2>
+<section id="immediate-action-items" class="level3" data-number="6.10.1">
+<h3 data-number="6.10.1" class="anchored" data-anchor-id="immediate-action-items"><span class="header-section-number">6.10.1</span> Immediate Action Items</h3>
+<ol type="1">
+<li><strong>Horizon Components</strong>
+<ul>
+<li>Add component percentage fields to horizon table</li>
+<li>Develop component tracking system</li>
+<li>Update validation rules</li>
+</ul></li>
+<li><strong>Sample-Horizon Matching</strong>
+<ul>
+<li>Implement sample to horizon matching logic</li>
+<li>Handle one-to-many relationships</li>
+<li>Create horizon records for orphaned samples</li>
+</ul></li>
+<li><strong>Documentation Updates</strong>
+<ul>
+<li>Add pedon morphological model section to main documentation</li>
+<li>Create technical specification document</li>
+<li>Update data dictionary</li>
+</ul></li>
+</ol>
+</section>
+<section id="future-development" class="level3" data-number="6.10.2">
+<h3 data-number="6.10.2" class="anchored" data-anchor-id="future-development"><span class="header-section-number">6.10.2</span> Future Development</h3>
+<ol type="1">
+<li><strong>Visualization Tools</strong>
+<ul>
+<li>Develop 2D visualization capabilities</li>
+<li>Create profile drawing tools</li>
+<li>Implement export to common formats</li>
+</ul></li>
+<li><strong>Analysis Functions</strong>
+<ul>
+<li>Volume calculations</li>
+<li>Horizon distribution analysis</li>
+<li>Component percentage verification</li>
+</ul></li>
+<li><strong>Performance Optimization</strong>
+<ul>
+<li>Evaluate compression alternatives</li>
+<li>Implement caching strategies</li>
+<li>Optimize matrix operations</li>
+</ul></li>
+</ol>
+</section>
+<section id="open-questions" class="level3" data-number="6.10.3">
+<h3 data-number="6.10.3" class="anchored" data-anchor-id="open-questions"><span class="header-section-number">6.10.3</span> Open Questions</h3>
+<ol type="1">
+<li>What is the optimal storage strategy for very large datasets?</li>
+<li>How should we handle varying levels of precision in source data?</li>
+<li>What additional metadata might be needed for future applications?</li>
+<li>How can we best support integration with existing soil databases?</li>
+</ol>
+</section>
+</section>
+<section id="conclusion" class="level2" data-number="6.11">
+<h2 data-number="6.11" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">6.11</span> Conclusion</h2>
+<p>The AKSDB pedon morphological model will hopefully provide a flexible and efficient way to store both simple and complex soil profile information. The chosen implementation balances storage efficiency with usability and maintains compatibility with existing systems while supporting future expansion.</p>
+<p>The model’s ability to handle both traditional one-dimensional profiles and complex two-dimensional representations makes it particularly valuable for Arctic and subarctic soils where cryoturbation and other processes create complex morphological patterns. The use of JSON as a storage format provides a good balance of human readability and machine processing efficiency while ensuring broad compatibility across different programming languages and platforms.</p>
+<p>As development continues, the focus will be on addressing the identified action items and expanding the model’s capabilities while maintaining its core principles of flexibility, efficiency, and usability.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./data-model.html" class="pagination-link" aria-label="Alaska Soil Data Bank (AKSDB) Data Model Documentation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Alaska Soil Data Bank (AKSDB) Data Model Documentation</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./authorship-guidelines.html" class="pagination-link" aria-label="Authorship Guidelines">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Authorship Guidelines</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
