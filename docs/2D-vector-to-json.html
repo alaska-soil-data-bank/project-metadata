@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Alaska Soil Data Bank Project Metadata - 9&nbsp; Summary</title>
+<title>Alaska Soil Data Bank Project Metadata - 7&nbsp; Raster to Matrix Profile Representation Framework</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./authorship-guidelines.html" rel="prev">
+<link href="./authorship-guidelines.html" rel="next">
+<link href="./pedon-morphological-model.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./summary.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./2D-vector-to-json.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Raster to Matrix Profile Representation Framework</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -150,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2D-vector-to-json.html" class="sidebar-item-text sidebar-link">
+  <a href="./2D-vector-to-json.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Raster to Matrix Profile Representation Framework</span></span></a>
   </div>
 </li>
@@ -162,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link active">
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
@@ -201,14 +235,56 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#framework-overview" id="toc-framework-overview" class="nav-link active" data-scroll-target="#framework-overview"><span class="header-section-number">7.1</span> Framework Overview</a></li>
+  <li><a href="#data-processing-clusters" id="toc-data-processing-clusters" class="nav-link" data-scroll-target="#data-processing-clusters"><span class="header-section-number">7.2</span> Data Processing Clusters</a></li>
+  <li><a href="#vector-to-raster-conversion" id="toc-vector-to-raster-conversion" class="nav-link" data-scroll-target="#vector-to-raster-conversion"><span class="header-section-number">7.3</span> Vector to Raster Conversion</a>
+  <ul class="collapse">
+  <li><a href="#key-functions" id="toc-key-functions" class="nav-link" data-scroll-target="#key-functions"><span class="header-section-number">7.3.1</span> Key Functions</a></li>
+  <li><a href="#usage-example" id="toc-usage-example" class="nav-link" data-scroll-target="#usage-example"><span class="header-section-number">7.3.2</span> Usage Example</a></li>
+  </ul></li>
+  <li><a href="#raster-processing" id="toc-raster-processing" class="nav-link" data-scroll-target="#raster-processing"><span class="header-section-number">7.4</span> Raster Processing</a>
+  <ul class="collapse">
+  <li><a href="#key-functions-1" id="toc-key-functions-1" class="nav-link" data-scroll-target="#key-functions-1"><span class="header-section-number">7.4.1</span> Key Functions</a></li>
+  <li><a href="#usage-example-1" id="toc-usage-example-1" class="nav-link" data-scroll-target="#usage-example-1"><span class="header-section-number">7.4.2</span> Usage Example</a></li>
+  </ul></li>
+  <li><a href="#matrix-generation" id="toc-matrix-generation" class="nav-link" data-scroll-target="#matrix-generation"><span class="header-section-number">7.5</span> Matrix Generation</a>
+  <ul class="collapse">
+  <li><a href="#key-functions-2" id="toc-key-functions-2" class="nav-link" data-scroll-target="#key-functions-2"><span class="header-section-number">7.5.1</span> Key Functions</a></li>
+  <li><a href="#usage-example-2" id="toc-usage-example-2" class="nav-link" data-scroll-target="#usage-example-2"><span class="header-section-number">7.5.2</span> Usage Example</a></li>
+  </ul></li>
+  <li><a href="#data-format-specifications" id="toc-data-format-specifications" class="nav-link" data-scroll-target="#data-format-specifications"><span class="header-section-number">7.6</span> Data Format Specifications</a>
+  <ul class="collapse">
+  <li><a href="#shapefile-requirements" id="toc-shapefile-requirements" class="nav-link" data-scroll-target="#shapefile-requirements"><span class="header-section-number">7.6.1</span> Shapefile Requirements</a></li>
+  <li><a href="#raster-format" id="toc-raster-format" class="nav-link" data-scroll-target="#raster-format"><span class="header-section-number">7.6.2</span> Raster Format</a></li>
+  <li><a href="#matrix-format" id="toc-matrix-format" class="nav-link" data-scroll-target="#matrix-format"><span class="header-section-number">7.6.3</span> Matrix Format</a></li>
+  <li><a href="#json-output-format" id="toc-json-output-format" class="nav-link" data-scroll-target="#json-output-format"><span class="header-section-number">7.6.4</span> JSON Output Format</a></li>
+  </ul></li>
+  <li><a href="#storage-efficiency" id="toc-storage-efficiency" class="nav-link" data-scroll-target="#storage-efficiency"><span class="header-section-number">7.7</span> Storage Efficiency</a></li>
+  <li><a href="#technical-requirements" id="toc-technical-requirements" class="nav-link" data-scroll-target="#technical-requirements"><span class="header-section-number">7.8</span> Technical Requirements</a></li>
+  <li><a href="#implementation-notes" id="toc-implementation-notes" class="nav-link" data-scroll-target="#implementation-notes"><span class="header-section-number">7.9</span> Implementation Notes</a>
+  <ul class="collapse">
+  <li><a href="#coordinate-transformation" id="toc-coordinate-transformation" class="nav-link" data-scroll-target="#coordinate-transformation"><span class="header-section-number">7.9.1</span> Coordinate Transformation</a></li>
+  <li><a href="#data-quality" id="toc-data-quality" class="nav-link" data-scroll-target="#data-quality"><span class="header-section-number">7.9.2</span> Data Quality</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices"><span class="header-section-number">7.9.3</span> Best Practices</a></li>
+  </ul></li>
+  <li><a href="#advanced-topics" id="toc-advanced-topics" class="nav-link" data-scroll-target="#advanced-topics"><span class="header-section-number">7.10</span> Advanced Topics</a>
+  <ul class="collapse">
+  <li><a href="#extending-the-framework" id="toc-extending-the-framework" class="nav-link" data-scroll-target="#extending-the-framework"><span class="header-section-number">7.10.1</span> Extending the Framework</a></li>
+  <li><a href="#performance-optimization" id="toc-performance-optimization" class="nav-link" data-scroll-target="#performance-optimization"><span class="header-section-number">7.10.2</span> Performance Optimization</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Raster to Matrix Profile Representation Framework</span></h1>
 </div>
 
 
@@ -225,9 +301,202 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Do we need a summary chapter?</p>
+<p>This documentation describes a workflow for converting soil profile data between shapefile, raster, and matrix representations, enabling flexible transitions between spatial and computational formats.</p>
+<section id="framework-overview" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="framework-overview"><span class="header-section-number">7.1</span> Framework Overview</h2>
+<p>The framework provides a pipeline for converting between three key representations: 1. Spatial vector data (shapefiles) 2. Rasterized profile data (GeoTIFF) 3. Matrix-based computational format (NumPy/JSON)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="output_2_1.png" class="img-fluid figure-img"></p>
+<figcaption>Rasterization Example</figcaption>
+</figure>
+</div>
+</section>
+<section id="data-processing-clusters" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="data-processing-clusters"><span class="header-section-number">7.2</span> Data Processing Clusters</h2>
+<ol type="1">
+<li><a href="#vector-to-raster-conversion">Vector to Raster Conversion</a></li>
+<li><a href="#raster-processing">Raster Processing</a></li>
+<li><a href="#matrix-generation">Matrix Generation</a></li>
+</ol>
+</section>
+<section id="vector-to-raster-conversion" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="vector-to-raster-conversion"><span class="header-section-number">7.3</span> Vector to Raster Conversion</h2>
+<p><a href="./_tools-pedon-morphological-model/vector_raster_conversion.py">Source Code: vector_raster_conversion.py</a></p>
+<p>Converts soil profile shapefiles into rasterized representations with proper coordinate transformation.</p>
+<section id="key-functions" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="key-functions"><span class="header-section-number">7.3.1</span> Key Functions</h3>
+<ul>
+<li><code>rasterize_soil_profile()</code>: Main conversion function
+<ul>
+<li>Transforms vector geometries to pixel space</li>
+<li>Handles horizon mapping and indexing</li>
+<li>Creates verification plots</li>
+<li>Preserves horizon metadata in GeoTIFF tags</li>
+</ul></li>
+</ul>
+</section>
+<section id="usage-example" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="usage-example"><span class="header-section-number">7.3.2</span> Usage Example</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>shp_path <span class="op">=</span> <span class="st">"HS 2-2-combined.shp"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>output_raster_path <span class="op">=</span> <span class="st">"HS 2-2-combined_raster.tif"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>width_cm <span class="op">=</span> <span class="dv">220</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>depth_cm <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>horizon_mapping, raster_data <span class="op">=</span> rasterize_soil_profile(</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    shp_path, </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    output_raster_path, </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    width_cm, </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    depth_cm</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Example output:</p>
+<pre><code>Raster statistics:
+Unique values in result: [ 1  2  3  4  5  6  7  8  9 10 11 12]
+Horizon mapping: {
+    'doe_CF': 1, 
+    'doe_Wf': 2,
+    'doe_air': 3,
+    ...
+}</code></pre>
+</section>
+</section>
+<section id="raster-processing" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="raster-processing"><span class="header-section-number">7.4</span> Raster Processing</h2>
+<p><a href="raster_processing.py">Source Code: raster_processing.py</a></p>
+<p>Handles post-processing of rasterized profiles, including air space management and data cleaning.</p>
+<section id="key-functions-1" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="key-functions-1"><span class="header-section-number">7.4.1</span> Key Functions</h3>
+<ul>
+<li><code>process_raster()</code>: Post-processes raster data
+<ul>
+<li>Removes air spaces</li>
+<li>Preserves horizon tags</li>
+<li>Maintains data integrity</li>
+</ul></li>
+</ul>
+</section>
+<section id="usage-example-1" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="usage-example-1"><span class="header-section-number">7.4.2</span> Usage Example</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>input_tif <span class="op">=</span> <span class="st">"HS 2-2-combined_raster.tif"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>output_tif <span class="op">=</span> <span class="st">"HS 2-2-combined_raster_processed.tif"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>processed_path <span class="op">=</span> process_raster(input_tif, output_tif, na_value<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Example output: <img src="output_4_0.png" class="img-fluid" alt="Processed Raster"></p>
+</section>
+</section>
+<section id="matrix-generation" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="matrix-generation"><span class="header-section-number">7.5</span> Matrix Generation</h2>
+<p><a href="matrix_generation.py">Source Code: matrix_generation.py</a></p>
+<p>Creates efficient matrix representations from processed raster data.</p>
+<section id="key-functions-2" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="key-functions-2"><span class="header-section-number">7.5.1</span> Key Functions</h3>
+<ul>
+<li><code>create_horizon_string_matrix()</code>: Creates string-based matrix</li>
+<li><code>matrix_to_ranges()</code>: Converts to efficient range representation</li>
+<li><code>save_horizon_json()</code>: Serializes to compressed JSON format</li>
+</ul>
+</section>
+<section id="usage-example-2" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" class="anchored" data-anchor-id="usage-example-2"><span class="header-section-number">7.5.2</span> Usage Example</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>raster_path <span class="op">=</span> <span class="st">"HS 2-2-combined_raster_processed.tif"</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>horizon_matrix <span class="op">=</span> create_horizon_string_matrix(raster_path)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>ranges <span class="op">=</span> save_horizon_json(horizon_matrix, <span class="st">"horizon_ranges.json"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Example output:</p>
+<pre><code>Number of unique patterns: 91
+Horizon row ranges:
+doe_CF: rows 21-67 (appears in 25 rows)
+doe_Wf: rows 3-99 (appears in 84 rows)
+...</code></pre>
+</section>
+</section>
+<section id="data-format-specifications" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="data-format-specifications"><span class="header-section-number">7.6</span> Data Format Specifications</h2>
+<section id="shapefile-requirements" class="level3" data-number="7.6.1">
+<h3 data-number="7.6.1" class="anchored" data-anchor-id="shapefile-requirements"><span class="header-section-number">7.6.1</span> Shapefile Requirements</h3>
+<ul>
+<li>Must contain horizon identifiers</li>
+<li>Should have clear horizon boundaries</li>
+<li>Coordinates in consistent units</li>
+</ul>
+</section>
+<section id="raster-format" class="level3" data-number="7.6.2">
+<h3 data-number="7.6.2" class="anchored" data-anchor-id="raster-format"><span class="header-section-number">7.6.2</span> Raster Format</h3>
+<ul>
+<li>GeoTIFF with horizon mapping in tags</li>
+<li>One band containing horizon indices</li>
+<li>No data value for air/empty space</li>
+</ul>
+</section>
+<section id="matrix-format" class="level3" data-number="7.6.3">
+<h3 data-number="7.6.3" class="anchored" data-anchor-id="matrix-format"><span class="header-section-number">7.6.3</span> Matrix Format</h3>
+<ul>
+<li>NumPy array of horizon strings</li>
+<li>Empty values represented as ’’</li>
+<li>Consistent dimensions (depth × width)</li>
+</ul>
+</section>
+<section id="json-output-format" class="level3" data-number="7.6.4">
+<h3 data-number="7.6.4" class="anchored" data-anchor-id="json-output-format"><span class="header-section-number">7.6.4</span> JSON Output Format</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"0-10"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"horizon1"</span><span class="ot">,</span> <span class="dv">10</span><span class="ot">]]</span><span class="fu">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"11-20"</span><span class="fu">:</span> <span class="ot">[[</span><span class="st">"horizon2"</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">],</span> <span class="ot">[</span><span class="st">"horizon3"</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">]]</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="storage-efficiency" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="storage-efficiency"><span class="header-section-number">7.7</span> Storage Efficiency</h2>
+<p>The framework achieves significant compression:</p>
+<pre><code>Matrix size: 1,760,000 bytes (22,000 elements)
+JSON size: 25,837 bytes (1,004 elements)
+Compression ratio: 0.01x</code></pre>
+</section>
+<section id="technical-requirements" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="technical-requirements"><span class="header-section-number">7.8</span> Technical Requirements</h2>
+<p>Required Python packages: - geopandas - rasterio - numpy - matplotlib - shapely</p>
+<p>Install via:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install geopandas rasterio numpy matplotlib shapely</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="implementation-notes" class="level2" data-number="7.9">
+<h2 data-number="7.9" class="anchored" data-anchor-id="implementation-notes"><span class="header-section-number">7.9</span> Implementation Notes</h2>
+<section id="coordinate-transformation" class="level3" data-number="7.9.1">
+<h3 data-number="7.9.1" class="anchored" data-anchor-id="coordinate-transformation"><span class="header-section-number">7.9.1</span> Coordinate Transformation</h3>
+<ul>
+<li>Preserves relative positions</li>
+<li>Scales to specified dimensions</li>
+<li>Handles both horizontal and vertical transformations</li>
+</ul>
+</section>
+<section id="data-quality" class="level3" data-number="7.9.2">
+<h3 data-number="7.9.2" class="anchored" data-anchor-id="data-quality"><span class="header-section-number">7.9.2</span> Data Quality</h3>
+<ul>
+<li>Validates horizon mappings</li>
+<li>Verifies rasterization results</li>
+<li>Tracks pattern statistics</li>
+</ul>
+</section>
+<section id="best-practices" class="level3" data-number="7.9.3">
+<h3 data-number="7.9.3" class="anchored" data-anchor-id="best-practices"><span class="header-section-number">7.9.3</span> Best Practices</h3>
+<ol type="1">
+<li>Verify shapefile quality before processing</li>
+<li>Check horizon mapping consistency</li>
+<li>Review verification plots</li>
+<li>Validate pattern statistics</li>
+<li>Compare compression results</li>
+</ol>
+</section>
+</section>
+<section id="advanced-topics" class="level2" data-number="7.10">
+<h2 data-number="7.10" class="anchored" data-anchor-id="advanced-topics"><span class="header-section-number">7.10</span> Advanced Topics</h2>
+<section id="extending-the-framework" class="level3" data-number="7.10.1">
+<h3 data-number="7.10.1" class="anchored" data-anchor-id="extending-the-framework"><span class="header-section-number">7.10.1</span> Extending the Framework</h3>
+<p>The workflow can be adapted for: - Different coordinate systems - Various horizon classification schemes - Additional metadata preservation - Custom visualization needs</p>
+</section>
+<section id="performance-optimization" class="level3" data-number="7.10.2">
+<h3 data-number="7.10.2" class="anchored" data-anchor-id="performance-optimization"><span class="header-section-number">7.10.2</span> Performance Optimization</h3>
+<p>Consider: - Batch processing for multiple profiles - Memory-efficient processing for large datasets - Parallel processing options - Custom compression schemes</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -619,13 +888,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./authorship-guidelines.html" class="pagination-link" aria-label="Authorship Guidelines">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Authorship Guidelines</span></span>
+      <a href="./pedon-morphological-model.html" class="pagination-link" aria-label="AKSDB Pedon Morphological Model Documentation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AKSDB Pedon Morphological Model Documentation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./authorship-guidelines.html" class="pagination-link" aria-label="Authorship Guidelines">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Authorship Guidelines</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

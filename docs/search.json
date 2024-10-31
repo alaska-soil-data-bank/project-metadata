@@ -510,23 +510,133 @@
     ]
   },
   {
+    "objectID": "2D-vector-to-json.html",
+    "href": "2D-vector-to-json.html",
+    "title": "7  Raster to Matrix Profile Representation Framework",
+    "section": "",
+    "text": "7.1 Framework Overview\nThe framework provides a pipeline for converting between three key representations: 1. Spatial vector data (shapefiles) 2. Rasterized profile data (GeoTIFF) 3. Matrix-based computational format (NumPy/JSON)",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Raster to Matrix Profile Representation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "2D-vector-to-json.html#framework-overview",
+    "href": "2D-vector-to-json.html#framework-overview",
+    "title": "7  Raster to Matrix Profile Representation Framework",
+    "section": "",
+    "text": "Rasterization Example",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Raster to Matrix Profile Representation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "2D-vector-to-json.html#data-processing-clusters",
+    "href": "2D-vector-to-json.html#data-processing-clusters",
+    "title": "7  Raster to Matrix Profile Representation Framework",
+    "section": "7.2 Data Processing Clusters",
+    "text": "7.2 Data Processing Clusters\n\nVector to Raster Conversion\nRaster Processing\nMatrix Generation",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Raster to Matrix Profile Representation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "2D-vector-to-json.html#vector-to-raster-conversion",
+    "href": "2D-vector-to-json.html#vector-to-raster-conversion",
+    "title": "7  Raster to Matrix Profile Representation Framework",
+    "section": "7.3 Vector to Raster Conversion",
+    "text": "7.3 Vector to Raster Conversion\nSource Code: vector_raster_conversion.py\nConverts soil profile shapefiles into rasterized representations with proper coordinate transformation.\n\n7.3.1 Key Functions\n\nrasterize_soil_profile(): Main conversion function\n\nTransforms vector geometries to pixel space\nHandles horizon mapping and indexing\nCreates verification plots\nPreserves horizon metadata in GeoTIFF tags\n\n\n\n\n7.3.2 Usage Example\nshp_path = \"HS 2-2-combined.shp\"\noutput_raster_path = \"HS 2-2-combined_raster.tif\"\nwidth_cm = 220\ndepth_cm = 100\n\nhorizon_mapping, raster_data = rasterize_soil_profile(\n    shp_path, \n    output_raster_path, \n    width_cm, \n    depth_cm\n)\nExample output:\nRaster statistics:\nUnique values in result: [ 1  2  3  4  5  6  7  8  9 10 11 12]\nHorizon mapping: {\n    'doe_CF': 1, \n    'doe_Wf': 2,\n    'doe_air': 3,\n    ...\n}",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Raster to Matrix Profile Representation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "2D-vector-to-json.html#raster-processing",
+    "href": "2D-vector-to-json.html#raster-processing",
+    "title": "7  Raster to Matrix Profile Representation Framework",
+    "section": "7.4 Raster Processing",
+    "text": "7.4 Raster Processing\nSource Code: raster_processing.py\nHandles post-processing of rasterized profiles, including air space management and data cleaning.\n\n7.4.1 Key Functions\n\nprocess_raster(): Post-processes raster data\n\nRemoves air spaces\nPreserves horizon tags\nMaintains data integrity\n\n\n\n\n7.4.2 Usage Example\ninput_tif = \"HS 2-2-combined_raster.tif\"\noutput_tif = \"HS 2-2-combined_raster_processed.tif\"\nprocessed_path = process_raster(input_tif, output_tif, na_value=3)\nExample output:",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Raster to Matrix Profile Representation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "2D-vector-to-json.html#matrix-generation",
+    "href": "2D-vector-to-json.html#matrix-generation",
+    "title": "7  Raster to Matrix Profile Representation Framework",
+    "section": "7.5 Matrix Generation",
+    "text": "7.5 Matrix Generation\nSource Code: matrix_generation.py\nCreates efficient matrix representations from processed raster data.\n\n7.5.1 Key Functions\n\ncreate_horizon_string_matrix(): Creates string-based matrix\nmatrix_to_ranges(): Converts to efficient range representation\nsave_horizon_json(): Serializes to compressed JSON format\n\n\n\n7.5.2 Usage Example\nraster_path = \"HS 2-2-combined_raster_processed.tif\"\nhorizon_matrix = create_horizon_string_matrix(raster_path)\nranges = save_horizon_json(horizon_matrix, \"horizon_ranges.json\")\nExample output:\nNumber of unique patterns: 91\nHorizon row ranges:\ndoe_CF: rows 21-67 (appears in 25 rows)\ndoe_Wf: rows 3-99 (appears in 84 rows)\n...",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Raster to Matrix Profile Representation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "2D-vector-to-json.html#data-format-specifications",
+    "href": "2D-vector-to-json.html#data-format-specifications",
+    "title": "7  Raster to Matrix Profile Representation Framework",
+    "section": "7.6 Data Format Specifications",
+    "text": "7.6 Data Format Specifications\n\n7.6.1 Shapefile Requirements\n\nMust contain horizon identifiers\nShould have clear horizon boundaries\nCoordinates in consistent units\n\n\n\n7.6.2 Raster Format\n\nGeoTIFF with horizon mapping in tags\nOne band containing horizon indices\nNo data value for air/empty space\n\n\n\n7.6.3 Matrix Format\n\nNumPy array of horizon strings\nEmpty values represented as ’’\nConsistent dimensions (depth × width)\n\n\n\n7.6.4 JSON Output Format\n{\n    \"0-10\": [[\"horizon1\", 10]],\n    \"11-20\": [[\"horizon2\", 5], [\"horizon3\", 5]]\n}",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Raster to Matrix Profile Representation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "2D-vector-to-json.html#storage-efficiency",
+    "href": "2D-vector-to-json.html#storage-efficiency",
+    "title": "7  Raster to Matrix Profile Representation Framework",
+    "section": "7.7 Storage Efficiency",
+    "text": "7.7 Storage Efficiency\nThe framework achieves significant compression:\nMatrix size: 1,760,000 bytes (22,000 elements)\nJSON size: 25,837 bytes (1,004 elements)\nCompression ratio: 0.01x",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Raster to Matrix Profile Representation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "2D-vector-to-json.html#technical-requirements",
+    "href": "2D-vector-to-json.html#technical-requirements",
+    "title": "7  Raster to Matrix Profile Representation Framework",
+    "section": "7.8 Technical Requirements",
+    "text": "7.8 Technical Requirements\nRequired Python packages: - geopandas - rasterio - numpy - matplotlib - shapely\nInstall via:\npip install geopandas rasterio numpy matplotlib shapely",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Raster to Matrix Profile Representation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "2D-vector-to-json.html#implementation-notes",
+    "href": "2D-vector-to-json.html#implementation-notes",
+    "title": "7  Raster to Matrix Profile Representation Framework",
+    "section": "7.9 Implementation Notes",
+    "text": "7.9 Implementation Notes\n\n7.9.1 Coordinate Transformation\n\nPreserves relative positions\nScales to specified dimensions\nHandles both horizontal and vertical transformations\n\n\n\n7.9.2 Data Quality\n\nValidates horizon mappings\nVerifies rasterization results\nTracks pattern statistics\n\n\n\n7.9.3 Best Practices\n\nVerify shapefile quality before processing\nCheck horizon mapping consistency\nReview verification plots\nValidate pattern statistics\nCompare compression results",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Raster to Matrix Profile Representation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "2D-vector-to-json.html#advanced-topics",
+    "href": "2D-vector-to-json.html#advanced-topics",
+    "title": "7  Raster to Matrix Profile Representation Framework",
+    "section": "7.10 Advanced Topics",
+    "text": "7.10 Advanced Topics\n\n7.10.1 Extending the Framework\nThe workflow can be adapted for: - Different coordinate systems - Various horizon classification schemes - Additional metadata preservation - Custom visualization needs\n\n\n7.10.2 Performance Optimization\nConsider: - Batch processing for multiple profiles - Memory-efficient processing for large datasets - Parallel processing options - Custom compression schemes",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Raster to Matrix Profile Representation Framework</span>"
+    ]
+  },
+  {
     "objectID": "authorship-guidelines.html",
     "href": "authorship-guidelines.html",
-    "title": "7  Authorship Guidelines",
+    "title": "8  Authorship Guidelines",
     "section": "",
     "text": "Notes/questions on this section:\n\n[ is there a good example we can draw from?, authorship if our data is used externally, or authorship within our group?]\n\nhttps://besjournals.onlinelibrary.wiley.com/doi/full/10.1002/2688-8319.12060\n\nCreative Commons Licensing?\nAuthorship for us internal\nAuthorship for external groups that use our data",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Authorship Guidelines</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Authorship Guidelines</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "8  Summary",
+    "title": "9  Summary",
     "section": "",
     "text": "Do we need a summary chapter?",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {

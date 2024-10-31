@@ -1,0 +1,185 @@
+# Raster to Matrix Profile Representation Framework
+
+This documentation describes a workflow for converting soil profile data between shapefile, raster, and matrix representations, enabling flexible transitions between spatial and computational formats.
+
+## Framework Overview
+
+The framework provides a pipeline for converting between three key representations:
+1. Spatial vector data (shapefiles)
+2. Rasterized profile data (GeoTIFF)
+3. Matrix-based computational format (NumPy/JSON)
+
+![Rasterization Example](output_2_1.png)
+
+## Data Processing Clusters
+
+1. [Vector to Raster Conversion](#vector-to-raster-conversion)
+2. [Raster Processing](#raster-processing)
+3. [Matrix Generation](#matrix-generation)
+
+## Vector to Raster Conversion
+[Source Code: vector_raster_conversion.py](/_tools-pedon-morphological-model/vector_raster_conversion.py)
+
+Converts soil profile shapefiles into rasterized representations with proper coordinate transformation.
+
+### Key Functions
+- `rasterize_soil_profile()`: Main conversion function
+  - Transforms vector geometries to pixel space
+  - Handles horizon mapping and indexing
+  - Creates verification plots
+  - Preserves horizon metadata in GeoTIFF tags
+
+### Usage Example
+```python
+shp_path = "HS 2-2-combined.shp"
+output_raster_path = "HS 2-2-combined_raster.tif"
+width_cm = 220
+depth_cm = 100
+
+horizon_mapping, raster_data = rasterize_soil_profile(
+    shp_path, 
+    output_raster_path, 
+    width_cm, 
+    depth_cm
+)
+```
+
+Example output:
+```
+Raster statistics:
+Unique values in result: [ 1  2  3  4  5  6  7  8  9 10 11 12]
+Horizon mapping: {
+    'doe_CF': 1, 
+    'doe_Wf': 2,
+    'doe_air': 3,
+    ...
+}
+```
+
+## Raster Processing
+[Source Code: raster_processing.py](raster_processing.py)
+
+Handles post-processing of rasterized profiles, including air space management and data cleaning.
+
+### Key Functions
+- `process_raster()`: Post-processes raster data
+  - Removes air spaces
+  - Preserves horizon tags
+  - Maintains data integrity
+
+### Usage Example
+```python
+input_tif = "HS 2-2-combined_raster.tif"
+output_tif = "HS 2-2-combined_raster_processed.tif"
+processed_path = process_raster(input_tif, output_tif, na_value=3)
+```
+
+Example output:
+![Processed Raster](output_4_0.png)
+
+## Matrix Generation
+[Source Code: matrix_generation.py](matrix_generation.py)
+
+Creates efficient matrix representations from processed raster data.
+
+### Key Functions
+- `create_horizon_string_matrix()`: Creates string-based matrix
+- `matrix_to_ranges()`: Converts to efficient range representation
+- `save_horizon_json()`: Serializes to compressed JSON format
+
+### Usage Example
+```python
+raster_path = "HS 2-2-combined_raster_processed.tif"
+horizon_matrix = create_horizon_string_matrix(raster_path)
+ranges = save_horizon_json(horizon_matrix, "horizon_ranges.json")
+```
+
+Example output:
+```
+Number of unique patterns: 91
+Horizon row ranges:
+doe_CF: rows 21-67 (appears in 25 rows)
+doe_Wf: rows 3-99 (appears in 84 rows)
+...
+```
+
+## Data Format Specifications
+
+### Shapefile Requirements
+- Must contain horizon identifiers
+- Should have clear horizon boundaries
+- Coordinates in consistent units
+
+### Raster Format
+- GeoTIFF with horizon mapping in tags
+- One band containing horizon indices
+- No data value for air/empty space
+
+### Matrix Format
+- NumPy array of horizon strings
+- Empty values represented as ''
+- Consistent dimensions (depth × width)
+
+### JSON Output Format
+```json
+{
+    "0-10": [["horizon1", 10]],
+    "11-20": [["horizon2", 5], ["horizon3", 5]]
+}
+```
+
+## Storage Efficiency
+The framework achieves significant compression:
+```
+Matrix size: 1,760,000 bytes (22,000 elements)
+JSON size: 25,837 bytes (1,004 elements)
+Compression ratio: 0.01x
+```
+
+## Technical Requirements
+Required Python packages:
+- geopandas
+- rasterio
+- numpy
+- matplotlib
+- shapely
+
+Install via:
+```bash
+pip install geopandas rasterio numpy matplotlib shapely
+```
+
+## Implementation Notes
+
+### Coordinate Transformation
+- Preserves relative positions
+- Scales to specified dimensions
+- Handles both horizontal and vertical transformations
+
+### Data Quality
+- Validates horizon mappings
+- Verifies rasterization results
+- Tracks pattern statistics
+
+### Best Practices
+1. Verify shapefile quality before processing
+2. Check horizon mapping consistency
+3. Review verification plots
+4. Validate pattern statistics
+5. Compare compression results
+
+## Advanced Topics
+
+### Extending the Framework
+The workflow can be adapted for:
+- Different coordinate systems
+- Various horizon classification schemes
+- Additional metadata preservation
+- Custom visualization needs
+
+### Performance Optimization
+Consider:
+- Batch processing for multiple profiles
+- Memory-efficient processing for large datasets
+- Parallel processing options
+- Custom compression schemes
