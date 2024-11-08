@@ -620,23 +620,121 @@
     ]
   },
   {
+    "objectID": "process.html",
+    "href": "process.html",
+    "title": "Process Documentation",
+    "section": "",
+    "text": "This section contains the data processing documentation for the project.",
+    "crumbs": [
+      "Process Documentation"
+    ]
+  },
+  {
+    "objectID": "l0-l1-process-doc.html",
+    "href": "l0-l1-process-doc.html",
+    "title": "8  L0 to L1 Data Processing Pipeline Documentation",
+    "section": "",
+    "text": "8.1 Overview\nThe L0 to L1 data processing pipeline is designed to transform raw data as delivered (Level 0) into a cleaned, standardized format (Level 1) through a series of systematic steps. This process includes file structure validation, cleaning, standardization, and quality control measures.",
+    "crumbs": [
+      "Process Documentation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>L0 to L1 Data Processing Pipeline Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "l0-l1-process-doc.html#system-architecture",
+    "href": "l0-l1-process-doc.html#system-architecture",
+    "title": "8  L0 to L1 Data Processing Pipeline Documentation",
+    "section": "8.2 System Architecture",
+    "text": "8.2 System Architecture\n\n8.2.1 Core Components\n\nBackupManager\n\nHandles data versioning and backup\nProvides verification and restoration capabilities\nMaintains a backup manifest with checksums\nImplements backup rotation (default: 5 versions)\n\nL0L1Processor\n\nMain processing engine\nImplements step-wise data transformation\nMaintains processing metadata and history\nGenerates detailed processing logs and reports",
+    "crumbs": [
+      "Process Documentation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>L0 to L1 Data Processing Pipeline Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "l0-l1-process-doc.html#processing-steps",
+    "href": "l0-l1-process-doc.html#processing-steps",
+    "title": "8  L0 to L1 Data Processing Pipeline Documentation",
+    "section": "8.3 Processing Steps",
+    "text": "8.3 Processing Steps\n\n8.3.1 Step 1: Initialization\n\nPurpose: Set up processing environment and create initial backup\nImplementation:\n\nScans input directory for CSV files\nCreates backup of raw data\nInitializes logging system\nLoads configuration settings\n\n\n\n\n8.3.2 Step 2: Empty Element Analysis\n\nPurpose: Identify data quality issues\nDetects:\n\nHeaderless columns (e.g., ‘Unnamed: X’)\nCompletely null columns\nEmpty columns\nNull rows\nOverall emptiness statistics\n\n\n\n\n8.3.3 Step 3: Empty Element Cleaning\n\nPurpose: Remove problematic data elements\nConfigurable Actions:\n\nRemove headerless columns\nRemove null columns\nRemove empty columns\nRemove null rows\n\nDecision Matrix:\n\n{\n    'remove_headerless': true/false,\n    'remove_null_columns': true/false,\n    'remove_empty_columns': true/false,\n    'remove_null_rows': true/false\n}\n\n\n8.3.4 Step 4: Name Standardization\n\nPurpose: Ensure consistent column naming\nStandardization Rules:\n\nConvert spaces to underscores\nRemove special characters\nNormalize case (upper/lower)\nRemove duplicate underscores\n\nConfiguration:\n\n{\n    \"patterns\": [\n        [\"\\\\s+\", \"_\"],\n        [\"[^\\\\w_]\", \"\"],\n        [\"_{2,}\", \"_\"]\n    ],\n    \"case\": \"lower\"\n}\n\n\n8.3.5 Step 5: Missing Value Harmonization\n\nPurpose: Standardize missing value representations\nDefault Missing Values:\n\nNA, N/A, None, NULL, “”\n“No Data”, “Unknown”\n“Not Available”\n-999, -9999, -999.0, -9999.0\n\n\n\n\n8.3.6 Step 6: Export\n\nPurpose: Save processed data and documentation\nOutputs:\n\nProcessed CSV files\nProcessing summary report\nDetailed processing history\nHTML report with visualizations",
+    "crumbs": [
+      "Process Documentation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>L0 to L1 Data Processing Pipeline Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "l0-l1-process-doc.html#quality-control-measures",
+    "href": "l0-l1-process-doc.html#quality-control-measures",
+    "title": "8  L0 to L1 Data Processing Pipeline Documentation",
+    "section": "8.4 Quality Control Measures",
+    "text": "8.4 Quality Control Measures\n\nBackup Verification\n\nChecksum validation\nFile integrity checks\nRestoration capability\n\nProcessing Metadata\n\nDetailed tracking of all changes\nBefore/after statistics\nDecision tracking\nTimestamp logging\n\nError Handling\n\nCustom exceptions\nDetailed error logging\nRollback capabilities",
+    "crumbs": [
+      "Process Documentation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>L0 to L1 Data Processing Pipeline Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "l0-l1-process-doc.html#file-structure",
+    "href": "l0-l1-process-doc.html#file-structure",
+    "title": "8  L0 to L1 Data Processing Pipeline Documentation",
+    "section": "8.5 File Structure",
+    "text": "8.5 File Structure\nproject/\n├── input/\n│   └── abr-nps-L0/         # Raw data (Level 0)\n├── output/\n│   └── abr-nps-L1/         # Processed data (Level 1)\n├── backups/\n│   ├── backup_manifest.json\n│   └── backup_{timestamp}/\n├── logs/\n│   └── processing_{timestamp}.log\n└── reports/\n    └── L0L1_processing_history.html",
+    "crumbs": [
+      "Process Documentation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>L0 to L1 Data Processing Pipeline Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "l0-l1-process-doc.html#reporting",
+    "href": "l0-l1-process-doc.html#reporting",
+    "title": "8  L0 to L1 Data Processing Pipeline Documentation",
+    "section": "8.6 Reporting",
+    "text": "8.6 Reporting\nThe system generates comprehensive HTML reports containing: - Processing statistics - Data quality metrics - Column transformations - Missing value analysis - Processing decisions - Error logs",
+    "crumbs": [
+      "Process Documentation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>L0 to L1 Data Processing Pipeline Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "l0-l1-process-doc.html#best-practices",
+    "href": "l0-l1-process-doc.html#best-practices",
+    "title": "8  L0 to L1 Data Processing Pipeline Documentation",
+    "section": "8.7 Best Practices",
+    "text": "8.7 Best Practices\n\nData Integrity\n\nAlways create backups before processing\nVerify data integrity after each step\nMaintain detailed processing logs\n\nConfiguration Management\n\nUse consistent configuration across datasets\nDocument any configuration changes\nVersion control configuration files\n\nQuality Control\n\nReview processing reports\nValidate outputs against expectations\nMonitor error logs",
+    "crumbs": [
+      "Process Documentation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>L0 to L1 Data Processing Pipeline Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "l0-l1-process-doc.html#usage-example",
+    "href": "l0-l1-process-doc.html#usage-example",
+    "title": "8  L0 to L1 Data Processing Pipeline Documentation",
+    "section": "8.8 Usage Example",
+    "text": "8.8 Usage Example\n# Initialize processor with custom configuration\nconfig = {\n    'missing_values': [\n        'NA', 'N/A', 'None', 'NULL', '', \n        'No Data', 'Unknown', 'Not Available',\n        -999, -9999, -999.0, -9999.0\n    ],\n    'column_name_standardization': {\n        'patterns': [\n            (r'\\s+', '_'),          # Convert spaces to underscores\n            (r'[^\\w_]', ''),        # Remove special characters\n            (r'_{2,}', '_')         # Remove duplicate underscores\n        ],\n        'case': 'lower'             # Convert to lowercase\n    }\n}\n\n# Initialize processor\nprocessor = L0L1Processor(\n    input_dir=\"./abr-nps-L0\",\n    output_dir=\"./abr-nps-L1\",\n    config_file=None,  # Using default config above\n    max_backups=5\n)\n\n# Step 1: Initialize and scan directory\nscan_results = processor.initialize_processing()\nprint(f\"Found {scan_results['files_found']} files\")\n\n# Step 2: Analyze empty elements\nempty_analysis = processor.analyze_empty_elements()\n\n# Step 3: Set up cleaning decisions matrix\ncleaning_decisions = {\n    'abr-nps-annotations.csv': {\n        'remove_headerless': True,   # Remove columns like 'Unnamed: X'\n        'remove_null_columns': True, # Remove completely null columns\n        'remove_empty_columns': False,# Keep partially empty columns\n        'remove_null_rows': True     # Remove completely empty rows\n    },\n    'abr_nps_els.csv': {\n        'remove_headerless': True,\n        'remove_null_columns': True,\n        'remove_empty_columns': False,\n        'remove_null_rows': True\n    }\n    # ... repeat for other files\n}\n\n# Alternative: Apply same decisions to all files\nfile_list = scan_results['file_list']\ndefault_decisions = {\n    'remove_headerless': True,\n    'remove_null_columns': True,\n    'remove_empty_columns': False,\n    'remove_null_rows': True\n}\ncleaning_decisions = {\n    filename: default_decisions.copy() \n    for filename in file_list\n}\n\n# Step 3: Clean empty elements\ncleaning_results = processor.clean_empty_elements(cleaning_decisions)\n\n# Step 4: Standardize column names (using config defined above)\nstandardization_results = processor.standardize_names()\n\n# Example of standardization results:\n# Original: \"Site ID\" → standardized: \"site_id\"\n# Original: \"Sample % (w/w)\" → standardized: \"sample_ww\"\n# Original: \"GPS__Latitude\" → standardized: \"gps_latitude\"\n\n# Step 5: Harmonize missing values\nharmonization_results = processor.harmonize_missing_values()\n\n# Step 6: Export processed files\nexport_results = processor.export_processed_files()\n\n# Generate detailed HTML report\nhistory = processor.get_processing_history()\ngenerate_html_report(history, \"./processing-logs/L0L1_processing_history.html\")\n\n# Example of accessing results\nprint(\"\\nProcessing Summary:\")\nprint(\"------------------\")\nfor filename, results in cleaning_results.items():\n    print(f\"\\n{filename}:\")\n    print(f\"Original shape: {results['original_shape']}\")\n    print(f\"Cleaned shape: {results['cleaned_shape']}\")\n    print(f\"Columns removed: {results['changes']['columns_removed']}\")\n    print(f\"Rows removed: {results['changes']['rows_removed']}\")\n\n# Example of accessing standardization results\nprint(\"\\nColumn Name Standardization:\")\nprint(\"---------------------------\")\nfor filename, results in standardization_results.items():\n    print(f\"\\n{filename}:\")\n    for orig, new in results['name_changes'].items():\n        if orig != new:  # Only show changed names\n            print(f\"{orig} → {new}\")",
+    "crumbs": [
+      "Process Documentation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>L0 to L1 Data Processing Pipeline Documentation</span>"
+    ]
+  },
+  {
     "objectID": "authorship-guidelines.html",
     "href": "authorship-guidelines.html",
-    "title": "8  Authorship Guidelines",
+    "title": "9  Authorship Guidelines",
     "section": "",
     "text": "Notes/questions on this section:\n\n[ is there a good example we can draw from?, authorship if our data is used externally, or authorship within our group?]\n\nhttps://besjournals.onlinelibrary.wiley.com/doi/full/10.1002/2688-8319.12060\n\nCreative Commons Licensing?\nAuthorship for us internal\nAuthorship for external groups that use our data",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Authorship Guidelines</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Authorship Guidelines</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "9  Summary",
+    "title": "10  Summary",
     "section": "",
     "text": "Do we need a summary chapter?",
     "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {

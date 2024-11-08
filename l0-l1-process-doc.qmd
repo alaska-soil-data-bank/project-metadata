@@ -1,0 +1,257 @@
+# L0 to L1 Data Processing Pipeline Documentation
+
+## Overview
+
+The L0 to L1 data processing pipeline is designed to transform raw data as delivered (Level 0) into a cleaned, standardized format (Level 1) through a series of systematic steps. This process includes file structure validation, cleaning, standardization, and quality control measures.
+
+## System Architecture
+
+### Core Components
+
+1.  **BackupManager**
+    -   Handles data versioning and backup
+    -   Provides verification and restoration capabilities
+    -   Maintains a backup manifest with checksums
+    -   Implements backup rotation (default: 5 versions)
+2.  **L0L1Processor**
+    -   Main processing engine
+    -   Implements step-wise data transformation
+    -   Maintains processing metadata and history
+    -   Generates detailed processing logs and reports
+
+## Processing Steps
+
+### Step 1: Initialization
+
+-   **Purpose**: Set up processing environment and create initial backup
+-   **Implementation**:
+    -   Scans input directory for CSV files
+    -   Creates backup of raw data
+    -   Initializes logging system
+    -   Loads configuration settings
+
+### Step 2: Empty Element Analysis
+
+-   **Purpose**: Identify data quality issues
+-   **Detects**:
+    -   Headerless columns (e.g., 'Unnamed: X')
+    -   Completely null columns
+    -   Empty columns
+    -   Null rows
+    -   Overall emptiness statistics
+
+### Step 3: Empty Element Cleaning
+
+-   **Purpose**: Remove problematic data elements
+-   **Configurable Actions**:
+    -   Remove headerless columns
+    -   Remove null columns
+    -   Remove empty columns
+    -   Remove null rows
+-   **Decision Matrix**:
+
+```         
+{
+    'remove_headerless': true/false,
+    'remove_null_columns': true/false,
+    'remove_empty_columns': true/false,
+    'remove_null_rows': true/false
+}
+```
+
+### Step 4: Name Standardization
+
+-   **Purpose**: Ensure consistent column naming
+-   **Standardization Rules**:
+    -   Convert spaces to underscores
+    -   Remove special characters
+    -   Normalize case (upper/lower)
+    -   Remove duplicate underscores
+-   **Configuration**:
+
+``` json
+{
+    "patterns": [
+        ["\\s+", "_"],
+        ["[^\\w_]", ""],
+        ["_{2,}", "_"]
+    ],
+    "case": "lower"
+}
+```
+
+### Step 5: Missing Value Harmonization
+
+-   **Purpose**: Standardize missing value representations
+-   **Default Missing Values**:
+    -   NA, N/A, None, NULL, ""
+    -   "No Data", "Unknown"
+    -   "Not Available"
+    -   -999, -9999, -999.0, -9999.0
+
+### Step 6: Export
+
+-   **Purpose**: Save processed data and documentation
+-   **Outputs**:
+    -   Processed CSV files
+    -   Processing summary report
+    -   Detailed processing history
+    -   HTML report with visualizations
+
+## Quality Control Measures
+
+1.  **Backup Verification**
+    -   Checksum validation
+    -   File integrity checks
+    -   Restoration capability
+2.  **Processing Metadata**
+    -   Detailed tracking of all changes
+    -   Before/after statistics
+    -   Decision tracking
+    -   Timestamp logging
+3.  **Error Handling**
+    -   Custom exceptions
+    -   Detailed error logging
+    -   Rollback capabilities
+
+## File Structure
+
+```         
+project/
+├── input/
+│   └── abr-nps-L0/         # Raw data (Level 0)
+├── output/
+│   └── abr-nps-L1/         # Processed data (Level 1)
+├── backups/
+│   ├── backup_manifest.json
+│   └── backup_{timestamp}/
+├── logs/
+│   └── processing_{timestamp}.log
+└── reports/
+    └── L0L1_processing_history.html
+```
+
+## Reporting
+
+The system generates comprehensive HTML reports containing: - Processing statistics - Data quality metrics - Column transformations - Missing value analysis - Processing decisions - Error logs
+
+## Best Practices
+
+1.  **Data Integrity**
+    -   Always create backups before processing
+    -   Verify data integrity after each step
+    -   Maintain detailed processing logs
+2.  **Configuration Management**
+    -   Use consistent configuration across datasets
+    -   Document any configuration changes
+    -   Version control configuration files
+3.  **Quality Control**
+    -   Review processing reports
+    -   Validate outputs against expectations
+    -   Monitor error logs
+
+## Usage Example
+
+``` python
+# Initialize processor with custom configuration
+config = {
+    'missing_values': [
+        'NA', 'N/A', 'None', 'NULL', '', 
+        'No Data', 'Unknown', 'Not Available',
+        -999, -9999, -999.0, -9999.0
+    ],
+    'column_name_standardization': {
+        'patterns': [
+            (r'\s+', '_'),          # Convert spaces to underscores
+            (r'[^\w_]', ''),        # Remove special characters
+            (r'_{2,}', '_')         # Remove duplicate underscores
+        ],
+        'case': 'lower'             # Convert to lowercase
+    }
+}
+
+# Initialize processor
+processor = L0L1Processor(
+    input_dir="./abr-nps-L0",
+    output_dir="./abr-nps-L1",
+    config_file=None,  # Using default config above
+    max_backups=5
+)
+
+# Step 1: Initialize and scan directory
+scan_results = processor.initialize_processing()
+print(f"Found {scan_results['files_found']} files")
+
+# Step 2: Analyze empty elements
+empty_analysis = processor.analyze_empty_elements()
+
+# Step 3: Set up cleaning decisions matrix
+cleaning_decisions = {
+    'abr-nps-annotations.csv': {
+        'remove_headerless': True,   # Remove columns like 'Unnamed: X'
+        'remove_null_columns': True, # Remove completely null columns
+        'remove_empty_columns': False,# Keep partially empty columns
+        'remove_null_rows': True     # Remove completely empty rows
+    },
+    'abr_nps_els.csv': {
+        'remove_headerless': True,
+        'remove_null_columns': True,
+        'remove_empty_columns': False,
+        'remove_null_rows': True
+    }
+    # ... repeat for other files
+}
+
+# Alternative: Apply same decisions to all files
+file_list = scan_results['file_list']
+default_decisions = {
+    'remove_headerless': True,
+    'remove_null_columns': True,
+    'remove_empty_columns': False,
+    'remove_null_rows': True
+}
+cleaning_decisions = {
+    filename: default_decisions.copy() 
+    for filename in file_list
+}
+
+# Step 3: Clean empty elements
+cleaning_results = processor.clean_empty_elements(cleaning_decisions)
+
+# Step 4: Standardize column names (using config defined above)
+standardization_results = processor.standardize_names()
+
+# Example of standardization results:
+# Original: "Site ID" → standardized: "site_id"
+# Original: "Sample % (w/w)" → standardized: "sample_ww"
+# Original: "GPS__Latitude" → standardized: "gps_latitude"
+
+# Step 5: Harmonize missing values
+harmonization_results = processor.harmonize_missing_values()
+
+# Step 6: Export processed files
+export_results = processor.export_processed_files()
+
+# Generate detailed HTML report
+history = processor.get_processing_history()
+generate_html_report(history, "./processing-logs/L0L1_processing_history.html")
+
+# Example of accessing results
+print("\nProcessing Summary:")
+print("------------------")
+for filename, results in cleaning_results.items():
+    print(f"\n{filename}:")
+    print(f"Original shape: {results['original_shape']}")
+    print(f"Cleaned shape: {results['cleaned_shape']}")
+    print(f"Columns removed: {results['changes']['columns_removed']}")
+    print(f"Rows removed: {results['changes']['rows_removed']}")
+
+# Example of accessing standardization results
+print("\nColumn Name Standardization:")
+print("---------------------------")
+for filename, results in standardization_results.items():
+    print(f"\n{filename}:")
+    for orig, new in results['name_changes'].items():
+        if orig != new:  # Only show changed names
+            print(f"{orig} → {new}")
+```
